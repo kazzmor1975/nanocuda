@@ -5,47 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nanomaterial Matchmaker</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Import Google Fonts for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
         <div class="logo">
-            <h1>Nanomaterial Matchmaker <span>v1.0</span></h1>
+            <h1>Nanomaterial Matchmaker <span>v2.0</span></h1>
         </div>
         <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
     </header>
 
     <main>
         <!-- Home / Selection View -->
-        <section id="intro-section">
-            <h2>Select an Intended Use Case</h2>
-            <p>Choose your application area to get tailored recommendations on nanomaterial classes, key properties to optimize, and characterization methods to use in the lab.</p>
-        </section>
+        <div id="view-home">
+            <section id="intro-section">
+                <h2>Select an Intended Use Case</h2>
+                <p>Choose your application area to start finding the best nanomaterial for your lab project.</p>
+            </section>
+            <section id="app-grid" class="grid-container">
+                <!-- Cards populated by JavaScript -->
+            </section>
+        </div>
 
-        <section id="app-grid" class="grid-container">
-            <!-- Cards populated by JavaScript -->
-        </section>
+        <!-- Priority Settings View -->
+        <div id="view-priority" style="display: none;">
+            <button class="back-button btn-home" aria-label="Back to selection">
+                &larr; Back to Use Cases
+            </button>
+            <section class="priority-section">
+                <header class="view-header">
+                    <h2>Step 2: Set Your Priorities</h2>
+                    <p>Adjust the sliders below based on your project constraints for <strong id="pri-app-name"></strong>.</p>
+                </header>
+                <div class="card-container">
+                    <div id="priority-sliders" class="sliders-container">
+                        <!-- Sliders populated by JS -->
+                    </div>
+                    <div class="action-bar">
+                        <button id="btn-get-recommendations" class="btn-primary">Get Recommendations</button>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-        <!-- Result View -->
-        <section id="result-section">
-            <button id="back-btn" class="back-button" aria-label="Back to selection">
-                &larr; Back to Selection
+        <!-- Recommendation Summary View -->
+        <div id="view-summary" style="display: none;">
+            <button class="back-button btn-priority" aria-label="Back to priorities">
+                &larr; Back to Priorities
+            </button>
+            <section class="summary-section">
+                <header class="view-header">
+                    <h2>Your Recommendations</h2>
+                    <p>Ranked material classes for <strong id="sum-app-name"></strong> based on your priorities.</p>
+                </header>
+
+                <div class="action-bar-top">
+                    <button id="btn-compare-mode" class="btn-secondary" disabled>Compare Selected (0)</button>
+                    <p class="helper-text">Select up to 2 materials to compare.</p>
+                </div>
+
+                <div id="ranking-list" class="ranking-container">
+                    <!-- Ranked items populated by JS -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Detailed Result View -->
+        <div id="view-result" style="display: none;">
+            <button class="back-button btn-summary" aria-label="Back to recommendations">
+                &larr; Back to Recommendations
             </button>
 
             <header class="result-header">
-                <h2 id="res-title">Application Title</h2>
-                <p id="res-desc">Application description goes here.</p>
+                <h2 id="res-title">Material Name</h2>
+                <div class="score-badge">Match: <span id="res-score"></span>%</div>
             </header>
 
             <div class="result-content">
                 <!-- Main Content Column -->
                 <div class="main-column">
                     <article class="section-block">
-                        <h3>Recommended Material Classes</h3>
-                        <div id="res-materials">
-                            <!-- Populated by JS -->
-                        </div>
+                        <h3>Why this material?</h3>
+                        <p id="res-why" class="text-large"></p>
                     </article>
 
                     <article class="section-block">
@@ -61,18 +102,26 @@
                             <!-- Populated by JS -->
                         </div>
                     </article>
+
+                    <article class="section-block next-step-block">
+                        <h3>Experimental Path</h3>
+                        <ol id="res-path" class="experimental-path-list">
+                            <!-- Populated by JS -->
+                        </ol>
+                    </article>
                 </div>
 
                 <!-- Sidebar / Warnings Column -->
                 <aside class="sidebar-column">
-                    <div class="section-block trade-offs-block">
-                        <h3>Key Risks & Limitations</h3>
-                        <p id="res-tradeoffs">Tradeoffs go here.</p>
+                    <div class="section-block strengths-block">
+                        <h3>Key Strengths</h3>
+                        <ul id="res-strengths" class="bullet-list"></ul>
                     </div>
 
-                    <div class="section-block next-step-block">
-                        <h3>Recommended Next Lab Step</h3>
-                        <p id="res-nextstep">Next step goes here.</p>
+                    <div class="section-block trade-offs-block">
+                        <h3>Key Risks & Limitations</h3>
+                        <ul id="res-limitations" class="bullet-list"></ul>
+                        <p id="res-tradeoffs" class="margin-top-sm"></p>
                     </div>
 
                     <div class="section-block question-block">
@@ -83,7 +132,23 @@
                     </div>
                 </aside>
             </div>
-        </section>
+        </div>
+
+        <!-- Comparison View -->
+        <div id="view-compare" style="display: none;">
+            <button class="back-button btn-summary" aria-label="Back to recommendations">
+                &larr; Back to Recommendations
+            </button>
+            <section class="compare-section">
+                <header class="view-header">
+                    <h2>Material Comparison</h2>
+                </header>
+                <div class="compare-grid" id="compare-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <!-- Scripts -->
