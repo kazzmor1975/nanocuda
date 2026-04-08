@@ -367,3 +367,110 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
 .compare-header h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .compare-section-block { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 0.5rem; padding: 1.5rem; height: 100%; }
 .compare-section-block h4 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;}
+
+
+/* Explore / Decide Mode Toggle */
+.mode-toggle-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mode-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 9999px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mode-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.mode-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Benefit-Risk Indicators */
+.benefit-risk-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--bg-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.br-indicator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.br-label {
+    width: 120px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.br-bar-bg {
+    flex: 1;
+    height: 8px;
+    background: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.br-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.ben-fill {
+    background: #10b981; /* emerald-500 */
+}
+
+.risk-fill {
+    background: #f59e0b; /* amber-500 */
+}
+
+/* Conceptual Diagrams */
+.priority-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.conceptual-diagram-wrapper {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.diagram-svg {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .priority-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .conceptual-diagram-wrapper {
+        align-self: flex-end;
+        margin-top: -3rem;
+    }
+}

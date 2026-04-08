@@ -2,6 +2,13 @@ const UI_I18N = {
     "en": {
         "title": "Nanomaterial Matchmaker",
         "version": "v2.0",
+        "modeExplore": "🔍 Explore",
+        "modeDecide": "⚖️ Decide",
+        "chartTitle2D": "Performance vs. Synthesis",
+        "axisPerf": "Performance →",
+        "axisSynth": "Synthesis Feasibility →",
+        "benefit": "Benefit",
+        "risk": "Risk Awareness",
         "themeDark": "🌙 Dark Mode",
         "themeLight": "☀️ Light Mode",
         "langToggle": "🇵🇱 PL",
@@ -38,6 +45,13 @@ const UI_I18N = {
     "pl": {
         "title": "Kreator Nanomateriałów",
         "version": "v2.0",
+        "modeExplore": "🔍 Eksploruj",
+        "modeDecide": "⚖️ Zdecyduj",
+        "chartTitle2D": "Wydajność vs Synteza",
+        "axisPerf": "Wydajność →",
+        "axisSynth": "Wykonalność syntezy →",
+        "benefit": "Korzyść",
+        "risk": "Świadomość ryzyka",
         "themeDark": "🌙 Tryb Ciemny",
         "themeLight": "☀️ Tryb Jasny",
         "langToggle": "🇬🇧 EN",
@@ -130,7 +144,13 @@ const APP_DATA = {
                         5,
                         2,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 3,
+                        "benefit": 5,
+                        "riskAwareness": 3
+                    }
                 },
                 {
                     "id": "sensor_metal_oxides",
@@ -164,7 +184,13 @@ const APP_DATA = {
                         3,
                         4,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "sensor_cnt",
@@ -195,7 +221,13 @@ const APP_DATA = {
                         4,
                         4,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 2,
+                        "benefit": 4,
+                        "riskAwareness": 4
+                    }
                 }
             ],
             "targetProperties": [
@@ -224,7 +256,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "High sensitivity often comes at the cost of poor selectivity. Sensor drift over time is common.",
             "studentQuestions": "How do I attach specific receptors to the surface without destroying conductivity?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12.55a11 11 0 0 1 14.08 0\"/><path d=\"M1.42 9a16 16 0 0 1 21.16 0\"/><path d=\"M8.53 16.11a6 6 0 0 1 6.95 0\"/><line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12.55a11 11 0 0 1 14.08 0\"/><path d=\"M1.42 9a16 16 0 0 1 21.16 0\"/><path d=\"M8.53 16.11a6 6 0 0 1 6.95 0\"/><line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"10\" y=\"40\" width=\"80\" height=\"20\" rx=\"5\" fill=\"#e2e8f0\" stroke=\"#94a3b8\"/><circle cx=\"30\" cy=\"35\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"50\" cy=\"35\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"70\" cy=\"35\" r=\"4\" fill=\"#3b82f6\"/><path d=\"M30 20 v10 m20 -10 v10 m20 -10 v10\" stroke=\"#ef4444\" stroke-dasharray=\"2,2\"/><text x=\"50\" y=\"80\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Receptors on substrate</text></svg>"
         },
         {
             "id": "biomaterial",
@@ -280,7 +313,13 @@ const APP_DATA = {
                         4,
                         2,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 3,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "bio_ceramics",
@@ -310,7 +349,13 @@ const APP_DATA = {
                         3,
                         3,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 2,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "bio_polymers",
@@ -340,7 +385,13 @@ const APP_DATA = {
                         5,
                         4,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 4,
+                        "benefit": 3,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -369,7 +420,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Materials with high porosity for tissue ingrowth often have compromised mechanical strength.",
             "studentQuestions": "Will these nanoparticles agglomerate in biological fluids?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z\"/><path d=\"M12 12v6\"/><path d=\"M9 15h6\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z\"/><path d=\"M12 12v6\"/><path d=\"M9 15h6\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><circle cx=\"50\" cy=\"50\" r=\"30\" fill=\"#f87171\" fill-opacity=\"0.2\" stroke=\"#f87171\"/><path d=\"M50 20 Q70 50 50 80 Q30 50 50 20\" fill=\"#3b82f6\" fill-opacity=\"0.5\"/><text x=\"50\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Nanoparticles in cell</text></svg>"
         },
         {
             "id": "coating",
@@ -426,7 +478,13 @@ const APP_DATA = {
                         3,
                         4,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "coat_ceramic",
@@ -458,7 +516,13 @@ const APP_DATA = {
                         4,
                         5,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 2,
+                        "benefit": 5,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "coat_polymer",
@@ -490,7 +554,13 @@ const APP_DATA = {
                         2,
                         4,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 5,
+                        "benefit": 3,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -520,7 +590,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Increasing coating thickness can lead to residual stress and delamination.",
             "studentQuestions": "How do I ensure uniform coverage on a complex 3D substrate?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><path d=\"M2 12h20\"/><path d=\"M2 16h20\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><path d=\"M2 12h20\"/><path d=\"M2 16h20\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"10\" y=\"60\" width=\"80\" height=\"20\" fill=\"#cbd5e1\" stroke=\"#64748b\"/><rect x=\"10\" y=\"45\" width=\"80\" height=\"15\" fill=\"#bfdbfe\" stroke=\"#3b82f6\"/><circle cx=\"30\" cy=\"52\" r=\"3\" fill=\"#1d4ed8\"/><circle cx=\"50\" cy=\"52\" r=\"3\" fill=\"#1d4ed8\"/><circle cx=\"70\" cy=\"52\" r=\"3\" fill=\"#1d4ed8\"/><text x=\"50\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Nanocoating on bulk</text></svg>"
         },
         {
             "id": "electrochemical",
@@ -572,7 +643,13 @@ const APP_DATA = {
                         4,
                         5,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "ec_metal_oxides",
@@ -606,7 +683,13 @@ const APP_DATA = {
                         3,
                         2,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 3,
+                        "benefit": 5,
+                        "riskAwareness": 3
+                    }
                 },
                 {
                     "id": "ec_polymers",
@@ -637,7 +720,13 @@ const APP_DATA = {
                         2,
                         1,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 4,
+                        "benefit": 3,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -666,7 +755,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Materials with very high capacity (like silicon anodes) often suffer from severe volume expansion and poor cycle life.",
             "studentQuestions": "Why does my specific capacity drop so quickly after the first few cycles?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"16\" height=\"10\" rx=\"2\" ry=\"2\"/><line x1=\"22\" y1=\"11\" x2=\"22\" y2=\"13\"/><line x1=\"6\" y1=\"12\" x2=\"14\" y2=\"12\"/><line x1=\"10\" y1=\"8\" x2=\"10\" y2=\"16\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"16\" height=\"10\" rx=\"2\" ry=\"2\"/><line x1=\"22\" y1=\"11\" x2=\"22\" y2=\"13\"/><line x1=\"6\" y1=\"12\" x2=\"14\" y2=\"12\"/><line x1=\"10\" y1=\"8\" x2=\"10\" y2=\"16\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"20\" y=\"20\" width=\"20\" height=\"60\" fill=\"#94a3b8\"/><rect x=\"60\" y=\"20\" width=\"20\" height=\"60\" fill=\"#fca5a5\"/><path d=\"M40 50 h20\" stroke-dasharray=\"2,2\"/><circle cx=\"50\" cy=\"50\" r=\"4\" fill=\"#3b82f6\"/><text x=\"50\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Ion transport</text></svg>"
         },
         {
             "id": "catalyst",
@@ -720,7 +810,13 @@ const APP_DATA = {
                         3,
                         4,
                         1
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 3,
+                        "benefit": 5,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "cat_zeolites",
@@ -753,7 +849,13 @@ const APP_DATA = {
                         4,
                         5,
                         1
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 1
+                    }
                 },
                 {
                     "id": "cat_photo",
@@ -788,7 +890,13 @@ const APP_DATA = {
                         5,
                         3,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 3,
+                        "benefit": 4,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -818,7 +926,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Smaller nanoparticles have higher activity but are more prone to aggregation/sintering at high temperatures.",
             "studentQuestions": "How do I prevent my nanoparticles from clumping together during the reaction?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 3h6\"/><path d=\"M10 3v4.36L5.33 17.65A2 2 0 0 0 7.05 21h9.9a2 2 0 0 0 1.72-3.35L14 7.36V3\"/><path d=\"M9 15c1.5 0 1.5 2 3 2s1.5-2 3-2\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 3h6\"/><path d=\"M10 3v4.36L5.33 17.65A2 2 0 0 0 7.05 21h9.9a2 2 0 0 0 1.72-3.35L14 7.36V3\"/><path d=\"M9 15c1.5 0 1.5 2 3 2s1.5-2 3-2\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><path d=\"M20 50 Q50 30 80 50 Q50 70 20 50\" fill=\"#e2e8f0\"/><circle cx=\"40\" cy=\"45\" r=\"5\" fill=\"#fbbf24\"/><circle cx=\"60\" cy=\"55\" r=\"5\" fill=\"#fbbf24\"/><path d=\"M40 20 v20 m20 -20 v30\" stroke=\"#ef4444\" stroke-dasharray=\"2,2\" marker-end=\"url(#arrow)\"/><text x=\"50\" y=\"85\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Active sites on support</text></svg>"
         },
         {
             "id": "filtration",
@@ -871,7 +980,13 @@ const APP_DATA = {
                         4,
                         2,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 3,
+                        "benefit": 4,
+                        "riskAwareness": 4
+                    }
                 },
                 {
                     "id": "filt_electrospun",
@@ -902,7 +1017,13 @@ const APP_DATA = {
                         2,
                         3,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 4,
+                        "benefit": 3,
+                        "riskAwareness": 3
+                    }
                 },
                 {
                     "id": "filt_zif",
@@ -933,7 +1054,13 @@ const APP_DATA = {
                         5,
                         1,
                         2
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 2,
+                        "benefit": 5,
+                        "riskAwareness": 2
+                    }
                 }
             ],
             "targetProperties": [
@@ -962,7 +1089,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Higher selectivity (rejection) usually results in lower permeability (flux). Look up the 'Robeson upper bound'.",
             "studentQuestions": "How do I scale up the synthesis of this membrane without introducing defects?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"10\" y=\"45\" width=\"80\" height=\"10\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><circle cx=\"30\" cy=\"20\" r=\"6\" fill=\"#ef4444\"/><circle cx=\"50\" cy=\"25\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"70\" cy=\"20\" r=\"8\" fill=\"#ef4444\"/><path d=\"M50 35 v20\" stroke=\"#3b82f6\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"50\" y=\"75\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Selective membrane</text></svg>"
         },
         {
             "id": "structural",
@@ -1016,7 +1144,13 @@ const APP_DATA = {
                         4,
                         4,
                         2
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 1,
+                        "benefit": 5,
+                        "riskAwareness": 4
+                    }
                 },
                 {
                     "id": "struc_clay",
@@ -1048,7 +1182,13 @@ const APP_DATA = {
                         3,
                         3,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 4,
+                        "benefit": 3,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "struc_mmc",
@@ -1080,7 +1220,13 @@ const APP_DATA = {
                         3,
                         5,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 2,
+                        "benefit": 4,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -1110,7 +1256,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Poor dispersion (agglomeration) of nanofillers actually degrades mechanical properties rather than improving them.",
             "studentQuestions": "What mixing technique is best to unbundle the nanotubes in the resin?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"/><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"/><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"10\" y=\"20\" width=\"80\" height=\"60\" fill=\"#f1f5f9\" stroke=\"#94a3b8\"/><line x1=\"20\" y1=\"30\" x2=\"80\" y2=\"40\" stroke=\"#334155\" stroke-width=\"3\"/><line x1=\"15\" y1=\"60\" x2=\"75\" y2=\"50\" stroke=\"#334155\" stroke-width=\"3\"/><line x1=\"30\" y1=\"70\" x2=\"90\" y2=\"65\" stroke=\"#334155\" stroke-width=\"3\"/><text x=\"50\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Nanofillers in matrix</text></svg>"
         },
         {
             "id": "optical",
@@ -1164,7 +1311,13 @@ const APP_DATA = {
                         5,
                         3,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 3,
+                        "benefit": 5,
+                        "riskAwareness": 5
+                    }
                 },
                 {
                     "id": "opt_plasmonic",
@@ -1196,7 +1349,13 @@ const APP_DATA = {
                         3,
                         5,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "opt_ucnp",
@@ -1227,7 +1386,13 @@ const APP_DATA = {
                         5,
                         5,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 2,
+                        "benefit": 4,
+                        "riskAwareness": 4
+                    }
                 }
             ],
             "targetProperties": [
@@ -1256,7 +1421,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Many highly efficient quantum dots contain toxic heavy metals (like Cd or Pb), limiting their commercial applications.",
             "studentQuestions": "Why does the emission color shift when I change the synthesis time?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"5\"/><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"/><line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\"/><line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\"/><line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\"/><line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\"/><line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\"/><line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\"/><line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"5\"/><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"/><line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\"/><line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\"/><line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\"/><line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\"/><line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\"/><line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\"/><line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><circle cx=\"50\" cy=\"50\" r=\"15\" fill=\"#fef08a\" stroke=\"#eab308\" stroke-width=\"2\"/><path d=\"M20 50 Q35 30 50 50\" stroke=\"#3b82f6\" stroke-dasharray=\"2,2\"/><path d=\"M50 50 Q65 70 80 50\" stroke=\"#ef4444\" stroke-dasharray=\"2,2\"/><text x=\"50\" y=\"85\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Light interaction</text></svg>"
         }
     ],
     "pl": [
@@ -1311,7 +1477,13 @@ const APP_DATA = {
                         5,
                         2,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 3,
+                        "benefit": 5,
+                        "riskAwareness": 3
+                    }
                 },
                 {
                     "id": "sensor_metal_oxides",
@@ -1341,7 +1513,13 @@ const APP_DATA = {
                         3,
                         4,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "sensor_cnt",
@@ -1371,7 +1549,13 @@ const APP_DATA = {
                         4,
                         4,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 2,
+                        "benefit": 4,
+                        "riskAwareness": 4
+                    }
                 }
             ],
             "targetProperties": [
@@ -1400,7 +1584,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Wysoka czułość często odbywa się kosztem słabej selektywności. Zjawisko dryftu sygnału w czasie jest powszechne.",
             "studentQuestions": "Jak przymocować konkretne receptory do powierzchni bez niszczenia przewodnictwa?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12.55a11 11 0 0 1 14.08 0\"/><path d=\"M1.42 9a16 16 0 0 1 21.16 0\"/><path d=\"M8.53 16.11a6 6 0 0 1 6.95 0\"/><line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12.55a11 11 0 0 1 14.08 0\"/><path d=\"M1.42 9a16 16 0 0 1 21.16 0\"/><path d=\"M8.53 16.11a6 6 0 0 1 6.95 0\"/><line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"10\" y=\"40\" width=\"80\" height=\"20\" rx=\"5\" fill=\"#e2e8f0\" stroke=\"#94a3b8\"/><circle cx=\"30\" cy=\"35\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"50\" cy=\"35\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"70\" cy=\"35\" r=\"4\" fill=\"#3b82f6\"/><path d=\"M30 20 v10 m20 -10 v10 m20 -10 v10\" stroke=\"#ef4444\" stroke-dasharray=\"2,2\"/><text x=\"50\" y=\"80\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Receptors on substrate</text></svg>"
         },
         {
             "id": "biomaterial",
@@ -1452,7 +1637,13 @@ const APP_DATA = {
                         4,
                         2,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 3,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "bio_ceramics",
@@ -1481,7 +1672,13 @@ const APP_DATA = {
                         3,
                         3,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 2,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "bio_polymers",
@@ -1510,7 +1707,13 @@ const APP_DATA = {
                         5,
                         4,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 4,
+                        "benefit": 3,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -1539,7 +1742,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Materiały o wysokiej porowatości, przeznaczone do wrastania tkanek, często mają zmniejszoną wytrzymałość mechaniczną.",
             "studentQuestions": "Czy te nanocząstki będą się aglomerować w płynach ustrojowych?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z\"/><path d=\"M12 12v6\"/><path d=\"M9 15h6\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z\"/><path d=\"M12 12v6\"/><path d=\"M9 15h6\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><circle cx=\"50\" cy=\"50\" r=\"30\" fill=\"#f87171\" fill-opacity=\"0.2\" stroke=\"#f87171\"/><path d=\"M50 20 Q70 50 50 80 Q30 50 50 20\" fill=\"#3b82f6\" fill-opacity=\"0.5\"/><text x=\"50\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Nanoparticles in cell</text></svg>"
         },
         {
             "id": "coating",
@@ -1592,7 +1796,13 @@ const APP_DATA = {
                         3,
                         4,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "coat_ceramic",
@@ -1623,7 +1833,13 @@ const APP_DATA = {
                         4,
                         5,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 2,
+                        "benefit": 5,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "coat_polymer",
@@ -1654,7 +1870,13 @@ const APP_DATA = {
                         2,
                         4,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 5,
+                        "benefit": 3,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -1684,7 +1906,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Zwiększenie grubości powłoki może prowadzić do naprężeń szczątkowych i delaminacji.",
             "studentQuestions": "Jak zapewnić równomierne pokrycie na złożonym podłożu 3D?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><path d=\"M2 12h20\"/><path d=\"M2 16h20\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><path d=\"M2 12h20\"/><path d=\"M2 16h20\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"10\" y=\"60\" width=\"80\" height=\"20\" fill=\"#cbd5e1\" stroke=\"#64748b\"/><rect x=\"10\" y=\"45\" width=\"80\" height=\"15\" fill=\"#bfdbfe\" stroke=\"#3b82f6\"/><circle cx=\"30\" cy=\"52\" r=\"3\" fill=\"#1d4ed8\"/><circle cx=\"50\" cy=\"52\" r=\"3\" fill=\"#1d4ed8\"/><circle cx=\"70\" cy=\"52\" r=\"3\" fill=\"#1d4ed8\"/><text x=\"50\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Nanocoating on bulk</text></svg>"
         },
         {
             "id": "electrochemical",
@@ -1735,7 +1958,13 @@ const APP_DATA = {
                         4,
                         5,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "ec_metal_oxides",
@@ -1765,7 +1994,13 @@ const APP_DATA = {
                         3,
                         2,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 3,
+                        "benefit": 5,
+                        "riskAwareness": 3
+                    }
                 },
                 {
                     "id": "ec_polymers",
@@ -1795,7 +2030,13 @@ const APP_DATA = {
                         2,
                         1,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 4,
+                        "benefit": 3,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -1824,7 +2065,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Materiały o bardzo wysokiej pojemności (np. anody krzemowe) często cierpią z powodu drastycznego zwiększania objętości i krótkiej żywotności.",
             "studentQuestions": "Dlaczego moja pojemność właściwa tak szybko spada po pierwszych kilku cyklach?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"16\" height=\"10\" rx=\"2\" ry=\"2\"/><line x1=\"22\" y1=\"11\" x2=\"22\" y2=\"13\"/><line x1=\"6\" y1=\"12\" x2=\"14\" y2=\"12\"/><line x1=\"10\" y1=\"8\" x2=\"10\" y2=\"16\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"16\" height=\"10\" rx=\"2\" ry=\"2\"/><line x1=\"22\" y1=\"11\" x2=\"22\" y2=\"13\"/><line x1=\"6\" y1=\"12\" x2=\"14\" y2=\"12\"/><line x1=\"10\" y1=\"8\" x2=\"10\" y2=\"16\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"20\" y=\"20\" width=\"20\" height=\"60\" fill=\"#94a3b8\"/><rect x=\"60\" y=\"20\" width=\"20\" height=\"60\" fill=\"#fca5a5\"/><path d=\"M40 50 h20\" stroke-dasharray=\"2,2\"/><circle cx=\"50\" cy=\"50\" r=\"4\" fill=\"#3b82f6\"/><text x=\"50\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Ion transport</text></svg>"
         },
         {
             "id": "catalyst",
@@ -1877,7 +2119,13 @@ const APP_DATA = {
                         3,
                         4,
                         1
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 3,
+                        "benefit": 5,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "cat_zeolites",
@@ -1909,7 +2157,13 @@ const APP_DATA = {
                         4,
                         5,
                         1
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 1
+                    }
                 },
                 {
                     "id": "cat_photo",
@@ -1940,7 +2194,13 @@ const APP_DATA = {
                         5,
                         3,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 3,
+                        "benefit": 4,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -1970,7 +2230,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Mniejsze nanocząstki mają wyższą aktywność, ale są bardziej podatne na aglomerację w wysokich temperaturach.",
             "studentQuestions": "Jak zapobiec zbijaniu się nanocząstek w grudki podczas reakcji?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 3h6\"/><path d=\"M10 3v4.36L5.33 17.65A2 2 0 0 0 7.05 21h9.9a2 2 0 0 0 1.72-3.35L14 7.36V3\"/><path d=\"M9 15c1.5 0 1.5 2 3 2s1.5-2 3-2\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 3h6\"/><path d=\"M10 3v4.36L5.33 17.65A2 2 0 0 0 7.05 21h9.9a2 2 0 0 0 1.72-3.35L14 7.36V3\"/><path d=\"M9 15c1.5 0 1.5 2 3 2s1.5-2 3-2\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><path d=\"M20 50 Q50 30 80 50 Q50 70 20 50\" fill=\"#e2e8f0\"/><circle cx=\"40\" cy=\"45\" r=\"5\" fill=\"#fbbf24\"/><circle cx=\"60\" cy=\"55\" r=\"5\" fill=\"#fbbf24\"/><path d=\"M40 20 v20 m20 -20 v30\" stroke=\"#ef4444\" stroke-dasharray=\"2,2\" marker-end=\"url(#arrow)\"/><text x=\"50\" y=\"85\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Active sites on support</text></svg>"
         },
         {
             "id": "filtration",
@@ -2022,7 +2283,13 @@ const APP_DATA = {
                         4,
                         2,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 3,
+                        "benefit": 4,
+                        "riskAwareness": 4
+                    }
                 },
                 {
                     "id": "filt_electrospun",
@@ -2052,7 +2319,13 @@ const APP_DATA = {
                         2,
                         3,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 4,
+                        "benefit": 3,
+                        "riskAwareness": 3
+                    }
                 },
                 {
                     "id": "filt_zif",
@@ -2082,7 +2355,13 @@ const APP_DATA = {
                         5,
                         1,
                         2
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 2,
+                        "benefit": 5,
+                        "riskAwareness": 2
+                    }
                 }
             ],
             "targetProperties": [
@@ -2111,7 +2390,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Wyższa selektywność zwykle skutkuje niższą przepuszczalnością (tzw. górna granica Robesona).",
             "studentQuestions": "Jak zwiększyć skalę produkcji tej membrany bez wprowadzania defektów?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"10\" y=\"45\" width=\"80\" height=\"10\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><circle cx=\"30\" cy=\"20\" r=\"6\" fill=\"#ef4444\"/><circle cx=\"50\" cy=\"25\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"70\" cy=\"20\" r=\"8\" fill=\"#ef4444\"/><path d=\"M50 35 v20\" stroke=\"#3b82f6\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"50\" y=\"75\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Selective membrane</text></svg>"
         },
         {
             "id": "structural",
@@ -2164,7 +2444,13 @@ const APP_DATA = {
                         4,
                         4,
                         2
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 1,
+                        "benefit": 5,
+                        "riskAwareness": 4
+                    }
                 },
                 {
                     "id": "struc_clay",
@@ -2195,7 +2481,13 @@ const APP_DATA = {
                         3,
                         3,
                         3
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 4,
+                        "benefit": 3,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "struc_mmc",
@@ -2226,7 +2518,13 @@ const APP_DATA = {
                         3,
                         5,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 2,
+                        "benefit": 4,
+                        "riskAwareness": 3
+                    }
                 }
             ],
             "targetProperties": [
@@ -2255,7 +2553,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Słaba dyspersja (aglomeracja) nanowypełniaczy pogarsza właściwości mechaniczne zamiast je poprawiać.",
             "studentQuestions": "Jaka technika mieszania jest najlepsza do rozdzielenia nanorurek w żywicy?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"/><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"/><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><rect x=\"10\" y=\"20\" width=\"80\" height=\"60\" fill=\"#f1f5f9\" stroke=\"#94a3b8\"/><line x1=\"20\" y1=\"30\" x2=\"80\" y2=\"40\" stroke=\"#334155\" stroke-width=\"3\"/><line x1=\"15\" y1=\"60\" x2=\"75\" y2=\"50\" stroke=\"#334155\" stroke-width=\"3\"/><line x1=\"30\" y1=\"70\" x2=\"90\" y2=\"65\" stroke=\"#334155\" stroke-width=\"3\"/><text x=\"50\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Nanofillers in matrix</text></svg>"
         },
         {
             "id": "optical",
@@ -2308,7 +2607,13 @@ const APP_DATA = {
                         5,
                         3,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 5,
+                        "synthesisFeasibility": 3,
+                        "benefit": 5,
+                        "riskAwareness": 5
+                    }
                 },
                 {
                     "id": "opt_plasmonic",
@@ -2338,7 +2643,13 @@ const APP_DATA = {
                         3,
                         5,
                         5
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 4,
+                        "synthesisFeasibility": 4,
+                        "benefit": 4,
+                        "riskAwareness": 2
+                    }
                 },
                 {
                     "id": "opt_ucnp",
@@ -2368,7 +2679,13 @@ const APP_DATA = {
                         5,
                         5,
                         4
-                    ]
+                    ],
+                    "metrics2D": {
+                        "performance": 3,
+                        "synthesisFeasibility": 2,
+                        "benefit": 4,
+                        "riskAwareness": 4
+                    }
                 }
             ],
             "targetProperties": [
@@ -2393,7 +2710,8 @@ const APP_DATA = {
             ],
             "tradeOffs": "Wiele wysoce wydajnych kropek kwantowych zawiera toksyczne metale ciężkie (jak Cd lub Pb), co ogranicza ich komercyjne zastosowania.",
             "studentQuestions": "Dlaczego kolor emisji zmienia się po zmianie czasu syntezy?",
-            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"5\"/><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"/><line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\"/><line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\"/><line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\"/><line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\"/><line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\"/><line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\"/><line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\"/></svg>"
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"5\"/><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"/><line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\"/><line x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\"/><line x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\"/><line x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\"/><line x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\"/><line x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\"/><line x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\"/></svg>",
+            "diagram": "<svg viewBox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"diagram-svg\"><circle cx=\"50\" cy=\"50\" r=\"15\" fill=\"#fef08a\" stroke=\"#eab308\" stroke-width=\"2\"/><path d=\"M20 50 Q35 30 50 50\" stroke=\"#3b82f6\" stroke-dasharray=\"2,2\"/><path d=\"M50 50 Q65 70 80 50\" stroke=\"#ef4444\" stroke-dasharray=\"2,2\"/><text x=\"50\" y=\"85\" text-anchor=\"middle\" font-size=\"8\" fill=\"#64748b\" stroke=\"none\">Light interaction</text></svg>"
         }
     ]
 };

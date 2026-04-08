@@ -32,13 +32,24 @@
 
         <!-- Priority Settings View -->
         <div id="view-priority" style="display: none;">
+            <div class="mode-toggle-container">
+                <button id="btn-mode-explore" class="mode-btn" data-i18n="modeExplore">🔍 Explore</button>
+                <button id="btn-mode-decide" class="mode-btn active" data-i18n="modeDecide">⚖️ Decide</button>
+            </div>
             <button class="back-button btn-home" aria-label="Back to selection" data-i18n="btnBackUseCases">
                 &larr; Back to Use Cases
             </button>
             <section class="priority-section">
                 <header class="view-header">
-                    <h2 data-i18n="priStep2">Step 2: Set Your Priorities</h2>
-                    <p><span data-i18n="priAdjust">Adjust the sliders below based on your project constraints for</span> <strong id="pri-app-name"></strong>.</p>
+                    <div class="priority-header-content">
+                        <div>
+                            <h2 data-i18n="priStep2">Step 2: Set Your Priorities</h2>
+                            <p><span data-i18n="priAdjust">Adjust the sliders below based on your project constraints for</span> <strong id="pri-app-name"></strong>.</p>
+                        </div>
+                        <div id="pri-app-diagram" class="conceptual-diagram-wrapper">
+                            <!-- SVG injected here -->
+                        </div>
+                    </div>
                 </header>
                 <div class="card-container">
                     <div id="priority-sliders" class="sliders-container">
@@ -72,6 +83,10 @@
                         <!-- Ranked items populated by JS -->
                     </div>
                     <aside class="chart-container-aside">
+                        <div id="chart-2d-container" style="margin-bottom: 2rem;">
+                            <h3 class="chart-title" style="text-align: center; font-size: 1rem; margin-bottom: 1rem;" data-i18n="chartTitle2D">Performance vs. Synthesis</h3>
+                            <canvas id="summary-2d-chart" width="300" height="250" aria-label="2D Property Chart" role="img"></canvas>
+                        </div>
                         <canvas id="summary-radar-chart" width="300" height="300" aria-label="Radar chart comparing top recommended materials" role="img"></canvas>
                         <div id="summary-radar-legend" class="chart-legend"></div>
                     </aside>
@@ -96,6 +111,10 @@
                     <article class="section-block">
                         <h3 data-i18n="resWhy">Why this material?</h3>
                         <p id="res-why" class="text-large"></p>
+
+                        <div id="res-benefit-risk" class="benefit-risk-container margin-top-sm">
+                            <!-- Populated by JS -->
+                        </div>
                     </article>
 
                     <article class="section-block">

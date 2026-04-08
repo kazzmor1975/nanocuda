@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let userPriorities = {}; // { dimensionId: weight (1-5) }
     let rankedMaterials = [];
     let selectedForComparison = [];
+    let appMode = 'decide'; // 'explore' or 'decide'
 
     // DOM Elements - Header Actions
     const themeToggleBtn = document.getElementById('theme-toggle');
@@ -36,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const rankingListContainer = document.getElementById('ranking-list');
     const btnCompareMode = document.getElementById('btn-compare-mode');
 
+    // Mode toggles
+    const btnModeExplore = document.getElementById('btn-mode-explore');
+    const btnModeDecide = document.getElementById('btn-mode-decide');
+
     // Initialize
     initTheme();
     updateUIForLanguage();
@@ -53,6 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnGetRecommendations.addEventListener('click', generateRecommendations);
     btnCompareMode.addEventListener('click', showCompareView);
+
+    if (btnModeExplore) btnModeExplore.addEventListener('click', () => setAppMode('explore'));
+    if (btnModeDecide) btnModeDecide.addEventListener('click', () => setAppMode('decide'));
+
+    function setAppMode(mode) {
+        appMode = mode;
+        if (mode === 'explore') {
+            btnModeExplore.classList.add('active');
+            btnModeDecide.classList.remove('active');
+            prioritySlidersContainer.style.display = 'none';
+            btnGetRecommendations.textContent = currentLang === 'pl' ? 'Przeglądaj materiały' : 'Explore Materials';
+            const priDesc = document.querySelector('#view-priority .view-header p');
+            if(priDesc) priDesc.style.display = 'none';
+        } else {
+            btnModeDecide.classList.add('active');
+            btnModeExplore.classList.remove('active');
+            prioritySlidersContainer.style.display = 'grid';
+            btnGetRecommendations.textContent = uiDict.btnGetRecs;
+            const priDesc = document.querySelector('#view-priority .view-header p');
+            if(priDesc) priDesc.style.display = 'block';
+        }
+    }
 
     // Initial Render
     renderGrid();
@@ -145,6 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         document.getElementById('pri-app-name').textContent = currentApp.title;
+
+        const diagramContainer = document.getElementById('pri-app-diagram');
+        if (diagramContainer) {
+            diagramContainer.innerHTML = currentApp.diagram || '';
+        }
+
         prioritySlidersContainer.innerHTML = '';
 
         currentApp.dimensions.forEach(dim => {
@@ -183,7 +216,13 @@ document.addEventListener('DOMContentLoaded', () => {
             let maxPossible = 0;
 
             dimensions.forEach(dim => {
-                const weight = userPriorities[dim.id];
+                let weight = 3;
+                if (appMode === 'decide') {
+                    const slider = document.getElementById(`slider-${dim.id}`);
+                    weight = slider ? parseInt(slider.value, 10) : 3;
+                }
+                userPriorities[dim.id] = weight;
+
                 const rating = mat.ratings[dim.id] || 3;
                 const fit = 5 - Math.abs(rating - weight);
 
@@ -196,6 +235,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Sort descending
+        if (appMode === 'explore') {
+             return scoredMaterials.sort((a, b) => {
+                 if (a.metrics2D && b.metrics2D) {
+                     return b.metrics2D.performance - a.metrics2D.performance;
+                 }
+                 return 0;
+             });
+        }
         return scoredMaterials.sort((a, b) => b.matchScore - a.matchScore);
     }
 
@@ -320,8 +367,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCompareButton();
         renderRankingList();
 
-        // Draw summary chart for top 3
-        drawRadarChart('summary-radar-chart', 'summary-radar-legend', rankedMaterials.slice(0, 3));
+        // Draw summary charts for top 3
+        const top3 = rankedMaterials.slice(0, 3);
+        drawRadarChart('summary-radar-chart', 'summary-radar-legend', top3);
+        draw2DChart('summary-2d-chart', top3);
 
         switchView(viewSummary);
     }
@@ -338,15 +387,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const item = document.createElement('div');
             item.className = 'ranked-item';
 
+            let scoreHTML = '';
+            if (appMode === 'decide') {
+                scoreHTML = `
+                    <div class="score-bar-bg">
+                        <div class="score-bar-fill" style="width: ${mat.matchScore}%"></div>
+                    </div>
+                    <span class="score-text">${mat.matchScore}% ${uiDict.match}</span>
+                `;
+            }
+
             item.innerHTML = `
                 <div class="rank-number">${index + 1}</div>
                 <div class="rank-details">
                     <h3>${mat.name}</h3>
                     <p>${mat.why}</p>
-                    <div class="score-bar-bg">
-                        <div class="score-bar-fill" style="width: ${mat.matchScore}%"></div>
-                    </div>
-                    <span class="score-text">${mat.matchScore}% ${uiDict.match}</span>
+                    ${scoreHTML}
                 </div>
                 <div class="rank-actions">
                     <button class="btn-primary btn-view-details" data-id="${mat.id}">${uiDict.btnViewDetails}</button>
@@ -396,12 +452,35 @@ document.addEventListener('DOMContentLoaded', () => {
     /* STEP 4: DETAIL VIEW */
     function showDetailView(mat) {
         document.getElementById('res-title').textContent = mat.name;
-        document.getElementById('res-score').textContent = mat.matchScore;
+        const scoreBadge = document.querySelector('.score-badge');
+        if (appMode === 'decide') {
+            scoreBadge.style.display = 'inline-block';
+            document.getElementById('res-score').textContent = mat.matchScore;
+        } else {
+            scoreBadge.style.display = 'none';
+        }
         document.getElementById('res-why').textContent = mat.why;
 
         // Render Lists
         document.getElementById('res-strengths').innerHTML = mat.strengths.map(s => `<li>${s}</li>`).join('');
         document.getElementById('res-limitations').innerHTML = mat.limitations.map(l => `<li>${l}</li>`).join('');
+
+        // Benefit-Risk Indicators
+        const brContainer = document.getElementById('res-benefit-risk');
+        if (brContainer && mat.metrics2D) {
+            const benPct = (mat.metrics2D.benefit / 5) * 100;
+            const riskPct = (mat.metrics2D.riskAwareness / 5) * 100;
+            brContainer.innerHTML = `
+                <div class="br-indicator">
+                    <div class="br-label">${uiDict.benefit || "Benefit"}</div>
+                    <div class="br-bar-bg"><div class="br-bar-fill ben-fill" style="width: ${benPct}%"></div></div>
+                </div>
+                <div class="br-indicator">
+                    <div class="br-label">${uiDict.risk || "Risk Awareness"}</div>
+                    <div class="br-bar-bg"><div class="br-bar-fill risk-fill" style="width: ${riskPct}%"></div></div>
+                </div>
+            `;
+        }
 
         document.getElementById('res-properties').innerHTML = currentApp.targetProperties.map((prop, idx) => {
             const score = mat.propertyScores[idx] || 3;
@@ -511,4 +590,112 @@ document.addEventListener('DOMContentLoaded', () => {
             themeToggleBtn.textContent = uiDict.themeLight;
         }
     }
+
+    // I18N Helper
+    window.getUiDict = function() {
+        return uiDict;
+    }
 });
+
+    /* 2D Property Chart Rendering */
+    function draw2DChart(canvasId, materials) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const width = canvas.width;
+        const height = canvas.height;
+
+        ctx.clearRect(0, 0, width, height);
+
+        // Configuration
+        const padding = 40;
+        const plotWidth = width - padding * 2;
+        const plotHeight = height - padding * 2;
+        const minVal = 0;
+        const maxVal = 6; // To give some space above 5
+
+        // Draw Axes
+        ctx.beginPath();
+        ctx.moveTo(padding, padding);
+        ctx.lineTo(padding, height - padding);
+        ctx.lineTo(width - padding, height - padding);
+        ctx.strokeStyle = getComputedStyle(document.body).getPropertyValue('--text-secondary').trim();
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // Axis Labels
+        ctx.fillStyle = getComputedStyle(document.body).getPropertyValue('--text-primary').trim();
+        ctx.font = '12px Inter, sans-serif';
+        ctx.textAlign = 'center';
+
+        // I18N context
+        const localUiDict = (typeof window.getUiDict === 'function') ? window.getUiDict() : {};
+
+        // X-axis label
+        ctx.fillText(localUiDict.axisSynth || "Synthesis Feasibility →", width / 2, height - padding / 3);
+
+        // Y-axis label
+        ctx.save();
+        ctx.translate(padding / 3, height / 2);
+        ctx.rotate(-Math.PI / 2);
+        ctx.fillText(localUiDict.axisPerf || "Performance →", 0, 0);
+        ctx.restore();
+
+        // Draw Grid Lines (optional, but good for Ashby charts)
+        ctx.strokeStyle = getComputedStyle(document.body).getPropertyValue('--border-color').trim();
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+
+        for (let i = 1; i <= 5; i++) {
+            // X grid
+            const x = padding + (i / maxVal) * plotWidth;
+            ctx.beginPath(); ctx.moveTo(x, padding); ctx.lineTo(x, height - padding); ctx.stroke();
+
+            // Y grid
+            const y = height - padding - (i / maxVal) * plotHeight;
+            ctx.beginPath(); ctx.moveTo(padding, y); ctx.lineTo(width - padding, y); ctx.stroke();
+        }
+        ctx.setLineDash([]);
+
+        // Colors corresponding to the radar chart
+        const colors = [
+            'rgba(59, 130, 246, 0.8)', // blue-500
+            'rgba(34, 197, 94, 0.8)',  // green-500
+            'rgba(249, 115, 22, 0.8)'  // orange-500
+        ];
+
+        // Plot Points
+        materials.forEach((mat, idx) => {
+            if (!mat.metrics2D) return;
+
+            const xVal = mat.metrics2D.synthesisFeasibility;
+            const yVal = mat.metrics2D.performance;
+            const bubbleSize = (mat.metrics2D.benefit || 3) * 4; // Using benefit for bubble size
+
+            const x = padding + (xVal / maxVal) * plotWidth;
+            const y = height - padding - (yVal / maxVal) * plotHeight;
+
+            ctx.beginPath();
+            ctx.arc(x, y, bubbleSize, 0, 2 * Math.PI);
+            ctx.fillStyle = colors[idx % colors.length];
+            ctx.fill();
+
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Label
+            ctx.fillStyle = getComputedStyle(document.body).getPropertyValue('--text-primary').trim();
+            ctx.font = '10px Inter, sans-serif';
+            ctx.textAlign = 'left';
+
+            // Text background for readability
+            const txt = `M${idx + 1}`;
+            const txtWidth = ctx.measureText(txt).width;
+            ctx.fillStyle = getComputedStyle(document.body).getPropertyValue('--card-bg').trim();
+            ctx.fillRect(x + bubbleSize + 2, y - 5, txtWidth + 4, 10);
+
+            ctx.fillStyle = getComputedStyle(document.body).getPropertyValue('--text-primary').trim();
+            ctx.fillText(txt, x + bubbleSize + 4, y + 4);
+        });
+    }
