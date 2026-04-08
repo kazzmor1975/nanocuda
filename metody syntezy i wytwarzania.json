@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "question": "Które stwierdzenie najlepiej opisuje podejście top-down w syntezie nanomateriałów?",
+    "options": [
+      "Rozdrabnianie materiału masowego do skali nano za pomocą metod fizycznych lub mechanicznych",
+      "Samorzutne łączenie atomów w nanostruktury w roztworze",
+      "Syntezę z wykorzystaniem organizmów żywych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Które stwierdzenie najlepiej opisuje podejście bottom-up?",
+    "options": [
+      "Budowanie nanostruktur z atomów, jonów lub cząsteczek poprzez reakcje chemiczne lub samoorganizację",
+      "Mechaniczne szlifowanie kryształów do nanometrowych rozmiarów",
+      "Obróbkę cieplną materiału masowego w próżni bez reakcji chemicznych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Który z poniższych procesów jest klasycznym przykładem metody top-down?",
+    "options": [
+      "Mielenie kulowe (high-energy ball milling)",
+      "Sol-gel",
+      "Hydrotermalna synteza w autoklawie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Który proces jest typową metodą bottom-up?",
+    "options": [
+      "Chemical Vapor Deposition (CVD)",
+      "Frezowanie mechaniczne",
+      "Piaskowanie powierzchni"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "Do jakiej głównej kategorii zalicza się metoda ball milling w syntezie nanocząstek?",
+    "options": [
+      "Fizyczna metoda top-down",
+      "Chemiczna metoda bottom-up",
+      "Biologiczna metoda green synthesis"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Sol-gel to przede wszystkim:",
+    "options": [
+      "Chemiczna metoda bottom-up oparta na przejściu zolu w żel",
+      "Metoda fizycznego odparowania metalu w próżni",
+      "Biologiczna metoda z użyciem bakterii"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Które z poniższych najlepiej opisuje hydrotermalną syntezę nanomateriałów?",
+    "options": [
+      "Reakcje w zamkniętym autoklawie przy wysokiej temperaturze i ciśnieniu, często w wodzie jako rozpuszczalniku",
+      "Wzrost warstw w ultra-wysokiej próżni z wiązki molekularnej",
+      "Bezpośrednie napylanie metalu w temperaturze pokojowej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Chemical Vapor Deposition (CVD) polega na:",
+    "options": [
+      "Rozkładzie lub reakcji gazowych prekursorów na gorącym podłożu, prowadzącym do osadzania warstwy stałej",
+      "Napylaniu metalu z fazy ciekłej na zimną powierzchnię",
+      "Rozdrabnianiu masy proszku w młynie kulowym"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "Physical Vapor Deposition (PVD) to przede wszystkim:",
+    "options": [
+      "Fizyczne odparowanie lub rozpylanie materiału i jego kondensacja jako cienkiej warstwy",
+      "Roztworowa reakcja chemiczna prowadząca do żelu",
+      "Biologiczne wytwarzanie nanocząstek przez rośliny"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Która metoda jest przykładem chemicznej metody bottom-up w roztworze?",
+    "options": [
+      "Współstrącanie (co-precipitation)",
+      "Litografia optyczna",
+      "Laserowa ablacja w próżni"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Co charakteryzuje metodę współstrącania (co-precipitation)?",
+    "options": [
+      "Równoczesne wytrącanie kilku jonów z roztworu, tworzące nanocząstki po suszeniu i obróbce cieplnej",
+      "Napylanie jonowe materiału na podłoże",
+      "Samorzutne samoorganizowanie lipidów w micelle"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Metoda mikroemulsji (microemulsion) wykorzystuje:",
+    "options": [
+      "Krople fazy wodnej lub olejowej stabilizowane surfaktantami jako nanoreaktory",
+      "Wyłącznie wysoką próżnię i wiązki jonowe",
+      "Bezpośrednie napylanie metodą magnetronową"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 13,
+    "question": "Która technika syntezy często wykorzystuje fale ultradźwiękowe do inicjowania reakcji?",
+    "options": [
+      "Metoda sonochemiczna",
+      "Metoda sol-gel",
+      "Ball milling"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 14,
+    "question": "Metoda syntezy z użyciem promieniowania mikrofalowego (microwave-assisted) daje zwykle:",
+    "options": [
+      "Szybkie nagrzewanie objętościowe i skrócony czas syntezy",
+      "Wyłącznie chłodzenie próbki",
+      "Niższe zużycie rozpuszczalników kosztem bardzo długiego czasu reakcji"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Która z metod syntezy nanomateriałów opiera się na wykorzystaniu organizmów żywych lub ekstraktów roślinnych?",
+    "options": [
+      "Biologiczna green synthesis",
+      "Physical Vapor Deposition",
+      "Laserowa ablacja"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 16,
+    "question": "Zaletą biologicznej syntezy nanocząstek metali jest przede wszystkim:",
+    "options": [
+      "Łagodniejsze warunki, brak toksycznych reagentów i naturalne ligandy stabilizujące",
+      "Wyłącznie najwyższa możliwa czystość krystaliczna",
+      "Pełna kontrola kształtu bez potrzeby optymalizacji parametrów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 17,
+    "question": "Która metoda jest typowo używana do wzrostu cienkich warstw krystalicznych półprzewodników III-V?",
+    "options": [
+      "Epitaksja z wiązki molekularnej (MBE)",
+      "Ball milling",
+      "Elektroprzędzenie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "Która metoda pozwala w prosty sposób wytwarzać nanowłókna polimerowe?",
+    "options": [
+      "Elektroprzędzenie (electrospinning)",
+      "Sol-gel",
+      "Litografia elektronowa"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "W której metodzie syntezy parametrami kluczowymi są nadmiar prekursorów, szybkość nukleacji i wzrostu ziaren w roztworze?",
+    "options": [
+      "Chemiczna synteza w roztworze (np. redukcja metali, współstrącanie)",
+      "Ball milling",
+      "Napylanie katodowe"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Główną zaletą metod fizycznych typu odparowanie–kondensacja (PVD, ablacja laserowa) jest:",
+    "options": [
+      "Wysoka czystość produktów, bez dodatkowych reagentów chemicznych",
+      "Zawsze niska energochłonność procesu",
+      "Pełna biodegradowalność produktów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Który z poniższych procesów należy do top-down i jest stosowany do miniaturyzacji struktur litograficznych?",
+    "options": [
+      "Litografia i trawienie",
+      "Sol-gel",
+      "Hydrotermalne wygrzewanie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 22,
+    "question": "Metaliczne nanocząstki srebra wytwarzane przez redukcję Ag+ w roztworze to przykład:",
+    "options": [
+      "Chemicznej metody bottom-up",
+      "Fizycznej metody top-down",
+      "Biologicznej epitaksji"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 23,
+    "question": "Która metoda jest szczególnie użyteczna do wytwarzania nanocząstek tlenków metali o kontrolowanym kształcie przy użyciu wysokiej temperatury i ciśnienia w roztworze?",
+    "options": [
+      "Hydrotermalna synteza",
+      "Ball milling",
+      "PVD"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 24,
+    "question": "Co jest charakterystyczne dla metody sol-gel przy syntezie tlenków?",
+    "options": [
+      "Przejście zolu w sieć żelową poprzez hydrolizę i kondensację prekursorów",
+      "Bezpośrednie odparowanie stopionego metalu",
+      "Użycie bakterii do redukcji jonów metali"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 25,
+    "question": "Która metoda bottom-up jest często wykorzystywana do wzrostu nanorurek węglowych?",
+    "options": [
+      "Chemical Vapor Deposition (CVD) na katalizatorach metalicznych",
+      "Laserowa ablacja w wodzie",
+      "Ball milling grafitu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 26,
+    "question": "W metodzie ball milling dla uzyskania nanocząstek kluczowym parametrem jest:",
+    "options": [
+      "Energia i czas mielenia oraz stosunek masy kulek do proszku",
+      "Stężenie bakterii w roztworze",
+      "Moc lasera UV"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 27,
+    "question": "Które z poniższych jest przykładem metody 'green synthesis' nanocząstek srebra?",
+    "options": [
+      "Redukcja Ag+ ekstraktem roślinnym zawierającym polifenole",
+      "Napylanie katodowe Ag w próżni",
+      "Elektroprzędzenie roztworu PVA"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 28,
+    "question": "Która metoda bottom-up charakteryzuje się osadzaniem warstw atom po atomie przy użyciu sekwencyjnych impulsów prekursorów?",
+    "options": [
+      "Atomic Layer Deposition (ALD)",
+      "Ball milling",
+      "Elektroprzędzenie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 29,
+    "question": "Elektrochemiczne osadzanie (electrodeposition) nanomateriałów to przykład:",
+    "options": [
+      "Metody bottom-up wykorzystującej reakcje elektrochemiczne na elektrodzie",
+      "Metody top-down mechanicznego rozdrabniania",
+      "Biologicznej syntezy enzymatycznej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "Czy metoda hydrotermalna jest zwykle klasyfikowana jako:",
+    "options": [
+      "Chemiczna metoda bottom-up w fazie ciekłej",
+      "Fizyczna metoda top-down w próżni",
+      "Biologiczna metoda z wykorzystaniem bakterii"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Które z poniższych stanowi główną wadę wielu metod fizycznych top-down, jak ball milling?",
+    "options": [
+      "Szeroki rozkład rozmiarów i możliwe defekty powierzchni",
+      "Niemożność skalowania do większych ilości",
+      "Zawsze obecność toksycznych prekursorów gazowych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Która zaleta wyróżnia metody typu CVD i ALD w porównaniu z prostą redukcją w roztworze?",
+    "options": [
+      "Bardzo dobra kontrola grubości i jednorodności cienkich warstw",
+      "Brak potrzeby stosowania wysokiej temperatury",
+      "Brak konieczności użycia jakichkolwiek prekursorów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Która z metod jest przykładem fizycznego top-down bez udziału chemii roztworów?",
+    "options": [
+      "Laserowa ablacja tarczy w próżni",
+      "Sol-gel",
+      "Biologiczna synteza z użyciem drożdży"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 34,
+    "question": "W hydrotermalnej syntezie nanorurek lub nanokryształów zwykle kontroluje się:",
+    "options": [
+      "Temperaturę, ciśnienie, czas wygrzewania i skład roztworu",
+      "Wyłącznie natężenie prądu elektrycznego",
+      "Jedynie ilość powietrza nad roztworem"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "Która metoda wytwarzania nanostruktur przypomina naturalne procesy biomineralizacji?",
+    "options": [
+      "Biologiczna synteza wykorzystująca mikroorganizmy lub rośliny",
+      "PVD w ultra-wysokiej próżni",
+      "Litografia rentgenowska"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Co jest typowym rozpuszczalnikiem w klasycznej hydrotermalnej syntezie tlenków metali?",
+    "options": [
+      "Woda",
+      "Benzen",
+      "Acetonitryl w fazie nadkrytycznej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 37,
+    "question": "W metodach typu mikroemulsja granice kropli pełnią rolę:",
+    "options": [
+      "Nanoreaktorów kontrolujących rozmiar powstających nanocząstek",
+      "Źródła promieniowania jonizującego",
+      "Czynnika mechanicznego rozdrabniającego kryształy"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Która metoda bottom-up szczególnie nadaje się do wytwarzania nanocząstek związków metali szlachetnych o wąskim rozkładzie rozmiarów?",
+    "options": [
+      "Chemiczna redukcja metali w roztworze z użyciem reduktora i liganda ochronnego",
+      "Ball milling stopu metalu",
+      "Napylanie magnezowe"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 39,
+    "question": "W CVD parametrami kluczowymi dla kontroli składu i morfologii są:",
+    "options": [
+      "Rodzaj gazów prekursorowych, temperatura podłoża i czas osadzania",
+      "Wyłącznie pH roztworu",
+      "Tylko prędkość wirowania wirówki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 40,
+    "question": "Która metoda może być traktowana jako szczególnie energochłonna, ale dająca materiały o wysokiej czystości?",
+    "options": [
+      "Fizyczne metody top-down, takie jak laserowa ablacja i odparowanie w próżni",
+      "Biologiczna synteza z użyciem ekstraktu roślinnego",
+      "Współstrącanie w temperaturze pokojowej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 41,
+    "question": "Który opis odpowiada metodzie 'spray pyrolysis'?",
+    "options": [
+      "Rozpylanie roztworu prekursora w gorącej strefie, gdzie krople ulegają odparowaniu i rozkładowi do nanocząstek",
+      "Rozdrabnianie materiału w młynie kulowym",
+      "Syntezę nanocząstek w bakteriach glebowych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "Co jest wspólne dla większości chemicznych metod bottom-up (sol-gel, współstrącanie, mikroemulsje)?",
+    "options": [
+      "Reakcje przebiegają w fazie ciekłej i obejmują nukleację oraz wzrost cząstek",
+      "Wymagają wyłącznie próżni i wysokiej energii wiązek",
+      "Nie wykorzystują żadnych prekursorów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 43,
+    "question": "Który przykład jest typową metodą otrzymywania nanocząstek tlenków metali o kontrolowanym rozmiarze bez użycia skomplikowanej aparatury próżniowej?",
+    "options": [
+      "Hydrotermalna synteza w autoklawie laboratoryjnym",
+      "MBE",
+      "PVD z wiązki elektronowej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 44,
+    "question": "Które stwierdzenie najlepiej opisuje kompromis między metodami top-down i bottom-up?",
+    "options": [
+      "Top-down daje często prostszą skalowalność, bottom-up – lepszą kontrolę składu i morfologii",
+      "Top-down daje zawsze najwyższą jednorodność, bottom-up zawsze najgorszą",
+      "Bottom-up nie nadaje się do syntezy żadnych tlenków metali"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 45,
+    "question": "Biologiczna synteza nanocząstek metali przez rośliny lub mikroorganizmy polega zwykle na:",
+    "options": [
+      "Redukcji jonów metali przez metabolity lub enzymy i stabilizacji otrzymanych jąder przez białka/cukry",
+      "Napylaniu metalu w próżni na liście roślin",
+      "Użyciu tylko wysokotemperaturowej plazmy"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "Która metoda bottom-up jest szczególnie odpowiednia do otrzymywania porowatych żeli i aerożeli krzemionkowych?",
+    "options": [
+      "Sol-gel z odpowiednim suszeniem i kalcynacją",
+      "Ball milling",
+      "Laserowa ablacja"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 47,
+    "question": "W metodzie ALD (Atomic Layer Deposition) grubość warstwy rośnie:",
+    "options": [
+      "Liniowo z liczbą cykli, zazwyczaj o ułamek nanometra na cykl",
+      "Nieliniowo i skokowo o setki nm na cykl",
+      "Tylko wtedy, gdy temperatura jest poniżej 0°C"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Które z poniższych jest prostą metodą top-down stosowaną do otrzymywania nanostruktur z grafitu?",
+    "options": [
+      "Mechaniczne lub chemiczne złuszczanie (exfoliation)",
+      "Hydrotermalna synteza z prekursorów krzemianowych",
+      "Sol-gel z alkoksydów tytanu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Która metoda bottom-up jest często wykorzystywana do wytwarzania metalicznych nanocząstek w osnowie polimerowej?",
+    "options": [
+      "In situ redukcja jonów metali w matrycy polimerowej",
+      "Ball milling polimeru z metalem",
+      "PVD metalu na gotowym kompozycie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 50,
+    "question": "Dlaczego w praktyce często łączy się metody top-down i bottom-up w jednym procesie technologicznym?",
+    "options": [
+      "Aby wykorzystać zalety obu podejść: dokładną kontrolę nanoarchitektury i skalowalność produkcji",
+      "Ponieważ pojedyncza metoda nie jest dopuszczalna regulacyjnie",
+      "Ponieważ metody bottom-up nie pozwalają na wytwarzanie nanostruktur"
+    ],
+    "correctIndex": 0
+  }
+]

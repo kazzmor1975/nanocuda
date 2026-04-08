@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "question": "Jaka jest jedna z głównych zalet nanonośników leków w terapii nowotworów?",
+    "options": [
+      "Umożliwiają celowane dostarczanie leku do guza przy mniejszej toksyczności dla zdrowych tkanek",
+      "Zwiększają przypadkowe odkładanie leku w całym organizmie",
+      "Uniemożliwiają jednoczesne stosowanie kilku leków"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Do czego wykorzystuje się nanocząstki żelaza lub tlenku żelaza w medycynie obrazowej?",
+    "options": [
+      "Jako środki kontrastujące w obrazowaniu MRI",
+      "Jako źródło promieniowania gamma w PET",
+      "Wyłącznie jako nośniki tlenu w krwiobiegu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Liposomy i nanonośniki polimerowe są najczęściej stosowane jako:",
+    "options": [
+      "Systemy kontrolowanego uwalniania leków",
+      "Materiały konstrukcyjne w mostach",
+      "Wyłączne źródło energii w ogniwach paliwowych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Jaką rolę pełnią nanocząstki złota w terapii fototermicznej?",
+    "options": [
+      "Pochłaniają światło i przekształcają je w ciepło lokalnie niszcząc komórki nowotworowe",
+      "Działają tylko jako pasywny materiał wypełniający",
+      "Stają się źródłem promieniowania rentgenowskiego"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "Dlaczego nanocząstki srebra są szeroko używane w opatrunkach i powłokach medycznych?",
+    "options": [
+      "Posiadają silne działanie przeciwbakteryjne dzięki uwalnianiu jonów Ag+",
+      "Zwiększają przewodność elektryczną skóry",
+      "Zapewniają wyłącznie efekt barwiący bez aktywności biologicznej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Jak nanotechnologia poprawia sprawność ogniw słonecznych?",
+    "options": [
+      "Poprzez zastosowanie nanostrukturalnych warstw światłochłonnych i antyrefleksyjnych zwiększających absorpcję światła",
+      "Wyłącznie przez zmianę koloru ogniw",
+      "Poprzez użycie grubszych warstw krzemu bez zmian struktury"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Jaką funkcję pełnią nanorurki węglowe w kompozytowych elektrodach baterii i superkondensatorów?",
+    "options": [
+      "Poprawiają przewodnictwo elektryczne i zapewniają sieć transportu ładunku",
+      "Służą jako źródło elektrolitu ciekłego",
+      "Działają wyłącznie jako barwnik"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Jak nanofiltry są wykorzystywane w uzdatnianiu wody?",
+    "options": [
+      "Usuwają jony, metale ciężkie i mikro‑zanieczyszczenia dzięki porom o rozmiarach nanometrowych",
+      "Dodają wodzie nanocząstki metali w celu poprawy smaku",
+      "Zwiększają wyłącznie temperaturę wody"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "Jak nanocząstki TiO2 stosuje się w samooczyszczających się powłokach i szybach?",
+    "options": [
+      "Jako fotokatalizator rozkładający zanieczyszczenia organiczne pod wpływem UV",
+      "Jako izolator termiczny zatrzymujący całkowicie przewodnictwo cieplne",
+      "Jako wyłącznie biały pigment bez dodatkowych funkcji"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Jaką zaletę daje zastosowanie nanocząstek ZnO i TiO2 w kremach przeciwsłonecznych?",
+    "options": [
+      "Skuteczne blokowanie promieniowania UV przy jednoczesnej przezroczystości preparatu",
+      "Zabarwienie skóry na trwały biały kolor",
+      "Zwiększenie przepuszczalności UV przez skórę"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Jak nanocząstki stosuje się w katalizatorach samochodowych?",
+    "options": [
+      "Zwiększają powierzchnię aktywną katalizatora, poprawiając redukcję NOx i utlenianie CO/HC",
+      "Służą tylko jako materiał konstrukcyjny obudowy katalizatora",
+      "Zastępują całkowicie metale szlachetne"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Jak nanocząstki wykorzystywane są w czujnikach chemicznych i biosensorach?",
+    "options": [
+      "Zwiększają czułość i selektywność dzięki dużej powierzchni i właściwościom elektrycznym/opt., umożliwiając detekcję bardzo niskich stężeń",
+      "Pełnią rolę wyłącznie mechanicznego wzmocnienia obudowy czujnika",
+      "Służą tylko jako barwnik wskaźnikowy"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 13,
+    "question": "Które zastosowanie nanotechnologii dotyczy poprawy własności mechanicznych materiałów konstrukcyjnych?",
+    "options": [
+      "Nanokompozyty polimerowe i metalowe z nanonapełniaczami wzmacniającymi",
+      "Wyłącznie stosowanie grubych powłok lakierniczych",
+      "Zastąpienie wszystkich dodatków mikro wypełniaczami"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 14,
+    "question": "Jak nanocząstki stosuje się w tekstyliach funkcyjnych?",
+    "options": [
+      "Nadają właściwości antybakteryjne, hydrofobowe lub chroniące przed UV przy zachowaniu miękkości tkaniny",
+      "Służą tylko do zmiany koloru włókien",
+      "Zawsze zwiększają palność tkanin"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Dlaczego nanocząstki srebra stosuje się w lodówkach, pralkach i filtrach powietrza?",
+    "options": [
+      "Redukują rozwój mikroorganizmów na powierzchniach roboczych",
+      "Zmniejszają zużycie energii elektrycznej przez urządzenie dzięki nadprzewodnictwu",
+      "Stabilizują kolor elementów plastikowych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 16,
+    "question": "Jak nanotechnologia wspiera rozwój leków o przedłużonym uwalnianiu?",
+    "options": [
+      "Nanonośniki kontrolują szybkość dyfuzji leku i mogą reagować na bodźce (pH, temperatura)",
+      "Leki są po prostu rozpuszczane w większej ilości wody",
+      "Zmniejsza się dawkę bez zmiany formy leku"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 17,
+    "question": "Jaką rolę pełnią nanocząstki w nowoczesnych materiałach opakowaniowych do żywności?",
+    "options": [
+      "Poprawiają barierowość dla tlenu/wody i mogą mieć działanie przeciwdrobnoustrojowe",
+      "Zmniejszają wytrzymałość mechaniczną opakowania",
+      "Nadają wyłącznie efekt fluorescencyjny"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "W jaki sposób nanotechnologia pomaga w usuwaniu zanieczyszczeń z wody?",
+    "options": [
+      "Nanoadsorbenty i nanofiltry wiążą metale ciężkie, barwniki i mikro‑zanieczyszczenia organiczne",
+      "Nanocząstki zwiększają rozpuszczalność wszystkich zanieczyszczeń",
+      "Zastępują proces filtracji mechanicznym mieszaniem"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "Jak nanomateriały wykorzystywane są w wychwycie CO2?",
+    "options": [
+      "Jako porowate adsorbenty o wysokiej pojemności sorpcyjnej",
+      "Tylko jako barwnik do oznaczania obecności CO2",
+      "Nie mają zastosowania w tym obszarze"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Jaką rolę pełnią nanostruktury w nowoczesnych diodach LED i laserach?",
+    "options": [
+      "Umożliwiają lepszą kontrolę emisji światła i wydajności dzięki kwantowym studniom i kropkom",
+      "Zastępują całkowicie warstwy półprzewodnikowe metalem masowym",
+      "Służą tylko jako elementy chłodzące"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Zastosowanie nanotechnologii w diagnostyce in vitro (np. lab-on-a-chip) pozwala na:",
+    "options": [
+      "Szybką i czułą detekcję biomarkerów przy małej objętości próbki",
+      "Zmniejszenie czułości testów w stosunku do metod klasycznych",
+      "Wyłącznie powiększenie rozmiaru urządzeń diagnostycznych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 22,
+    "question": "Jak nanosensory są wykorzystywane w rolnictwie precyzyjnym?",
+    "options": [
+      "Monitorują poziom wilgotności, składników odżywczych i obecność patogenów w glebie",
+      "Służą tylko do oznaczania kolorów nasion",
+      "Wytwarzają nawozy bezpośrednio w glebie z powietrza"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 23,
+    "question": "Jak nanotechnologia wpływa na rozwój ogniw paliwowych?",
+    "options": [
+      "Nanokatalizatory (np. Pt/C) zwiększają aktywność elektrochemiczną i zmniejszają ilość metali szlachetnych",
+      "Zastępuje elektrolit cieczą o dużej lepkości",
+      "Umożliwia pracę ogniw tylko w niskich temperaturach"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 24,
+    "question": "Jaką funkcję mogą pełnić nanocząstki w materiałach stomatologicznych (np. kompozytach wypełnieniowych)?",
+    "options": [
+      "Zwiększają wytrzymałość mechanicz­ną, odporność na ścieranie i estetykę",
+      "Zmniejszają adhezję do zęba",
+      "Nadają materiałowi przewodnictwo nadprzewodzące"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 25,
+    "question": "Jak nanocząstki wykorzystywane są w tzw. smart coatings na szybach i elewacjach?",
+    "options": [
+      "Nadają własności samoczyszczące, antyrefleksyjne lub regulujące przepuszczalność ciepła",
+      "Zwiększają wyłącznie masę konstrukcji",
+      "Sprawiają, że powierzchnia zawsze absorbuje wilgoć"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 26,
+    "question": "W jaki sposób nanotechnologia wspiera rozwój inteligentnych systemów dostarczania pestycydów?",
+    "options": [
+      "Nanonośniki umożliwiają kontrolowane, miejscowe uwalnianie substancji czynnych w roślinach",
+      "Zawsze zwiększają toksyczność dla wszystkich organizmów",
+      "Powodują samoistne rozpadanie się pestycydu w magazynie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 27,
+    "question": "Jak nanocząstki stosuje się w materiałach przeciwkorozyjnych?",
+    "options": [
+      "Jako pigmenty inhibitorowe i składniki powłok barierowych blokujących dyfuzję wilgoci i jonów",
+      "Wyłącznie jako barwniki dekoracyjne",
+      "Jako źródło gazu ochronnego w porach powłoki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 28,
+    "question": "Jak nanotechnologia jest wykorzystywana w systemach bezpieczeństwa żywności?",
+    "options": [
+      "Nanosensory i wskaźniki w inteligentnych opakowaniach monitorują świeżość i obecność patogenów",
+      "Nanocząstki nadają produktom intensywniejszy kolor bez innych korzyści",
+      "Zmniejszają wartość odżywczą żywności"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 29,
+    "question": "Jak nanotechnologia wspiera rozwój elastycznej elektroniki i wyświetlaczy?",
+    "options": [
+      "Nanoprzewodzące tusze i warstwy (np. nanodruty Ag, grafen) umożliwiają drukowane, zginane układy elektryczne",
+      "Pozwala jedynie na miniaturyzację baterii",
+      "Eliminuje potrzebę stosowania półprzewodników"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "Jak nanocząstki stosuje się w materiałach do magazynowania wodoru?",
+    "options": [
+      "Jako porowate sorbenty lub fazy stopów tworzące wodorki o dużej pojemności",
+      "Wyłącznie jako barwniki ostrzegawcze",
+      "Działają tylko jako katalizatory spalania wodoru"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "W jaki sposób nanotechnologia poprawia efektywność izolacji cieplnych?",
+    "options": [
+      "Nanoporowate aerogele i powłoki ograniczają przewodnictwo cieplne dzięki uwięzieniu powietrza i fal cieplnych",
+      "Zwiększa przewodnictwo cieplne w celu szybkiego wyrównania temperatury",
+      "Wymaga zastosowania grubych warstw metali"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Jak nanocząstki stosowane są w medycynie regeneracyjnej (np. inżynierii tkankowej)?",
+    "options": [
+      "Jako składniki scaffoldów imitujących macierz zewnątrzkomórkową i dostarczające sygnały dla komórek",
+      "Wyłącznie jako kontrasty MRI",
+      "Jako substytut komórek macierzystych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Jak nanotechnologia pomaga w szybkim wykrywaniu chorób zakaźnych?",
+    "options": [
+      "Nanobiosensory i testy punktowe umożliwiają detekcję niskich stężeń patogenów w krótkim czasie",
+      "Zastępuje testy laboratoryjne zwykłym badaniem wzrokowym",
+      "Umożliwia tylko hodowlę bakterii"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 34,
+    "question": "Jak nanocząstki wykorzystywane są w terapii fotodynamicznej?",
+    "options": [
+      "Jako nośniki fotouczulaczy, które po naświetleniu generują reaktywne formy tlenu niszczące komórki",
+      "Jako wyłączne źródło promieniowania X",
+      "Jako izolatory elektryczne w obwodach"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "W jaki sposób nanotechnologia jest stosowana do tworzenia powierzchni antyadhezyjnych (np. przeciw osadzaniu się lodu lub zabrudzeń)?",
+    "options": [
+      "Nanostrukturyzowana chropowatość i odpowiednia chemia powierzchni powodują superhydrofobowość lub oleofobowość",
+      "Dodanie grubej warstwy gumy",
+      "Zwiększenie przewodnictwa cieplnego metalu bazowego"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Jak nanocząstki mogą poprawiać właściwości mechaniczne i antybakteryjne cementu kostnego w ortopedii?",
+    "options": [
+      "Dodatek nano‑hydroksyapatytu lub nano‑Ag poprawia integrację z kością i ogranicza infekcje",
+      "Obniżają moduł sprężystości do zera",
+      "Uniemożliwiają wiązanie cementu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 37,
+    "question": "Jakie jest typowe zastosowanie nanotechnologii w aparatach słuchowych i elektronice ubieralnej?",
+    "options": [
+      "Miniaturowe komponenty i nano‑akumulatory zwiększają czas pracy przy małej masie",
+      "Służą tylko jako dekoracyjne elementy świecące",
+      "Zastępują mikrofony głośnikami"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Jak nanotechnologia wspiera rozwój inteligentnych szyb w budownictwie energooszczędnym?",
+    "options": [
+      "Nanopowłoki reagujące na światło/temperaturę regulują przepuszczalność promieniowania cieplnego",
+      "Zwiększają grubość szkła bez zmiany właściwości",
+      "Umożliwiają jedynie zmianę koloru szyb"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 39,
+    "question": "Jaką funkcję pełnią nanocząstki w inteligentnych farbach antykorozyjnych do infrastruktury mostowej?",
+    "options": [
+      "Działają jako kapsułki samonaprawcze uwalniające inhibitor korozji w miejscu uszkodzenia powłoki",
+      "Zmniejszają przyczepność farby do podłoża",
+      "Zwiększają przewodność elektrochemiczną stali"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 40,
+    "question": "Zastosowanie nanotechnologii w kosmetykach do pielęgnacji skóry obejmuje m.in.:",
+    "options": [
+      "Nanoemulsje i nanokapsułki poprawiające przenikanie składników aktywnych",
+      "Wyłącznie dodatek nanometalicznych barwników",
+      "Zmniejszenie trwałości kosmetyku"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 41,
+    "question": "Jak nanocząstki stosowane są w systemach wykrywania gazów toksycznych?",
+    "options": [
+      "Nanostrukturalne warstwy półprzewodnikowe zmieniają przewodnictwo w obecności określonych gazów",
+      "Służą tylko jako filtry mechaniczne",
+      "Pochłaniają wszystkie gazy bez selektywności"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "Jak nanotechnologia pomaga w poprawie właściwości smarów i olejów silnikowych?",
+    "options": [
+      "Nanododatki zmniejszają tarcie i zużycie, tworząc warstwy ochronne na powierzchniach trących",
+      "Powoduje wzrost lepkości do wartości niesmarujących",
+      "Zwiększa jedynie przewodność elektryczną oleju"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 43,
+    "question": "Jak nanocząstki wykorzystywane są w medycznych robotach i systemach mikro‑/nano‑manipulacji?",
+    "options": [
+      "Jako elementy napędzane polami magnetycznymi/elektrycznymi do precyzyjnego dostarczania leków lub zabiegów",
+      "Jako pasywne wypełniacze bez funkcji",
+      "Wyłącznie jako źródło energii cieplnej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 44,
+    "question": "W jaki sposób nanotechnologia wspomaga rozwój wysokowydajnych materiałów do magazynowania energii elektrycznej?",
+    "options": [
+      "Nanostrukturalne elektrody zwiększają powierzchnię reakcji i skracają drogę dyfuzji jonów",
+      "Zwiększają opór wewnętrzny baterii",
+      "Zmniejszają liczbę cykli ładowania/rozładowania"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 45,
+    "question": "Jak nanocząstki stosuje się w systemach przeciwbiofilmowych w szpitalach?",
+    "options": [
+      "Jako powłoki antybakteryjne na powierzchniach sprzętu i implantów, ograniczając adhezję i wzrost biofilmu",
+      "Jako składniki pożywek bakteryjnych",
+      "Wyłącznie jako kontrast w obrazowaniu RTG"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "Jak nanotechnologia jest wykorzystywana w tworzeniu papieru i kart inteligentnych (RFID, smart cards)?",
+    "options": [
+      "Przewodzące nanopigmenty i tusze umożliwiają drukowane anteny i obwody",
+      "Nanocząstki zawsze izolują elektrycznie",
+      "Służy jedynie do wybielania papieru"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 47,
+    "question": "W jaki sposób nanotechnologia może poprawić skuteczność terapii genowej?",
+    "options": [
+      "Nanonośniki chronią materiał genetyczny i umożliwiają jego dostarczenie do konkretnych komórek",
+      "Nanocząstki zastępują całkowicie DNA pacjenta",
+      "Stosuje się je jedynie do barwienia próbek"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Jak nanotechnologia jest stosowana w nowoczesnych materiałach budowlanych?",
+    "options": [
+      "Nanonapełniacze poprawiają wytrzymałość, odporność na ogień i właściwości izolacyjne betonu i kompozytów",
+      "Nanocząstki służą tylko do barwienia tynków",
+      "Zmniejszają trwałość konstrukcji"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "W jaki sposób nanotechnologia wspiera rozwój biosensorów glukozy dla diabetyków?",
+    "options": [
+      "Nanomateriały (np. CNT, złoto) zwiększają powierzchnię elektrody i czułość enzymatycznej detekcji glukozy",
+      "Umożliwia jedynie zmianę koloru obudowy glukometru",
+      "Zastępuje enzymy czystym metalem"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 50,
+    "question": "Jak nanotechnologia jest wykorzystywana w systemach monitorowania środowiska?",
+    "options": [
+      "Nanosensory wykrywają śladowe stężenia zanieczyszczeń w powietrzu, wodzie i glebie",
+      "Nanocząstki powodują większe ukrycie zanieczyszczeń",
+      "Stosuje się je wyłącznie w systemach ogrzewania"
+    ],
+    "correctIndex": 0
+  }
+]

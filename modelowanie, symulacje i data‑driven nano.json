@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "question": "Co jest głównym celem modelowania i symulacji w nanoinżynierii materiałowej?",
+    "options": [
+      "Przewidywanie właściwości i zachowania nanomateriałów bez konieczności wykonania wszystkich eksperymentów",
+      "Zastąpienie wszystkich badań eksperymentalnych marketingiem",
+      "Wyłącznie wizualizacja 3D cząstek na potrzeby grafiki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Molecular Dynamics (MD) to metoda, która:",
+    "options": [
+      "Śledzi ruch atomów/cząsteczek w czasie poprzez numeryczne rozwiązywanie równań ruchu",
+      "Rozwiązuje wyłącznie równania Maxwella dla pola elektromagnetycznego",
+      "Opisuje tylko zjawiska w skali makroskopowej bez atomów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Metody Monte Carlo (MC) w modelowaniu nanomateriałów służą głównie do:",
+    "options": [
+      "Próbkowania przestrzeni konfiguracji i stanów układu przy użyciu losowych kroków",
+      "Śledzenia torów cząstek wyłącznie w czasie rzeczywistym",
+      "Analizy wyłącznie zjawisk falowych w optyce"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Density Functional Theory (DFT) w kontekście nanomateriałów służy do:",
+    "options": [
+      "Obliczania struktury elektronowej i energii układów na poziomie kwantowym",
+      "Symulowania przepływu płynów w rurach o dużej średnicy",
+      "Projektowania wyłącznie geometrii makroelementów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "Co oznacza pojęcie „multiscale modeling” w badaniach nanomateriałów?",
+    "options": [
+      "Łączenie modeli od skali atomowej do makroskopowej w celu opisania materiału w wielu skalach długości i czasu",
+      "Modelowanie tylko jednej skali, ale z różnymi kolorami",
+      "Zastąpienie modeli atomowych modelami marketingowymi"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Który typ symulacji jest szczególnie przydatny do badania dyfuzji jonów i molekuł w nanoporach?",
+    "options": [
+      "Molecular Dynamics (MD)",
+      "Metody elementów skończonych (FEM) bez poziomu atomowego",
+      "Proste równania liniowe bez dynamiki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Phase‑field modeling (PFM) stosuje się w nanomateriałach głównie do:",
+    "options": [
+      "Symulacji ewolucji mikrostruktury i frontów fazowych w czasie",
+      "Obliczeń wyłącznie gęstości elektronowej",
+      "Projektowania układów obwodów elektrycznych na PCB"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Co jest typowym wejściem (features) w modelach machine learning dla materials informatics?",
+    "options": [
+      "Deskryptory struktury i składu, takie jak skład pierwiastkowy, parametry sieci czy cechy powierzchniowe",
+      "Losowe liczby bez związku z materiałem",
+      "Wyłącznie nazwa producenta materiału"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "Jaki jest główny cel podejścia data‑driven w projektowaniu nanomateriałów?",
+    "options": [
+      "Wykorzystanie istniejących danych eksperymentalnych i obliczeniowych do trenowania modeli przewidujących właściwości i optymalne składy",
+      "Zbieranie danych tylko do archiwum bez analizy",
+      "Zastąpienie wszystkich modeli fizycznych zgadywaniem"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Który rodzaj algorytmu ML jest często używany do przewidywania właściwości nanomateriałów na podstawie wielu zmiennych wejściowych?",
+    "options": [
+      "Regresja (np. lasy losowe, sieci neuronowe)",
+      "Algorytmy sortowania bąbelkowego",
+      "Algorytmy kompresji bezstratnej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Co oznacza termin „surrogate model” w kontekście symulacji nanomateriałów?",
+    "options": [
+      "Przybliżony model ML zastępujący kosztowne obliczenia fizyczne lub kwantowe",
+      "Model graficzny do tworzenia animacji",
+      "Model opisujący wyłącznie koszty produkcji"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Które z poniższych najlepiej opisuje podejście „inverse design” z użyciem ML w nanomateriałach?",
+    "options": [
+      "Poszukiwanie struktury i składu materiału odpowiadających zadanym docelowym właściwościom",
+      "Zawsze preferowanie znanych materiałów zamiast nowych",
+      "Projektowanie wyłącznie kształtu makroelementów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 13,
+    "question": "Jaką rolę pełni coarse‑grained (CG) modeling w symulacjach nanomateriałów?",
+    "options": [
+      "Uproszczenie opisu układu przez grupowanie wielu atomów w pojedyncze „ziarna”, umożliwiające symulacje większych skal",
+      "Zastąpienie atomów idealnymi kulkami bez żadnych oddziaływań",
+      "Symulacje tylko pojedynczego atomu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 14,
+    "question": "Które stwierdzenie najlepiej opisuje bazę danych Materials Project lub podobne bazy w kontekście data‑driven nano?",
+    "options": [
+      "Zawierają obliczone metodami DFT właściwości tysięcy materiałów i służą jako źródło danych do trenowania modeli",
+      "Są tylko katalogiem nazw firm",
+      "Przechowują wyłącznie zdjęcia próbek"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Co jest typową miarą jakości modelu predykcyjnego w materials informatics?",
+    "options": [
+      "Błąd predykcji (np. RMSE, MAE) na zbiorze testowym",
+      "Liczba linii kodu w programie",
+      "Rozdzielczość ekranu, na którym prezentuje się wyniki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 16,
+    "question": "Które podejście łączy obliczenia DFT z ML, aby przyspieszyć przeszukiwanie przestrzeni składu nanomateriałów?",
+    "options": [
+      "Iteracyjne generowanie danych DFT, trenowanie modelu ML i eksploracja nowych kandydatów (active learning)",
+      "Losowe wybieranie materiałów bez aktualizacji modelu",
+      "Zastąpienie obliczeń DFT całkowitym brakiem danych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 17,
+    "question": "Modelowanie atomistyczne nanomateriałów metalicznych często wykorzystuje potencjały:",
+    "options": [
+      "Empiryczne (np. EAM, ReaxFF) lub półempiryczne dopasowane do danych kwantowych",
+      "Wyłącznie harmoniczne sprężyny bez parametrów",
+      "Modele ignorujące oddziaływania między atomami"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "Jakim zadaniem ML jest klasyfikacja faz krystalicznych na obrazach z mikroskopii elektronowej?",
+    "options": [
+      "Klasyfikacją (classification)",
+      "Regresją",
+      "Klasteryzacją bez nadzoru na liczbach porządkowych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "Czym różni się model continuum (np. FEM) od MD przy opisie deformacji nanokompozytu?",
+    "options": [
+      "Continuum używa pól ciągłych (naprężenie, odkształcenie), MD śledzi położenia pojedynczych atomów",
+      "Continuum opisuje wyłącznie zjawiska kwantowe",
+      "MD nie uwzględnia czasu, a continuum zawsze"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Który etap jest krytyczny przy budowie data‑driven modeli dla nanomateriałów?",
+    "options": [
+      "Czyszczenie, standaryzacja i walidacja jakości danych wejściowych",
+      "Losowe usuwanie połowy danych",
+      "Ignorowanie jednostek fizycznych w danych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Co jest typowym ograniczeniem klasycznych symulacji MD dla nanomateriałów?",
+    "options": [
+      "Ograniczona skala czasowa i długości (nanosekundy, kilkadziesiąt nm) ze względu na koszt obliczeniowy",
+      "Niemożność symulowania żadnych atomów",
+      "Brak możliwości obliczenia energii układu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 22,
+    "question": "Jakie dane są zwykle wykorzystywane w ML‑owych modelach przewidujących wytrzymałość nanokompozytów?",
+    "options": [
+      "Skład fazowy, frakcja objętościowa napełniacza, geometria i rozmiar nanofaz",
+      "Kolor logo producenta",
+      "Jedynie nazwa serii produktu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id

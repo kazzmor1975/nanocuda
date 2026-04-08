@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "question": "Jaką informację podstawowo dostarcza skaningowa mikroskopia elektronowa (SEM) przy badaniu nanomateriałów?",
+    "options": [
+      "Morfologię i topografię powierzchni",
+      "Bezpośrednio strukturę pasm elektronowych",
+      "Rozkład mas atomowych w jądrze"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Co jest główną zaletą mikroskopii transmisyjnej (TEM) w stosunku do SEM?",
+    "options": [
+      "Wyższa rozdzielczość umożliwiająca obrazowanie struktury wewnętrznej aż do poziomu atomowego",
+      "Możliwość pracy wyłącznie w warunkach otoczenia bez próżni",
+      "Niższa energia wiązki, co zawsze eliminuje uszkodzenia próbki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Co mierzy mikroskopia sił atomowych (AFM)?",
+    "options": [
+      "Topografię powierzchni poprzez siły oddziaływania końcówki z próbką",
+      "Absorpcję promieniowania gamma przez próbkę",
+      "Sztywność chemiczną wiązań jonowych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Która technika jest najbardziej odpowiednia do określania struktury krystalicznej i fazowej nanomateriałów?",
+    "options": [
+      "Dyfrakcja rentgenowska (XRD)",
+      "Dynamiczne rozpraszanie światła (DLS)",
+      "Zeta potencjał"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "Dynamiczne rozpraszanie światła (DLS) służy głównie do:",
+    "options": [
+      "Wyznaczania rozkładu wielkości nanocząstek w zawiesinie",
+      "Określania składu pierwiastkowego próbki w próżni",
+      "Obrazowania defektów dyslokacyjnych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Co opisuje pomiar zeta potencjału w zawiesinach nanocząstek?",
+    "options": [
+      "Potencjał elektrostatyczny na granicy ścinania, związany ze stabilnością koloidu",
+      "Energię aktywacji reakcji chemicznej w roztworze",
+      "Różnicę potencjałów między elektrodami odniesienia"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Która technika może bezpośrednio wizualizować sieć krystaliczną i dyslokacje w nanokrystalach?",
+    "options": [
+      "Wysokorozdzielcza TEM (HRTEM)",
+      "FTIR",
+      "DLS"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Jaką informację podstawowo dostarcza spektroskopia FTIR dla nanomateriałów organicznych lub hybrydowych?",
+    "options": [
+      "Rodzaje grup funkcyjnych i wiązań chemicznych w materiale",
+      "Rozkład mas atomowych w jądrze",
+      "Wyłącznie rozkład wielkości cząstek"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "Raman spektroskopia jest szczególnie użyteczna przy badaniu:",
+    "options": [
+      "Nanomateriałów węglowych, takich jak grafen i nanotuby, poprzez analizę fononów i defektów",
+      "Wyłącznie temperatury topnienia polimerów",
+      "Składników gazowych pod wysokim ciśnieniem"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "UV-Vis spektroskopia w kontekście nanocząstek metali (np. Au, Ag) pozwala na:",
+    "options": [
+      "Analizę rezonansu plazmonowego zależnego od wielkości i kształtu cząstek",
+      "Bezpośredni pomiar składu izotopowego",
+      "Wyłącznie pomiar przewodnictwa elektrycznego"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Która technika jest podstawowa do określania pola powierzchni właściwej i porowatości nanomateriałów?",
+    "options": [
+      "Adsorpcja gazu (np. BET)",
+      "SEM",
+      "CV (cykliczna woltamperometria)"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Jaka informacja jest zwykle otrzymywana z analizy BET dla nanomateriałów porowatych?",
+    "options": [
+      "Powierzchnia właściwa i objętość/rozmiar porów",
+      "Rozkład ładunku jądrowego",
+      "Widmo emisji gamma"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 13,
+    "question": "Która technika jest właściwa do analizy składu pierwiastkowego i często sprzężona z SEM lub TEM?",
+    "options": [
+      "Energy-dispersive X-ray spectroscopy (EDX/EDS)",
+      "DLS",
+      "AFM w trybie kontaktowym"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 14,
+    "question": "Jaką informację dostarcza X-ray Photoelectron Spectroscopy (XPS) w charakteryzacji nanomateriałów?",
+    "options": [
+      "Skład pierwiastkowy i stany utlenienia na powierzchni",
+      "Rozkład wielkości cząstek w roztworze",
+      "Wyłącznie przewodnictwo cieplne"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Która technika jest najbardziej odpowiednia do wyznaczania rozkładu wielkości cząstek w roztworach koloidalnych, obok DLS?",
+    "options": [
+      "Nanoparticle Tracking Analysis (NTA)",
+      "XRD",
+      "TGA"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 16,
+    "question": "Small-Angle X-ray Scattering (SAXS) służy głównie do:",
+    "options": [
+      "Analizy rozmiaru, kształtu i agregacji nanocząstek w objętości",
+      "Obrazowania powierzchni z rozdzielczością atomową",
+      "Pomiaru przewodnictwa jonowego elektrolitu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 17,
+    "question": "Która technika termoanalityczna mierzy zmianę masy próbki w funkcji temperatury?",
+    "options": [
+      "Termograwimetria (TGA)",
+      "DSC",
+      "DLS"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "Diferencjalna kalorymetria skaningowa (DSC) służy do:",
+    "options": [
+      "Analizy przemian termicznych, takich jak topnienie czy przejścia fazowe",
+      "Bezpośredniego obrazowania nanocząstek",
+      "Pomiaru ładunku powierzchniowego"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "Która technika elektrochemiczna jest szeroko stosowana do badania kinetyki i reversyjności procesów na elektrodach z nanomateriałami?",
+    "options": [
+      "Cykliczna woltamperometria (CV)",
+      "SEM",
+      "DLS"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Electrochemical Impedance Spectroscopy (EIS) pozwala na:",
+    "options": [
+      "Analizę oporu, pojemności i transportu ładunku w układach z nanomateriałami",
+      "Wyłącznie pomiar kąta zwilżania",
+      "Wyznaczanie tylko pola powierzchni właściwej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Która technika mikroskopowa mierzy prąd tunelowy między ostrzem a przewodzącą powierzchnią próbki?",
+    "options": [
+      "Scanning Tunneling Microscopy (STM)",
+      "AFM w trybie kontaktowym",
+      "SEM"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 22,
+    "question": "Jaką główną informację daje spektroskopia NMR w odniesieniu do nanomateriałów organicznych lub hybrydowych?",
+    "options": [
+      "Lokalne środowisko jąder (np. 1H, 13C) i dynamikę segmentów molekularnych",
+      "Dokładny rozkład wielkości cząstek w zawiesinie",
+      "Topografię powierzchni z rozdzielczością nanometrową"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 23,
+    "question": "Która technika spektrometryczna jest używana do dokładnego oznaczania stężenia metali w dyspersjach nanocząstek?",
+    "options": [
+      "ICP-MS (Inductively Coupled Plasma Mass Spectrometry)",
+      "XRD",
+      "AFM"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 24,
+    "question": "Co oznacza skrót EELS w kontekście TEM?",
+    "options": [
+      "Electron Energy Loss Spectroscopy",
+      "Electron Elastic Light Scattering",
+      "Enhanced Electron Luminescence Study"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 25,
+    "question": "Jaką informację można uzyskać z EELS w połączeniu z TEM?",
+    "options": [
+      "Skład chemiczny i stany elektronowe lokalnie w nanostrukturze",
+      "Wyłącznie rozkład wielkości cząstek w roztworze",
+      "Wyłącznie temperaturę topnienia materiału"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 26,
+    "question": "Która technika jest szczególnie przydatna do badania szorstkości i wysokości nanostruktur na izolujących podłożach bez potrzeby przewodności próbki?",
+    "options": [
+      "AFM",
+      "STM",
+      "SEM w trybie wysokiego napięcia"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 27,
+    "question": "Która technika pozwala określić szybko i nieinwazyjnie wielkość nanocząstek w roztworze, ale zakłada kulisty kształt?",
+    "options": [
+      "DLS",
+      "SEM",
+      "XRD"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 28,
+    "question": "Jaki jest podstawowy parametr wyznaczany z XRD przy użyciu równania Scherrera dla nanokrystalitów?",
+    "options": [
+      "Średni rozmiar krystalitów w kierunku określonej płaszczyzny krystalograficznej",
+      "Zeta potencjał cząstek",
+      "Ciepło topnienia materiału"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 29,
+    "question": "Która technika jest najbardziej odpowiednia do bezpośredniego pomiaru grubości ultracienkiej warstwy tlenkowej na metalu w skali nm?",
+    "options": [
+      "TEM przekrojowe (cross-section TEM)",
+      "DLS",
+      "UV-Vis"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "Jaki typ informacji daje SEM-EDS (SEM z detektorem energii dyspersyjnej)?",
+    "options": [
+      "Morfologię powierzchni oraz lokalny skład pierwiastkowy",
+      "Wyłącznie strukturę pasmową półprzewodnika",
+      "Zależność przewodnictwa od temperatury"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Która technika jest szczególnie przydatna do badania wysokości barier energii i pracy wyjścia na powierzchni nanomateriałów metalicznych?",
+    "options": [
+      "Kelvin Probe Force Microscopy (KPFM)",
+      "DLS",
+      "ICP-MS"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Jaką informację podstawowo mierzy spektroskopia fotoelektronów rentgenowskich (XPS)?",
+    "options": [
+      "Energie wiązania elektronów na powierzchni, powiązane ze stanami chemicznymi",
+      "Rozkład wielkości porów w strukturze",
+      "Odporność próbki na ścieranie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Która technika jest klasycznym wyborem do obrazowania struktur lamelarnych, np. warstw blokowych polimerów, w skali nanometrów?",
+    "options": [
+      "TEM",
+      "DLS",
+      "XRD w małym kącie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 34,
+    "question": "Która technika jest najbardziej odpowiednia do pomiaru ładunku powierzchniowego i stabilności nanocząstek w roztworach wodnych?",
+    "options": [
+      "Zeta potencjał (elektroforeza laserowa)",
+      "XRD",
+      "SEM w trybie wysokiej próżni"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "Jaką informację głównie dostarcza spektroskopia Raman dla grafenu?",
+    "options": [
+      "Liczbę warstw, obecność defektów i naprężeń na podstawie pasm G, D i 2D",
+      "Wyłącznie stężenie domieszek azotu",
+      "Jedynie przewodnictwo jonowe"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Która technika pozwala badać dystrybucję wielkości nanocząstek w aerozolu?",
+    "options": [
+      "Scanning Mobility Particle Sizer (SMPS) lub podobne metody mobilnościowe",
+      "XPS",
+      "AFM w roztworze"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 37,
+    "question": "Co mierzy technika TGA-DSC stosowana równocześnie?",
+    "options": [
+      "Zmianę masy i przepływu ciepła, pozwalając powiązać rozkład termiczny z przemianami energetycznymi",
+      "Wyłącznie rozkład wielkości porów",
+      "Wyłącznie przewodnictwo elektryczne"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Która technika jest właściwa do badania struktury elektronowej i gęstości stanów powierzchniowych w nanomateriałach przewodzących?",
+    "options": [
+      "STM i spektroskopia dI/dV",
+      "DLS",
+      "UV-Vis w roztworze"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 39,
+    "question": "Jakie jest główne ograniczenie klasycznego DLS przy analizie polidyspersyjnych, niesferycznych nanocząstek?",
+    "options": [
+      "Założenie modelu sferycznego powoduje błędy w interpretacji hydrodynamicznej średnicy",
+      "Niemożność pomiaru w wodzie",
+      "Brak czułości na małe cząstki poniżej 1 µm"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 40,
+    "question": "Która technika pozwala na mapowanie topografii i jednoczesne mierzenie sił adhezji na powierzchni nanomateriału?",
+    "options": [
+      "AFM w odpowiednich trybach (np. force mapping)",
+      "SEM w trybie wtórnych elektronów",
+      "XRD"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 41,
+    "question": "Która technika jest używana do badania składu chemicznego przy powierzchni z głębokością analizowaną rzędu kilku nm?",
+    "options": [
+      "XPS",
+      "ICP-MS",
+      "DLS"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "Jaką rolę pełni EDX w mikroskopie SEM?",
+    "options": [
+      "Analizuje widmo promieniowania rentgenowskiego emitowanego z próbki, dając skład pierwiastkowy",
+      "Służy do pomiaru zeta potencjału",
+      "Wytwarza obraz 3D powierzchni poprzez triangulację"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 43,
+    "question": "Która technika jest odpowiednia do badania optycznych własności nanocząstek półprzewodnikowych, takich jak kropki kwantowe?",
+    "options": [
+      "Fotoluminescencja (PL) i UV-Vis",
+      "XRD",
+      "TGA"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 44,
+    "question": "Która para 'technika – główna informacja' jest poprawna?",
+    "options": [
+      "DLS – rozkład wielkości nanocząstek w roztworze",
+      "XPS – rozkład wielkości porów w membranie",
+      "AFM – skład pierwiastkowy w objętości"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 45,
+    "question": "Które z poniższych służy do identyfikacji faz krystalicznych i stopnia krystaliczności w polimerach nanonapełnianych?",
+    "options": [
+      "XRD",
+      "Zeta potencjał",
+      "DLS"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "Jaką informację można uzyskać z pomiarów kontaktowego kąta zwilżania dla powierzchni pokrytych nanowarstwami?",
+    "options": [
+      "Charakter hydrofilowy/hydrofobowy i energię powierzchniową",
+      "Bezpośrednio rozmiar nanocząstek w roztworze",
+      "Skład izotopowy wodoru"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 47,
+    "question": "Która technika jest właściwa do badania rozkładu wielkości nanocząstek w proszkach, a nie tylko w roztworach?",
+    "options": [
+      "Dyfrakcja laserowa lub analiza sitowa uzupełniona SEM",
+      "DLS",
+      "Zeta potencjał"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Która metoda charakteryzacji jest szczególnie czuła na zmiany w strukturze powierzchni i wiązaniach chemicznych w cienkich warstwach organicznych na nanonośnikach?",
+    "options": [
+      "FTIR (w trybie ATR lub transmisji)",
+      "DLS",
+      "TGA bez sprzężenia"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Która kombinacja metod jest typowa dla pełnej charakteryzacji nanocząstek metalicznych w roztworze?",
+    "options": [
+      "TEM/SEM + DLS + UV-Vis + zeta potencjał",
+      "XRD + DSC tylko",
+      "AFM + kontaktowy kąt zwilżania"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 50,
+    "question": "Dlaczego w praktyce badań nanomateriałów często stosuje się kilka technik charakteryzacji jednocześnie?",
+    "options": [
+      "Ponieważ pojedyncza technika zwykle dostarcza tylko częściowej informacji (np. rozmiar, skład, struktura), a pełny obraz wymaga podejścia komplementarnego",
+      "Ponieważ przepisy zawsze wymagają dokładnie pięciu metod",
+      "Ponieważ każda technika daje identyczne wyniki i trzeba je uśrednić"
+    ],
+    "correctIndex": 0
+  }
+]

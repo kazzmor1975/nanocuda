@@ -1,0 +1,454 @@
+[
+  {
+    "id": 1,
+    "question": "Jaki zakres rozmiarów najczęściej przyjmuje się jako skalę nano?",
+    "options": ["1–100 nm", "1–100 µm", "0.1–1 mm"],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Co jest główną przyczyną tego, że właściwości materiału zmieniają się w skali nano?",
+    "options": ["Wzrost stosunku powierzchni do objętości", "Zmiana liczby protonów w jądrze", "Inny układ sieci krystalicznej w próżni"],
+    "correctIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Które z poniższych najlepiej opisuje nanotechnologię?",
+    "options": [
+      "Kontrolę materii na poziomie atomowym i molekularnym w zakresie nanometrów",
+      "Badania wyłącznie nad półprzewodnikami krzemowymi",
+      "Dowolne miniaturyzowanie urządzeń elektronicznych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Jaką długość ma 1 nm?",
+    "options": ["10^-9 m", "10^-6 m", "10^-12 m"],
+    "correctIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "Co oznacza skrót 0D w klasyfikacji nanomateriałów?",
+    "options": [
+      "Obiekt, który jest nanometrowy we wszystkich trzech wymiarach",
+      "Nanostruktura o jednym wymiarze makroskopowym",
+      "Nanowarstwa o grubości mikrometrowej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Który przykład najlepiej pasuje do nanomateriału 1D?",
+    "options": ["Nanorurka węglowa", "Nanocząstka srebra", "Nanopory w membranie"],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Który przykład najlepiej pasuje do nanomateriału 2D?",
+    "options": ["Grafenowa warstwa na podłożu", "Sferyczne nanocząstki złota", "Nanokapsułki polimerowe"],
+    "correctIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Który opis odpowiada nanokompozytowi 3D?",
+    "options": [
+      "Makroskopowy materiał z nanometrowymi wypełniaczami rozproszonymi w objętości",
+      "Pojedyncza warstwa atomowa w próżni",
+      "Struktura krystaliczna bez żadnych defektów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "Co charakteryzuje podejście bottom‑up w nanotechnologii?",
+    "options": [
+      "Budowanie struktur z atomów lub małych cząsteczek",
+      "Mechaniczne rozdrabnianie dużych kryształów",
+      "Wyłącznie litografię optyczną"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Co charakteryzuje podejście top‑down w nanotechnologii?",
+    "options": [
+      "Tworzenie nanoobiektów przez obróbkę większych struktur",
+      "Samorzutne samoorganizowanie cząsteczek",
+      "Wzrost kryształów od pojedynczych atomów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Dlaczego stosunek powierzchni do objętości rośnie przy zmniejszaniu rozmiaru cząstek?",
+    "options": [
+      "Objętość maleje szybciej niż powierzchnia",
+      "Powierzchnia maleje szybciej niż objętość",
+      "Powierzchnia i objętość maleją w tym samym tempie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Jakie zjawisko kwantowe jest kluczowe w kropkach kwantowych?",
+    "options": [
+      "Kwantowe uwięzienie nośników ładunku",
+      "Nadprzewodnictwo wysokotemperaturowe",
+      "Tunelowanie jądrowe w jądrze atomowym"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 13,
+    "question": "Dlaczego nanocząstki metali mogą mieć inny kolor niż ten sam metal w formie makro?",
+    "options": [
+      "Zmienia się sposób oddziaływania z promieniowaniem optycznym",
+      "Zmieniona jest liczba protonów w jądrze",
+      "Nanocząstki nie absorbują światła"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 14,
+    "question": "Które stwierdzenie najlepiej opisuje efekt kwantowego uwięzienia?",
+    "options": [
+      "Energia elektronów zależy silnie od rozmiaru nanostruktury",
+      "Elektrony poruszają się tylko po orbicie kołowej",
+      "Elektrony całkowicie przestają przewodzić prąd"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Dlaczego nanocząstki są często bardziej reaktywne chemicznie niż materiał masowy?",
+    "options": [
+      "Więcej atomów znajduje się na powierzchni i może reagować",
+      "Mają wyższy ładunek jądra",
+      "Zawsze są w stanie ciekłym"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 16,
+    "question": "Co odróżnia nanomateriał od zwykłego proszku o cząstkach mikrometrowych?",
+    "options": [
+      "Przynajmniej jeden wymiar jest w zakresie nanometrów i pojawiają się nowe efekty",
+      "Nanomateriał musi być zawsze metaliczny",
+      "Nanomateriał nie może przewodzić prądu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 17,
+    "question": "Jakie jednostki najczęściej stosuje się do opisu powierzchni właściwej nanomateriałów?",
+    "options": ["m²/g", "J/mol", "S/m"],
+    "correctIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "Które stwierdzenie jest prawdziwe dla skali nano?",
+    "options": [
+      "Siły powierzchniowe i międzycząsteczkowe dominują nad grawitacją",
+      "Grawitacja dominuje nad siłami powierzchniowymi",
+      "Siły nie zależą od rozmiaru obiektu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "Kiedy materiał uważa się za nanostrukturalny w kontekście ziarna krystalicznego?",
+    "options": [
+      "Gdy średni rozmiar ziarna jest w zakresie nanometrów",
+      "Gdy ma dowolne wtrącenia makro",
+      "Gdy gęstość jest mniejsza od wody"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Który termin opisuje proces samorzutnego tworzenia uporządkowanych struktur z wielu cząsteczek?",
+    "options": ["Samoorganizacja", "Rozpuszczanie", "Topnienie"],
+    "correctIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Co jest typową konsekwencją miniaturyzacji tranzystorów do skali kilku nanometrów?",
+    "options": [
+      "Silniejsze efekty tunelowania i wycieku prądu",
+      "Całkowity zanik przewodnictwa",
+      "Niezależność parametrów od temperatury"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 22,
+    "question": "Jak określiłbyś 'nanonaukę' w odróżnieniu od nanotechnologii?",
+    "options": [
+      "Nanonauka bada zjawiska w skali nano, nanotechnologia je wykorzystuje",
+      "Nanonauka dotyczy wyłącznie elektroniki, nanotechnologia biologii",
+      "Nanonauka oznacza produkcję dowolnych miniaturowych układów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 23,
+    "question": "Które z poniższych jest przykładem naturalnej nanostruktury?",
+    "options": ["Struktura barwna skrzydeł motyla", "Blok betonowy", "Kawałek szkła okiennego"],
+    "correctIndex": 0
+  },
+  {
+    "id": 24,
+    "question": "Jakie znaczenie mają defekty powierzchniowe w nanocząstkach?",
+    "options": [
+      "Mogą silnie wpływać na reaktywność i właściwości elektroniczne",
+      "Nie mają znaczenia, bo zanika sieć krystaliczna",
+      "Są całkowicie pomijalne w porównaniu z objętością"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 25,
+    "question": "Dlaczego w nanoskali klasyczne prawo Hooke’a i modele ciągłe często zawodzą?",
+    "options": [
+      "Bo materiał składa się z małej liczby atomów i trzeba stosować opis dyskretny",
+      "Bo stała sprężystości staje się nieskończona",
+      "Bo atomy przestają drgać"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 26,
+    "question": "Co oznacza termin 'functionalization' w kontekście nanocząstek?",
+    "options": [
+      "Modyfikację powierzchni w celu nadania określonych funkcji chemicznych lub biologicznych",
+      "Zwiększenie masy próbki przez dodanie soli",
+      "Topnienie nanocząstek w wysokiej temperaturze"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 27,
+    "question": "Jaka jest typowa długość wiązania atomowego w ciele stałym?",
+    "options": ["Rząd setek pikometrów (0.1–0.3 nm)", "Rząd centymetrów", "Rząd kilometrów"],
+    "correctIndex": 0
+  },
+  {
+    "id": 28,
+    "question": "Co najlepiej opisuje 'nano‑scale confinement' w materiałach porowatych?",
+    "options": [
+      "Ograniczenie ruchu cząsteczek w porach o rozmiarach nanometrowych",
+      "Zamknięcie próbki w małym naczyniu laboratoryjnym",
+      "Zamrożenie materiału w ciekłym azocie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 29,
+    "question": "Które zjawisko jest typowo silniejsze w skali nano niż w makroskali?",
+    "options": ["Siły van der Waalsa", "Siły grawitacyjne", "Siły odśrodkowe"],
+    "correctIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "Jak zmiana rozmiaru kropki kwantowej wpływa na jej widmo emisyjne?",
+    "options": [
+      "Zmiana rozmiaru przesuwa maksimum emisji (np. kolor światła)",
+      "Zmiana rozmiaru nie ma wpływu na emisję",
+      "Zmiana rozmiaru zawsze zmienia emisję na podczerwień"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Dlaczego nanocząstki mogą mieć niższą temperaturę topnienia niż materiał masowy?",
+    "options": [
+      "Duży udział powierzchni zmienia warunki energetyczne topnienia",
+      "W nanoskali nie obowiązuje prawo zachowania energii",
+      "Nanocząstki mają inną liczbę protonów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Jakie jest typowe znaczenie skrótu 'NP' w kontekście nanonauki?",
+    "options": ["Nanoparticle", "Nano‑phase", "Nano‑pressure"],
+    "correctIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Który opis najlepiej pasuje do nanowłókna?",
+    "options": [
+      "Struktura o średnicy nanometrowej i długości mikrometrowej lub większej",
+      "Sferyczna cząstka o średnicy milimetrowej",
+      "Warstwa o grubości kilku milimetrów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 34,
+    "question": "Jakie zjawisko może ograniczać przewodnictwo cieplne w nanodrutach?",
+    "options": [
+      "Rozpraszanie fononów na powierzchni i defektach",
+      "Brak fononów w tak małych strukturach",
+      "Silny wzrost grawitacji"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "Co oznacza termin 'self‑assembly' w nanotechnologii?",
+    "options": [
+      "Samorzutne tworzenie uporządkowanych struktur z wielu elementów dzięki lokalnym oddziaływaniom",
+      "Ręczne składanie układów przez operatora mikroskopu",
+      "Automatyczne wytwarzanie obwodów drukowanych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Która wielkość jest najbliżej 100 nm?",
+    "options": [
+      "Wirus grypy",
+      "Komórka krwi czerwona",
+      "Ludzkie włosy"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 37,
+    "question": "Dlaczego w nanoskali istotne stają się fluktuacje termiczne?",
+    "options": [
+      "Bo liczba cząstek w układzie jest mała i pojedyncze zdarzenia mają duże znaczenie",
+      "Bo temperatura absolutna rośnie z rozmiarem",
+      "Bo grawitacja działa silniej na małe cząstki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Jak nazywa się zależność własności materiału od kierunku w przestrzeni, która może się nasilać w nanostrukturach?",
+    "options": ["Anizotropia", "Izotropia", "Homogenizacja"],
+    "correctIndex": 0
+  },
+  {
+    "id": 39,
+    "question": "Który typ oddziaływań często stabilizuje koloidalne zawiesiny nanocząstek w roztworach wodnych?",
+    "options": [
+      "Odpychanie elektrostatyczne lub steryczne między cząstkami",
+      "Silna grawitacja między cząstkami",
+      "Oddziaływania jądrowe dalekiego zasięgu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 40,
+    "question": "Co w kontekście nanonauki oznacza termin 'surface functional group'?",
+    "options": [
+      "Grupę chemiczną związaną z powierzchnią nanomateriału",
+      "Dowolny atom wewnątrz ziarna krystalicznego",
+      "Miejsce, w którym próbka dotyka stołu laboratoryjnego"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 41,
+    "question": "Jak zwykle definiuje się 'nanomateriał inżynieryjny'?",
+    "options": [
+      "Materiał zaprojektowany tak, aby zawierał strukturę w skali nano w celu uzyskania nowych właściwości",
+      "Dowolny naturalny materiał ilasty",
+      "Materiał o gęstości mniejszej niż woda"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "Która kombinacja jednostek najlepiej opisuje rozmiar i powierzchnię nanocząstki?",
+    "options": [
+      "Rozmiar w nm, powierzchnia w m²/g",
+      "Rozmiar w cm, powierzchnia w kg/m³",
+      "Rozmiar w m, powierzchnia w V/m"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 43,
+    "question": "Dlaczego w nanoskali ważne jest pojęcie 'polidyspersyjności'?",
+    "options": [
+      "Bo rozrzut rozmiarów cząstek silnie wpływa na własności optyczne, mechaniczne i transportowe",
+      "Bo dotyczy tylko masy próbki",
+      "Bo określa jedynie kolor materiału"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 44,
+    "question": "Co opisuje 'zeta potential' w kontekście zawiesin nanocząstek?",
+    "options": [
+      "Potencjał elektrostatyczny na granicy ścinania, związany ze stabilnością koloidu",
+      "Energię aktywacji reakcji chemicznej",
+      "Napięcie progowe tranzystora MOSFET"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 45,
+    "question": "Dlaczego pomiary średniego rozmiaru cząstek nie wystarczają do pełnego opisu nanomateriału?",
+    "options": [
+      "Bo kształt, rozkład rozmiarów i stan powierzchni również silnie wpływają na właściwości",
+      "Bo wszystkie cząstki są zawsze identyczne",
+      "Bo rozmiar nie ma żadnego znaczenia"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "Co oznacza skrót 'NEMS' w kontekście systemów w skali nano?",
+    "options": [
+      "Nanoelectromechanical Systems",
+      "Nano Energy Management System",
+      "Non‑Equilibrium Mass Spectrometry"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 47,
+    "question": "Dlaczego nanocząstki często wymagają stabilizacji przy przechowywaniu w zawiesinie?",
+    "options": [
+      "Mogą łatwo aglomerować ze względu na silne przyciąganie międzycząsteczkowe",
+      "Mogą wyparować jak gaz",
+      "Zawsze ulegają natychmiastowej krystalizacji do formy masowej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Które ze stwierdzeń najlepiej opisuje relację między nanonauką a inżynierią materiałową?",
+    "options": [
+      "Nanonauka dostarcza zrozumienia zjawisk w skali nano, a inżynieria materiałowa wykorzystuje je do projektowania funkcjonalnych materiałów",
+      "Inżynieria materiałowa i nanonauka to dokładnie to samo",
+      "Inżynieria materiałowa dotyczy wyłącznie makroskopowych konstrukcji stalowych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Jak w prosty sposób odróżnić efekt 'nano' od zwykłego efektu skali w miniaturyzacji klasycznych elementów?",
+    "options": [
+      "W skali nano pojawiają się zjawiska jakościowo nowe (np. kwantowe, powierzchniowe), a nie tylko liniowe skalowanie",
+      "Efekt nano to zawsze tylko mniejsza wersja tego samego zjawiska",
+      "Efekt nano wymaga, by materiał był nadprzewodnikiem"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 50,
+    "question": "Które z poniższych najlepiej opisuje podstawowy cel nanonauki?",
+    "options": [
+      "Zrozumienie i kontrola własności materii wynikających z jej struktury w skali nano",
+      "Produkcja jak największej liczby chipów komputerowych",
+      "Zastąpienie wszystkich materiałów makroskopowych nanomateriałami"
+    ],
+    "correctIndex": 0
+  }
+]

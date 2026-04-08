@@ -1,0 +1,398 @@
+[
+  {
+    "id": 1,
+    "question": "Który z poniższych jest przykładem nanomateriału 0D?",
+    "options": ["Kropka kwantowa CdSe", "Nanorurka węglowa", "Warstwa grafenu"],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Który z poniższych jest przykładem nanomateriału 1D?",
+    "options": ["Nanowłókno polimerowe", "Nanocząstka złota", "Nanopłyta glinokrzemianu"],
+    "correctIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Który z poniższych jest przykładem nanomateriału 2D?",
+    "options": ["Grafen", "Koloidalne nanocząstki srebra", "Nanokapsułki liposomowe"],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Co odróżnia nanomateriał 3D od 0D/1D/2D?",
+    "options": [
+      "Ma nanostrukturalny charakter wewnątrz całej objętości materiału",
+      "Nie zawiera żadnych elementów w skali nano",
+      "Musi być amorficzny"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "Do której klasy wymiarowej należą nanorurki węglowe (CNT)?",
+    "options": ["1D", "0D", "2D"],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Do której klasy wymiarowej należy pojedyncza warstwa MoS2?",
+    "options": ["2D", "0D", "3D"],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Do której klasy wymiarowej należy proszek złożony z wolnych nanocząstek TiO2?",
+    "options": ["0D", "1D", "2D"],
+    "correctIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Jak najprościej opisać nanokompozyt polimerowy?",
+    "options": [
+      "Makroskopowy polimer z wbudowanymi nanocząstkami jako wypełniaczami",
+      "Czysty polimer bez dodatków",
+      "Mieszaninę dwóch stopionych metali bez fazy nano"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "Który z poniższych jest przykładem nanomateriału węglowego?",
+    "options": ["Grafen", "Nanocząstki TiO2", "Nanocząstki AgCl"],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Który z poniższych jest przykładem nanomateriału metalicznego?",
+    "options": ["Nanocząstki srebra", "Nanorurka celulozowa", "Liposome z lekiem"],
+    "correctIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Który z poniższych jest przykładem nanomateriału tlenkowego (oxide-based)?",
+    "options": ["Nanocząstki TiO2", "Nanorurka węglowa", "Peptydowy nanowłókienkowy hydrożel"],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Który z poniższych jest przykładem nanomateriału polimerowego?",
+    "options": ["Dendrymery", "Nanocząstki złota", "Grafen"],
+    "correctIndex": 0
+  },
+  {
+    "id": 13,
+    "question": "Jak sklasyfikujesz liposomy i micelle w nanomedycynie?",
+    "options": [
+      "Organiczne nanomateriały na bazie związków amfifilowych",
+      "Czysto metaliczne nanocząstki",
+      "Wyłącznie nieorganiczne tlenki półprzewodnikowe"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 14,
+    "question": "Która grupa najlepiej opisuje główne klasy nanomateriałów wg składu?",
+    "options": [
+      "Metaliczne, tlenkowe, węglowe, polimerowe, kompozytowe",
+      "Gazowe, ciekłe, stałe",
+      "Kwasy, zasady, sole"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Do jakiej kategorii materiałów zaliczysz fulleren C60?",
+    "options": ["0D nanomateriał węglowy", "1D nanomateriał metaliczny", "2D nanomateriał tlenkowy"],
+    "correctIndex": 0
+  },
+  {
+    "id": 16,
+    "question": "Jak sklasyfikujesz pojedynczą warstwę grafenu ze względu na strukturę?",
+    "options": ["2D nanomateriał węglowy", "0D nanomateriał metaliczny", "3D nanokompozyt ceramiczny"],
+    "correctIndex": 0
+  },
+  {
+    "id": 17,
+    "question": "Które z poniższych najlepiej opisuje dendrymer?",
+    "options": [
+      "Silnie rozgałęziony polimer o strukturze drzewiastej w skali nano",
+      "Jednorodny kryształ metalu o rozmiarze centymetrów",
+      "Pusta sfera węglowa C60"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "Metal–organic frameworks (MOF) to przykład:",
+    "options": [
+      "Nanomateriałów kompozytowych o charakterze szkieletu metal–ligand",
+      "Czystych nanocząstek metalicznych",
+      "Wyłącznie polimerów przewodzących"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "Który opis odpowiada nanocząstkom \"core–shell\"?",
+    "options": [
+      "Nanocząstka z rdzeniem jednego materiału i otoczką z innego",
+      "Nanocząstka z całkowicie jednorodnego materiału",
+      "Jednowarstwowa 2D płytka bez powłoki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Który przykład jest typowym 0D nanomateriałem półprzewodnikowym?",
+    "options": ["Kropki kwantowe CdSe", "Nanowłókna PLA", "Nanowarstwa Al2O3"],
+    "correctIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Jak określisz nanorurki TiO2 osadzone pionowo na podłożu?",
+    "options": ["1D nanomateriał tlenkowy", "0D nanomateriał węglowy", "2D nanokompozyt metaliczny"],
+    "correctIndex": 0
+  },
+  {
+    "id": 22,
+    "question": "Które z poniższych jest przykładem nanomateriału naturalnego?",
+    "options": ["Nanoceluloza", "Nanocząstki złota wytworzone redukcją chemiczną", "Grafen z CVD"],
+    "correctIndex": 0
+  },
+  {
+    "id": 23,
+    "question": "Jak sklasyfikujesz aerozole zawierające nanocząstki sadzy z silnika diesla?",
+    "options": [
+      "Niezamierzone (incidental) nanomateriały węglowe",
+      "Intencjonalnie wytworzone nanokompozyty",
+      "Wyłącznie naturalne nanomateriały mineralne"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 24,
+    "question": "Który typ nanomateriałów jest definiowany głównie przez strukturę szkieletu z atomów węgla sp2?",
+    "options": ["Nanomateriały grafenowe", "Nanocząstki tlenków metali", "Nanocząstki srebra"],
+    "correctIndex": 0
+  },
+  {
+    "id": 25,
+    "question": "Jak skategoryzujesz nanowarstwy tlenków przejściowych o grubości kilku nm na metalu?",
+    "options": ["2D nanomateriały tlenkowe", "0D nanocząstki węglowe", "3D nanowłókna polimerowe"],
+    "correctIndex": 0
+  },
+  {
+    "id": 26,
+    "question": "Który opis odpowiada nanocząstkom o wysokim współczynniku kształtu (aspect ratio)?",
+    "options": [
+      "Długość znacznie większa niż średnica, jak w nanodrutach",
+      "Kształt zbliżony do idealnej kuli",
+      "Objętość taka sama jak powierzchnia"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 27,
+    "question": "Który przykład jest nanomateriałem kompozytowym?",
+    "options": [
+      "Polimer z nanorurkami węglowymi jako wypełniaczem",
+      "Czysty krzem monokrystaliczny",
+      "Czysty grafen na Cu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 28,
+    "question": "Do jakiej klasy materiałów zaliczysz nanodiamanty?",
+    "options": ["Nanomateriały węglowe 0D", "Nanomateriały metaliczne 2D", "Nanomateriały polimerowe 1D"],
+    "correctIndex": 0
+  },
+  {
+    "id": 29,
+    "question": "Co jest typowym przykładem nanomateriału metalicznego stosowanego jako środek antybakteryjny?",
+    "options": ["Nanocząstki srebra", "Nanocząstki krzemionki", "Nanowarstwy grafenu"],
+    "correctIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "Które z poniższych to przykład nanomateriału magnetycznego?",
+    "options": ["Nanocząstki tlenku żelaza Fe3O4", "Nanocząstki cukru", "Nanowłókna kolagenowe"],
+    "correctIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Jak sklasyfikujesz nanocząstki Au z powłoką PEG używane do terapii fototermicznej?",
+    "options": [
+      "Metaliczne nanocząstki funkcjonalizowane polimerem",
+      "Czysto polimerowe nanocząstki",
+      "Nanomateriały ceramiczne 2D"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Który z poniższych opisów pasuje do nanomateriałów typu 'carbon dots'?",
+    "options": [
+      "Małe, zazwyczaj <10 nm, wysoko luminoforowe nanokropki węglowe",
+      "Nanocząstki metaliczne o średnicy >1 µm",
+      "Warstwy krzemu o grubości milimetrów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Jak sklasyfikujesz nanocząstki BaTiO3 stosowane w kondensatorach?",
+    "options": ["Nanomateriały ceramiczne (ferroelektryczne)", "Nanomateriały węglowe", "Nanomateriały czysto polimerowe"],
+    "correctIndex": 0
+  },
+  {
+    "id": 34,
+    "question": "Który z poniższych jest przykładem 1D nanomateriału węglowego?",
+    "options": ["Nanorurka węglowa (CNT)", "Grafen", "Nanocząstka srebra"],
+    "correctIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "Która para najlepiej odpowiada klasie 'carbon-based nanomaterials'?",
+    "options": [
+      "Fullereny i grafen",
+      "TiO2 i ZnO",
+      "Fe3O4 i CoFe2O4"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Jak zaklasyfikujesz nanocząstki nanosrebra w żelu do ran?",
+    "options": [
+      "Metaliczne nanocząstki 0D w matrycy polimerowej",
+      "2D warstwa tlenkowa",
+      "3D nanowłókno węglowe"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 37,
+    "question": "Który przykład pokazuje różnicę między 0D a 1D dla tej samej chemii?",
+    "options": [
+      "Nanocząstki Au vs nanodruty Au",
+      "Nanocząstki Au vs nanocząstki Ag",
+      "Grafen vs grafen z defektami"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Które z poniższych jest nanomateriałem o strukturze rdzeń–powłoka (core–shell) stosowanym w fotonice?",
+    "options": [
+      "Kropki kwantowe CdSe/ZnS",
+      "Czyste nanocząstki TiO2",
+      "Nanowłókna PLA"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 39,
+    "question": "Jak sklasyfikujesz nanocząstki srebra pokryte krzemionką (Ag@SiO2)?",
+    "options": [
+      "Metaliczno‑tlenkowy nanomateriał rdzeń–powłoka",
+      "Czysto węglowy nanomateriał",
+      "Polimerowy nanokompozyt 2D"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 40,
+    "question": "Który z poniższych jest przykładem nanomateriału o strukturze laminarnej 2D innej niż grafen?",
+    "options": ["Warstwa MoS2", "Nanocząstki Au", "Dendrymery PAMAM"],
+    "correctIndex": 0
+  },
+  {
+    "id": 41,
+    "question": "Jak zaklasyfikujesz elektroprzędzone włókna polimerowe o średnicy 200 nm?",
+    "options": ["1D nanowłókna polimerowe", "0D nanocząstki tlenkowe", "2D nanowarstwy metaliczne"],
+    "correctIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "Który typ nanomateriałów często opisuje się jako 'nanoclay'?",
+    "options": [
+      "Warstwowe krzemiany glinokrzemianowe o strukturze 2D",
+      "Nanocząstki złota 0D",
+      "Nanowłókna kolagenowe 1D"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 43,
+    "question": "Jak sklasyfikujesz cienką warstwę przewodzącego polimeru PEDOT:PSS o grubości 50 nm na podłożu?",
+    "options": ["2D nanomateriał polimerowy", "0D nanocząstki metaliczne", "3D nanokompozyt ceramiczny"],
+    "correctIndex": 0
+  },
+  {
+    "id": 44,
+    "question": "Która grupa najlepiej odpowiada klasie 'metal‑based nanomaterials'?",
+    "options": [
+      "Nanocząstki Au, Ag, Cu",
+      "Grafen, CNT, fullereny",
+      "Dendrymery, liposomy, micelle"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 45,
+    "question": "Jak sklasyfikujesz nanocząstki ZnO stosowane w kremach przeciwsłonecznych?",
+    "options": ["0D nanomateriał tlenkowy", "2D nanomateriał węglowy", "1D nanowłókno polimerowe"],
+    "correctIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "Która para 'typ – przykład' jest poprawna?",
+    "options": [
+      "Dendrymery – nośniki leków o strukturze drzewiastej",
+      "Fullereny – 1D nanowłókna z tlenku krzemu",
+      "CNT – 0D nanocząstki Ag"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 47,
+    "question": "Jak sklasyfikujesz warstwę ITO (Sn‑doped In2O3) o grubości 80 nm?",
+    "options": [
+      "2D przewodzący nanomateriał tlenkowy",
+      "0D nanocząstki węglowe",
+      "3D nanokompozyt polimerowy"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Które z poniższych najlepiej opisuje nanomateriały kompozytowe w sensie 'hybrid nanomaterials'?",
+    "options": [
+      "Połączenie co najmniej dwóch faz, z których przynajmniej jedna jest nanostrukturalna",
+      "Czysty monokrystaliczny materiał bez domieszek",
+      "Dowolny materiał o dużej gęstości"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Jak zaklasyfikujesz nanopory o średnicy 10 nm w membranie aluminiowej?",
+    "options": [
+      "Struktura 2D/3D z nanoporowatością, często zaliczana do 2D/3D nanomateriałów",
+      "0D nanocząstki metaliczne",
+      "1D nanowłókna węglowe"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 50,
+    "question": "Który z poniższych opisów jest poprawny dla klasyfikacji wg wymiarów?",
+    "options": [
+      "0D: wszystkie wymiary w skali nano; 1D: jeden wymiar makro; 2D: dwa wymiary makro; 3D: struktura objętościowa z elementami nano",
+      "0D: jeden wymiar nano; 1D: dwa wymiary nano; 2D: trzy wymiary nano",
+      "0D: tylko warstwy; 1D: tylko cząstki; 2D: tylko kompozyty"
+    ],
+    "correctIndex": 0
+  }
+]

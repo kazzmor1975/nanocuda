@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "question": "Dlaczego nanocząstki metali są często znacznie bardziej aktywne katalitycznie niż ich odpowiedniki masowe?",
+    "options": [
+      "Mają znacznie większy stosunek powierzchni do objętości, więc więcej atomów jest dostępnych na powierzchni",
+      "Zawsze mają wyższą temperaturę",
+      "Zawierają więcej protonów w jądrze atomowym"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Jak zmniejszenie rozmiaru ziarna do skali nano wpływa typowo na wytrzymałość metali nanokrystalicznych?",
+    "options": [
+      "Wytrzymałość na rozciąganie zwykle rośnie (umocnienie Hall–Petcha) do pewnego zakresu rozmiarów",
+      "Wytrzymałość zawsze maleje proporcjonalnie do 1/d",
+      "Nie ma istotnego wpływu na wytrzymałość"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Dlaczego nanocząstki często mają niższą temperaturę topnienia niż materiał masowy?",
+    "options": [
+      "Duży udział atomów powierzchniowych obniża energię potrzebną do przejścia w fazę ciekłą",
+      "Ponieważ grawitacja działa silniej na małe obiekty",
+      "Ponieważ atomy w nanocząstce nie drgają"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Czym jest podstawowy efekt kwantowych kropek (quantum dots)?",
+    "options": [
+      "Energia stanów elektronowych zależy silnie od rozmiaru cząstki, co zmienia barwę emisji",
+      "Nanocząstki stają się nadprzewodnikami w temperaturze pokojowej",
+      "Elektrony przestają w nich przewodzić prąd"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "Co oznacza termin 'gigantyczny stosunek powierzchni do objętości' w kontekście nanomateriałów?",
+    "options": [
+      "Znacznie większy udział atomów powierzchniowych w porównaniu z objętością niż w materiałach masowych",
+      "Zależność pola powierzchni od ciśnienia atmosferycznego",
+      "Wzrost gęstości materiału do wartości większej niż stal"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Jak rozmiar nanocząstek półprzewodnikowych wpływa na ich przerwę energetyczną (bandgap)?",
+    "options": [
+      "Zmniejszenie rozmiaru zwykle zwiększa efektywny bandgap (blue shift emisji)",
+      "Zmniejszenie rozmiaru zawsze zmniejsza bandgap",
+      "Rozmiar nie wpływa na bandgap"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "Dlaczego nanocząstki złota mogą wykazywać czerwone lub fioletowe zabarwienie roztworu, zamiast typowej barwy złota masowego?",
+    "options": [
+      "Ze względu na rezonans plazmonów powierzchniowych zależny od rozmiaru i kształtu cząstek",
+      "Ponieważ zmienia się konfiguracja jąder atomowych",
+      "Z powodu fluorescencji jądrowej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Jak zmiana rozmiaru nanocząstek magnetycznych (np. Fe3O4) do kilku nanometrów wpływa na ich zachowanie magnetyczne?",
+    "options": [
+      "Mogą stać się superparamagnetyczne, tracąc histerezę w temperaturze pokojowej",
+      "Zawsze stają się diamagnetyczne",
+      "Zawsze zwiększają remanencję i koercję"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "Co oznacza termin 'superparamagnetyzm' w nanomateriałach magnetycznych?",
+    "options": [
+      "Zachowanie magnetyczne, w którym małe nanodomenty zachowują się jak pojedyncze momenty i łatwo się rozmagnesowują termicznie",
+      "Stan, w którym materiał ma nieskończoną namagnesowanie",
+      "Zjawisko kwantowe tylko w nadprzewodnikach"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Jak rozmiar nanodrutów przewodzących wpływa na ich opór elektryczny?",
+    "options": [
+      "Rozpraszanie elektronów na powierzchni i ziaranach może zwiększać opór w porównaniu z materiałem masowym",
+      "Opór zawsze maleje, bo druty są mniejsze",
+      "Rozmiar nie ma żadnego wpływu na opór"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Dlaczego nanocząstki są szczególnie skuteczne jako nośniki katalizatorów w reakcjach heterogenicznych?",
+    "options": [
+      "Zapewniają dużą, łatwo dostępną powierzchnię aktywną i mogą stabilizować stany przejściowe",
+      "Mają zawsze niższą energię aktywacji niezależnie od reakcji",
+      "Nie oddziałują z reagentami chemicznymi"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Które zjawisko mechaniczne jest szczególnie istotne dla nanocząstek w zawiesinie?",
+    "options": [
+      "Dominacja ruchów Browna nad sedymentacją grawitacyjną",
+      "Silna deformacja plastyczna pod wpływem ciężaru własnego",
+      "Brak zderzeń między cząstkami"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 13,
+    "question": "Dlaczego adhezja i tarcie międzyfazowe stają się kluczowe w nanostrukturach mechanicznych, takich jak NEMS?",
+    "options": [
+      "Ponieważ siły powierzchniowe (van der Waalsa, kapilarne) zaczynają dominować nad siłami objętościowymi",
+      "Ponieważ grawitacja rośnie z malejącym rozmiarem",
+      "Ponieważ materiały w skali nano nie przewodzą już prądu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 14,
+    "question": "Jak zmiana porowatości w nanoporowatych materiałach wpływa na ich właściwości mechaniczne?",
+    "options": [
+      "Zwiększona porowatość zazwyczaj obniża moduł sprężystości i wytrzymałość",
+      "Porowatość nie ma wpływu na mechanikę",
+      "Większa porowatość zawsze zwiększa wytrzymałość na ściskanie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Który efekt optyczny jest typowy dla małych metalicznych nanocząstek (np. Au, Ag)?",
+    "options": [
+      "Powierzchniowy rezonans plazmonowy",
+      "Pełna refleksyjność w całym zakresie widma",
+      "Zanik wszystkich przejść optycznych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 16,
+    "question": "Dlaczego grafen wykazuje wyjątkowo wysoką ruchliwość nośników ładunku?",
+    "options": [
+      "Elektrony zachowują się jak fermiony Diraca poruszające się z bardzo wysoką prędkością w dwuwymiarowej sieci heksagonalnej",
+      "Posiada ogromną liczbę defektów siatki, co ułatwia rozpraszanie",
+      "Jest materiałem amorficznym bez struktury krystalicznej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 17,
+    "question": "Co powoduje, że nanorurki węglowe mają bardzo wysoką wytrzymałość na rozciąganie?",
+    "options": [
+      "Silne wiązania kowalencyjne C–C i brak defektów w idealnie zwiniętym arkuszu grafenowym",
+      "Duża ilość wtrąceń tlenowych",
+      "Wysoka gęstość ziaren o przypadkowej orientacji"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "Jak stosunek powierzchni do objętości wpływa na rozpuszczalność nanocząstek w porównaniu z proszkami mikro?",
+    "options": [
+      "Często przyspiesza rozpuszczanie dzięki większej powierzchni kontaktu z rozpuszczalnikiem",
+      "Spowalnia rozpuszczanie, bo powierzchnia jest bardziej gładka",
+      "Nie ma żadnego wpływu na rozpuszczalność"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "W jakim sensie nanocząstki mogą wykazywać właściwości pośrednie między molekułami a materiałami masowymi?",
+    "options": [
+      "Posiadają dyskretne poziomy energetyczne jak molekuły, ale zawierają wiele atomów jak ciała stałe",
+      "Zawsze przewodzą jak nadprzewodniki",
+      "Nie wykazują żadnych właściwości kwantowych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Jak zmiana wielkości nanocząstek magnetycznych wpływa na temperaturę blokowania (blocking temperature)?",
+    "options": [
+      "Mniejsze cząstki mają zwykle niższą temperaturę blokowania, łatwiej przechodzą w stan superparamagnetyczny",
+      "Temperatura blokowania jest niezależna od rozmiaru",
+      "Większe cząstki zawsze mają niższą temperaturę blokowania"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Dlaczego nanocząstki mogą być bardziej toksyczne niż większe cząstki tego samego materiału?",
+    "options": [
+      "Lepsza penetracja barier biologicznych i większa reaktywność powierzchniowa",
+      "Zawsze mają mniejszą zdolność do przechodzenia przez błony",
+      "Zawsze są elektrycznie obojętne"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 22,
+    "question": "Co oznacza termin 'quantum confinement' w nanostrukturach półprzewodnikowych?",
+    "options": [
+      "Ograniczenie ruchu nośników ładunku w jednym lub więcej wymiarach do rozmiaru porównywalnego z długością fali de Broglie’a",
+      "Ograniczenie próbki w niewielkim naczyniu laboratoryjnym",
+      "Zamrożenie drgań sieci krystalicznej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 23,
+    "question": "Dlaczego cienkie nanowarstwy mogą wykazywać większą twardość niż materiał masowy o tej samej chemii?",
+    "options": [
+      "Ograniczenie rozwoju dyslokacji i umocnienie przez rozdrobnienie ziarna",
+      "Obecność wielu porów makroskopowych",
+      "Niższa gęstość atomów w warstwie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 24,
+    "question": "Jak zmniejszenie rozmiaru cząstek katalizatora wpływa na jego selektywność reakcji?",
+    "options": [
+      "Może zmienić selektywność poprzez zmianę dominujących facetów krystalograficznych i miejsc aktywnych",
+      "Nie ma żadnego wpływu, decyduje tylko temperatura",
+      "Zawsze zmniejsza selektywność do zera"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 25,
+    "question": "Który z poniższych efektów optycznych jest typowy dla nanoporowatych materiałów dielektrycznych?",
+    "options": [
+      "Zmiana efektywnego współczynnika załamania i rozpraszania, prowadząca do matowych lub opalizujących barw",
+      "Powstawanie wyłącznie lustrzanych odbić",
+      "Pełna przezroczystość niezależnie od porowatości"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 26,
+    "question": "Jak w skali nano zmienia się relatywne znaczenie sił van der Waalsa w porównaniu z grawitacją?",
+    "options": [
+      "Siły van der Waalsa stają się dominujące nad grawitacją",
+      "Grawitacja staje się dominująca nad siłami powierzchniowymi",
+      "Oba typy sił maleją do zera"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 27,
+    "question": "Dlaczego nanocząstki mogą wykazywać intensywną fluorescencję, nawet jeśli materiał masowy jest słabo świecący?",
+    "options": [
+      "Zmiana gęstości stanów i zakazanych przejść radiacyjnych dzięki kwantowemu uwięzieniu",
+      "Obniżenie temperatury topnienia",
+      "Zwiększona przewodność cieplna"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 28,
+    "question": "Jak zachowują się właściwości optyczne grafenu przy zwiększaniu liczby warstw?",
+    "options": [
+      "Transmisja maleje, a struktura pasmowa zbliża się do grafitu trójwymiarowego",
+      "Transmisja rośnie, a materiał staje się przezroczysty jak szkło",
+      "Własności optyczne nie zmieniają się z liczbą warstw"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 29,
+    "question": "Co dzieje się z przewodnictwem protonowym w nanoporowatych membranach polimerowych przy zwiększeniu stopnia uwodnienia i liczby kanałów nano?",
+    "options": [
+      "Przewodnictwo protonowe zazwyczaj rośnie dzięki ciągłym ścieżkom przewodzącym",
+      "Przewodnictwo zawsze maleje z powodu większej porowatości",
+      "Zostaje całkowicie wyłączone"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "Dlaczego nanoziarna w polikrystalicznym materiale mogą zwiększyć odporność na pełzanie w niskiej temperaturze, ale ją pogorszyć w wysokiej?",
+    "options": [
+      "W wysokiej temperaturze dyfuzja po granicach ziaren przyspiesza pełzanie, a przy niskiej granice działają jak bariery dla dyslokacji",
+      "Ponieważ nanoziarna są zawsze amorficzne",
+      "Ponieważ zmienia się liczba protonów w jądrze"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Jak zmiana rozmiaru porów w materiałach mezoporowatych wpływa na zjawiska międzyfazowe, takie jak kondensacja kapilarna?",
+    "options": [
+      "Mniejsze pory sprzyjają kondensacji przy niższych ciśnieniach względnych dzięki efektom Laplace’a",
+      "Rozmiar porów nie wpływa na kondensację",
+      "Większe pory zawsze kondensują przy niższym ciśnieniu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Dlaczego nanocząstki często wykazują większą aktywność fotokatalityczną niż klasyczne pigmenty tlenkowe?",
+    "options": [
+      "Więcej miejsc aktywnych na powierzchni i krótsza droga dyfuzji nośników w objętości",
+      "Mają zawsze niższy bandgap niż materiał masowy",
+      "Nie absorbują światła"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Jak nano‑skalowa chropowatość powierzchni wpływa na zwilżalność?",
+    "options": [
+      "Może wzmacniać zarówno hydrofobowość, jak i hydrofilowość w zależności od chemii powierzchni (modele Wenzla/Cassie‑Baxtera)",
+      "Zawsze zmniejsza kąt zwilżania do zera",
+      "Nie ma wpływu na zwilżalność"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 34,
+    "question": "Dlaczego cienkie nanowarstwy tlenkowe mogą wykazywać bariery dyfuzyjne lepsze niż grube powłoki makroskopowe?",
+    "options": [
+      "Mogą być bardziej jednorodne i wolne od mikropęknięć, a krótsza droga dyfuzji pozwala lepiej kontrolować defekty",
+      "Ponieważ mają większą liczbę porów makroskopowych",
+      "Bo łatwiej odspajają się od podłoża"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "W jaki sposób nanocząstki magnetyczne wykorzystywane są w separacji magnetycznej?",
+    "options": [
+      "Mają silny moment magnetyczny na jednostkę objętości i można je szybko przeciągać polem magnetycznym między fazami",
+      "Wytwarzają pole grawitacyjne",
+      "Zmieniają temperaturę roztworu bez udziału pola"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "Dlaczego w nanokompozytach polimerowych nawet niewielka ilość nanonapełniacza może znacząco zwiększyć moduł sprężystości?",
+    "options": [
+      "Silne oddziaływania międzyfazowe i ogromna powierzchnia kontaktu pozwalają efektywnie przenosić naprężenia",
+      "Ponieważ nanonapełniacz zawsze ma wyższą gęstość",
+      "Ponieważ tworzy makropory zwiększające objętość"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 37,
+    "question": "Co oznacza termin 'perkolacja' w kontekście przewodzących nanonapełniaczy w matrycy izolującej?",
+    "options": [
+      "Powstanie ciągłej sieci przewodzącej po przekroczeniu krytycznego stężenia napełniacza",
+      "Całkowite rozpuszczenie napełniacza w matrycy",
+      "Zanik przewodzenia przy wysokim stężeniu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Dlaczego nanocząstki metaliczne rozpraszają światło silniej niż duże cząstki o tej samej objętości masy?",
+    "options": [
+      "Rozmiar porównywalny z długością fali i efekty plazmonowe zwiększają rozpraszanie",
+      "Ponieważ mają mniejszą polaryzowalność",
+      "Ponieważ nie absorbują żadnego promieniowania"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 39,
+    "question": "Jak rozmiar porów w membranach nanofiltracyjnych wpływa na selektywność transportu?",
+    "options": [
+      "Rozmiary porów zbliżone do wielkości cząsteczek umożliwiają selektywne odrzucanie/transport na podstawie zjawisk sitowych i międzyfazowych",
+      "Większe pory zawsze zwiększają selektywność",
+      "Rozmiar porów nie ma znaczenia, decyduje tylko ciśnienie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 40,
+    "question": "Co powoduje, że nanocząstki węglowe (np. carbon dots) wykazują często silną fotoluminescencję?",
+    "options": [
+      "Połączenie efektów rozmiarowych, defektów powierzchni i grup funkcyjnych tworzących poziomy emisyjne",
+      "Brak jakichkolwiek defektów",
+      "Wyłącznie obecność atomów metali szlachetnych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 41,
+    "question": "Dlaczego nanocząstki ferromagnetyczne powyżej pewnego rozmiaru tracą superparamagnetyzm?",
+    "options": [
+      "Mogą tworzyć wielodomenowe ziarna z istotną energią barier magnetycznych i histerezą",
+      "Zawsze przechodzą w stan diamagnetyczny",
+      "Ponieważ temperatura Curie rośnie powyżej temperatury pokojowej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "Jak efekt tunelowania elektronów ujawnia się w cienkich barierach tlenkowych o grubości kilku nanometrów?",
+    "options": [
+      "Elektrony mogą przenikać przez barierę mimo klasycznie niewystarczającej energii, co prowadzi do prądu tunelowego",
+      "Przewodnictwo całkowicie zanika",
+      "Bariera staje się idealnym izolantem bez żadnego prądu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 43,
+    "question": "Dlaczego efekty międzyfazowe są krytyczne w nanokompozytach polimer–nanonapełniacz?",
+    "options": [
+      "Bo główna część objętości polimeru znajduje się w pobliżu powierzchni napełniacza i jego właściwości dominują zachowanie makroskopowe",
+      "Ponieważ fazy nie wchodzą ze sobą w żadne interakcje",
+      "Ponieważ napełniacz znajduje się wyłącznie w rdzeniu próbki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 44,
+    "question": "Jak obecność nanocząstek może wpływać na przewodnictwo cieplne cieczy (tzw. nanofluids)?",
+    "options": [
+      "Może zwiększać przewodnictwo cieplne dzięki lepszemu transportowi energii przez cząstki i zjawiskom międzyfazowym",
+      "Zawsze zmniejsza przewodnictwo cieplne",
+      "Nie zmienia przewodnictwa cieplnego cieczy"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 45,
+    "question": "Który efekt mechaniczny jest charakterystyczny dla bardzo cienkich nanobłon, np. membran grafenowych?",
+    "options": [
+      "Bardzo wysoka wytrzymałość przy jednocześnie łatwym falowaniu i pofałdowaniach z powodu małej sztywności na zginanie",
+      "Całkowita sztywność bez możliwości odkształceń",
+      "Wyłącznie sprężystość lepka"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "W jaki sposób zwiększona gęstość stanów powierzchniowych w nanocząstkach półprzewodnikowych może wpływać na ich przewodnictwo?",
+    "options": [
+      "Pułapki powierzchniowe mogą zmniejszać ruchliwość i czas życia nośników, obniżając przewodnictwo",
+      "Zawsze zwiększa przewodnictwo bez strat",
+      "Nie ma żadnego wpływu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 47,
+    "question": "Jak zmiana rozmiaru krystalitów wpływa na szerokość pików w dyfrakcji rentgenowskiej XRD?",
+    "options": [
+      "Mniejsze krystality powodują poszerzenie pików (efekt Scherrera)",
+      "Nie ma żadnego wpływu na szerokość pików",
+      "Większe krystality zawsze dają szersze piki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Dlaczego nanocząstki są skutecznymi ośrodkami rozpraszania w farbach i powłokach matowych?",
+    "options": [
+      "Ich rozmiar porównywalny z długością fali światła i wysokie kontrasty współczynników załamania powodują silne rozpraszanie",
+      "Ponieważ nie mają żadnego współczynnika załamania",
+      "Ponieważ pochłaniają całe światło bez rozpraszania"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Jak obecność nanocząstek węglowych w kompozycie może wpływać na ekranowanie elektromagnetyczne (EMI shielding)?",
+    "options": [
+      "Tworzą sieci przewodzące i powierzchnie odbijające, które pochłaniają i odbijają fale EM",
+      "Zmniejszają przewodność, co pogarsza ekranowanie",
+      "Nie wpływają na własności elektromagnetyczne kompozytu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 50,
+    "question": "Dlaczego w nanoskali istotna staje się fluktuacja liczby atomów i cząstek w małych objętościach?",
+    "options": [
+      "Ponieważ niewielka liczba cząstek oznacza, że statystyczne fluktuacje mają duży względny wpływ na własności lokalne",
+      "Ponieważ atomy przestają istnieć w małych objętościach",
+      "Ponieważ gęstość masy staje się nieskończona"
+    ],
+    "correctIndex": 0
+  }
+]

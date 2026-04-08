@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "question": "Co jest głównym celem podejścia Safe(r)-by-Design (SbD) w odniesieniu do nanomateriałów?",
+    "options": [
+      "Uwzględnienie bezpieczeństwa ludzi i środowiska już na etapie projektowania materiału, procesu i produktu",
+      "Przeprowadzenie testów toksyczności dopiero po wprowadzeniu produktu na rynek",
+      "Całkowita rezygnacja z oceny ryzyka przy innowacjach"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 2,
+    "question": "Która droga narażenia jest zazwyczaj uznawana za najważniejszą przy ocenie ryzyka w miejscu pracy dla nanocząstek w powietrzu?",
+    "options": [
+      "Inhalacja",
+      "Kontakt przez skórę",
+      "Droga dożylna"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 3,
+    "question": "Klasyczny paradygmat oceny ryzyka chemicznego obejmuje m.in. następujące kroki:",
+    "options": [
+      "Identyfikację zagrożeń, charakterystykę zagrożeń, ocenę narażenia i charakterystykę ryzyka",
+      "Wyłącznie zebranie opinii eksperckich",
+      "Tylko pomiar stężenia w środowisku"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 4,
+    "question": "Które stwierdzenie najlepiej opisuje nanosafety?",
+    "options": [
+      "Dziedzinę zajmującą się oceną i zarządzaniem potencjalnymi zagrożeniami zdrowotnymi i środowiskowymi nanomateriałów",
+      "Wyłącznie techniczne zagadnienia syntezy nanomateriałów",
+      "Projektowanie wyłącznie właściwości optycznych nanomateriałów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 5,
+    "question": "Która właściwość nanocząstek jest szczególnie istotna z punktu widzenia toksykologii inhalacyjnej?",
+    "options": [
+      "Rozmiar i rozkład rozmiarów cząstek (wpływ na depozycję w drogach oddechowych)",
+      "Wyłącznie kolor cząstek",
+      "Gęstość prądu płynącego przez cząstkę"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "question": "Które z poniższych NIE jest główną drogą narażenia na nanomateriały?",
+    "options": [
+      "Promieniowanie gamma z jądra nanocząstki",
+      "Inhalacja aerozolu",
+      "Kontakt skórny"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "question": "W kontekście nano‑toksykologii, jaki jest typowy skutek dużej reaktywności powierzchniowej nanocząstek w organizmie?",
+    "options": [
+      "Generacja reaktywnych form tlenu (ROS) i stres oksydacyjny",
+      "Natychmiastowa neutralizacja wszystkich toksyn",
+      "Brak interakcji z komórkami"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 8,
+    "question": "Które podejście najlepiej odpowiada zasadom SbD przy projektowaniu nowego nanomateriału?",
+    "options": [
+      "Modyfikacja składu i powierzchni tak, aby zmniejszyć toksyczność przy zachowaniu wymaganej funkcji",
+      "Najpierw maksymalizacja wydajności, a kwestie bezpieczeństwa pozostawione na później",
+      "Zastąpienie wszystkich badań toksyczności modelami marketingowymi"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 9,
+    "question": "Które stwierdzenie najlepiej opisuje „lifecycle approach” w nanosafety?",
+    "options": [
+      "Uwzględnienie ryzyka na wszystkich etapach życia nanomateriału: od syntezy, przez użycie, po utylizację",
+      "Skupienie się wyłącznie na fazie produkcji",
+      "Rozważanie tylko fazy transportu materiału"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 10,
+    "question": "Który z poniższych parametrów często ma większe znaczenie toksykologiczne dla nanocząstek niż sama masa?",
+    "options": [
+      "Powierzchnia właściwa lub liczba cząstek",
+      "Wyłącznie gęstość masowa",
+      "Kolor optyczny materiału"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 11,
+    "question": "Jaką rolę pełni powłoka (coating) nanocząstek z punktu widzenia nanosafety?",
+    "options": [
+      "Może zmieniać rozpuszczalność, interakcje biologiczne i toksyczność cząstek",
+      "Służy wyłącznie do poprawy wyglądu optycznego",
+      "Zawsze czyni cząstki całkowicie obojętnymi biologicznie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "question": "Który scenariusz najlepiej ilustruje podejście „exposure reduction” w SbD?",
+    "options": [
+      "Zamknięcie procesu w izolowanym reaktorze z filtracją emisji zamiast pracy w otwartej instalacji",
+      "Zwiększenie prędkości wentylatorów bez filtrów",
+      "Poleganie tylko na maseczkach bawełnianych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 13,
+    "question": "Co oznacza „grouping and read-across” w kontekście oceny bezpieczeństwa nanomateriałów?",
+    "options": [
+      "Przypisywanie podobnych nanomateriałów do grup na podstawie cech i przenoszenie danych toksyczności między nimi",
+      "Łączenie wszystkich nanomateriałów w jedną kategorię toksyczności",
+      "Zastępowanie testów toksycznych ankietą wśród pracowników"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 14,
+    "question": "Która z dróg narażenia jest szczególnie istotna w przypadku nanomateriałów stosowanych w kosmetykach i kremach przeciwsłonecznych?",
+    "options": [
+      "Kontakt skórny (dermalny)",
+      "Ekspozycja dożylna",
+      "Ekspozycja wyłącznie przez spożycie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 15,
+    "question": "Co jest typowym krótkoterminowym skutkiem inhalacji wysokich stężeń niektórych nanocząstek metali tlenkowych w modelach zwierzęcych?",
+    "options": [
+      "Stan zapalny w płucach i stres oksydacyjny",
+      "Natychmiastowe zwiększenie masy ciała",
+      "Zwiększona odporność na infekcje wirusowe bez skutków ubocznych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 16,
+    "question": "Które z poniższych jest przykładem środka inżynieryjnego (engineering control) dla nanosafety?",
+    "options": [
+      "Lokalna wentylacja wyciągowa z filtrami HEPA",
+      "Zalecenie, aby pracownicy po prostu „uważali”",
+      "Malowanie ścian na inny kolor"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 17,
+    "question": "W podejściu SbD, co powinno być zrobione na jak najwcześniejszym etapie R&D?",
+    "options": [
+      "Identyfikacja potencjalnych zagrożeń i scenariuszy narażenia dla projektowanego nanomateriału",
+      "Wyłącznie oszacowanie kosztów produkcji",
+      "Zaprojektowanie logo marketingowego produktu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 18,
+    "question": "Które nanomateriały zwykle wymagają szczególnej uwagi z powodu możliwości generowania włóknistych struktur podobnych do azbestu?",
+    "options": [
+      "Długie, cienkie nanorurki węglowe o wysokim stosunku długości do średnicy",
+      "Nanocząstki srebra kuliste o niskim stosunku powierzchni do objętości",
+      "Nanocząstki soli kuchennej"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 19,
+    "question": "Jakie działanie jest zgodne z hierarchią kontroli ryzyka dla nanomateriałów?",
+    "options": [
+      "Substytucja bardziej toksycznego nanomateriału mniej toksycznym o podobnej funkcji",
+      "Zastąpienie wszystkich zabezpieczeń dodatkowymi szkoleniami",
+      "Zwiększanie czasu ekspozycji w celu adaptacji organizmu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 20,
+    "question": "Co w kontekście nanosafety oznacza „no data, no market” dla nowych nanomateriałów?",
+    "options": [
+      "Brak wystarczających danych bezpieczeństwa może uniemożliwić wprowadzenie materiału na rynek",
+      "Materiał można wprowadzić na rynek bez żadnych danych, jeśli jest przełomowy",
+      "Dane toksyczności zbiera się dopiero po szerokim zastosowaniu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 21,
+    "question": "Które własności fizykochemiczne nanocząstek są kluczowe przy ocenie ich losu w środowisku?",
+    "options": [
+      "Rozmiar, ładunek powierzchniowy, rozpuszczalność i zdolność do aglomeracji/agregacji",
+      "Wyłącznie temperatura topnienia",
+      "Tylko przewodnictwo cieplne"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 22,
+    "question": "Który scenariusz jest typowy dla narażenia populacji ogólnej na nanocząstki srebra?",
+    "options": [
+      "Kontakt z wyrobami konsumenckimi o działaniu antybakteryjnym (tekstyliami, powłokami, kosmetykami)",
+      "Wyłącznie praca w laboratorium fizyki jądrowej",
+      "Ekspozycja tylko w kopalniach węgla"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 23,
+    "question": "W nano‑toksykologii, co oznacza „dose metric”?",
+    "options": [
+      "Wielkość opisująca dawkę, np. masa, liczba cząstek lub powierzchnia właściwa",
+      "Nazwa producenta danego nanomateriału",
+      "Maksymalny czas przechowywania próbki"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 24,
+    "question": "Które z poniższych działań jest związane z SbD na poziomie procesu produkcyjnego?",
+    "options": [
+      "Projektowanie zamkniętych, zautomatyzowanych linii ograniczających emisję pyłów nano",
+      "Zwiększanie ręcznej manipulacji proszkami",
+      "Stosowanie wentylatorów bez filtrów"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 25,
+    "question": "Dlaczego nanomateriały w żywności i opakowaniach budzą szczególne obawy toksykologiczne?",
+    "options": [
+      "Ze względu na potencjalną drogę narażenia przez przewód pokarmowy i brak pełnej wiedzy o biodostępności",
+      "Ponieważ zawsze świecą w ciemności",
+      "Bo uniemożliwiają wykrycie zepsucia żywności"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 26,
+    "question": "Które stwierdzenie najlepiej oddaje rolę „problem formulation” w ocenie ryzyka nanomateriału?",
+    "options": [
+      "Zdefiniowanie celu oceny, scenariuszy ekspozycji, populacji narażonych i kluczowych punktów końcowych",
+      "Wyłącznie wykonanie pomiarów pyłu w pomieszczeniu",
+      "Opis marketingowy zalet produktu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 27,
+    "question": "Która droga narażenia na nanomateriały jest istotna przy pracach z aerozolami medycznymi lub sprayami?",
+    "options": [
+      "Inhalacja",
+      "Ekspozycja wyłącznie skórna",
+      "Ekspozycja wyłącznie dożylna"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 28,
+    "question": "W podejściu SbD do nanoleków, które z poniższych działań jest przykładem redukcji hazardu?",
+    "options": [
+      "Wybór nośnika o niższej cytotoksyczności przy zachowaniu skuteczności dostarczania leku",
+      "Zwiększenie dawki nanonośnika bez zmiany składu",
+      "Rezygnacja z badań biokompatybilności"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 29,
+    "question": "Dlaczego stabilność koloidalna nanocząstek w płynach biologicznych ma znaczenie dla nanosafety?",
+    "options": [
+      "Agregacja lub deagregacja zmienia biodostępność, rozkład w organizmie i toksyczność",
+      "Nie ma znaczenia, bo liczy się tylko skład chemiczny",
+      "Decyduje wyłącznie o kolorze preparatu"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 30,
+    "question": "Które z poniższych jest przykładem „informacji regulacyjnej” potrzebnej w SbD?",
+    "options": [
+      "Dane o klasyfikacji zagrożeń, wartościach NDS/REL i wymaganiach rejestracyjnych dla danego typu nanomateriału",
+      "Kolor opakowania produktu",
+      "Preferencje estetyczne użytkowników"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 31,
+    "question": "Co jest główną zaletą stosowania wysokoprzepustowych (high‑throughput) metod toksykologicznych w SbD?",
+    "options": [
+      "Szybkie przesiewowe porównanie wielu wariantów nanomateriałów pod kątem hazardu",
+      "Zastąpienie całkowicie wszystkich badań toksyczności jednym testem",
+      "Ograniczenie się tylko do badań na ludziach"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 32,
+    "question": "Który z poniższych przykładów dotyczy SbD na poziomie produktu końcowego?",
+    "options": [
+      "Projektowanie powłoki tak, aby minimalizować uwalnianie nanocząstek w trakcie użytkowania i utylizacji",
+      "Zwiększenie abrazyjności powłoki bez badań emisji",
+      "Stosowanie nanocząstek luźno przyczepionych do powierzchni"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 33,
+    "question": "Dlaczego małe rozmiary nanocząstek ułatwiają przekraczanie barier biologicznych?",
+    "options": [
+      "Mogą przenikać przez bariery, takie jak nabłonek płuc czy ściany naczyń, oraz być transportowane z krwią i limfą",
+      "Bo zawsze są obojętne elektrycznie",
+      "Bo nie oddziałują z żadnymi białkami"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 34,
+    "question": "Które stwierdzenie najlepiej opisuje różnicę między „hazard” a „risk” w nanosafety?",
+    "options": [
+      "Hazard to inherentne właściwości szkodliwe materiału, a ryzyko zależy od hazardu i poziomu narażenia",
+      "Hazard i ryzyko to dokładnie to samo",
+      "Hazard odnosi się tylko do zagrożeń środowiskowych, ryzyko tylko do ekonomicznych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 35,
+    "question": "Jakie środki ochrony indywidualnej (PPE) są zazwyczaj rekomendowane przy pracy z nanopyłami?",
+    "options": [
+      "Półmaski lub maski z filtrami P3/HEPA, rękawice i odzież ochronna",
+      "Zwykła maseczka chirurgiczna i podwinięte rękawy",
+      "Okulary przeciwsłoneczne bez innych środków"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 36,
+    "question": "W kontekście SbD, co oznacza „trade-off” między bezpieczeństwem a funkcjonalnością?",
+    "options": [
+      "Konieczność znalezienia kompromisu między maksymalnym bezpieczeństwem a wymaganymi właściwościami użytkowymi i kosztami",
+      "Zawsze wybór maksymalnej funkcjonalności niezależnie od ryzyka",
+      "Zawsze całkowita rezygnacja z funkcji dla bezpieczeństwa"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 37,
+    "question": "Dlaczego w ocenie ryzyka nanocząstek inhalacyjnych istotny jest ich kształt (np. włóknisty vs kulisty)?",
+    "options": [
+      "Włókniste cząstki mogą zachowywać się podobnie do azbestu, z trudniejszą eliminacją z płuc",
+      "Kształt nie wpływa na los w organizmie",
+      "Kuliste cząstki są zawsze bardziej toksyczne niezależnie od rozmiaru"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 38,
+    "question": "Które z poniższych jest przykładem scenariusza wysokiego ryzyka dla uwalniania nanopyłów?",
+    "options": [
+      "Suche mielenie lub szlifowanie nanokompozytów bez osłon i wyciągu",
+      "Przechowywanie nanomateriału w szczelnie zamkniętych pojemnikach",
+      "Praca z nanomateriałem w postaci mokrej pasty w zamkniętym systemie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 39,
+    "question": "Jaką rolę odgrywają testy in vitro w wczesnym etapie SbD?",
+    "options": [
+      "Pozwalają szybko zidentyfikować potencjalne mechanizmy toksyczności i porównać warianty nanomateriałów",
+      "Zastępują całkowicie wszystkie inne badania",
+      "Służą tylko do oceny koloru komórek"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 40,
+    "question": "Który element jest KLUCZOWY dla komunikacji ryzyka nanomateriałów w łańcuchu dostaw?",
+    "options": [
+      "Karty charakterystyki (SDS) zawierające informacje specyficzne dla nanomateriału",
+      "Wyłącznie reklamy produktu",
+      "Brak jakichkolwiek dokumentów, aby nie wzbudzać obaw"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 41,
+    "question": "Który z poniższych to przykład „process SbD” w fabryce produkującej nanoprochy?",
+    "options": [
+      "Automatyczne napełnianie i zamykanie worków z odciągiem pyłu",
+      "Ręczne przesypywanie proszku z otwartych worków",
+      "Suszenie proszku na otwartych tacach w hali"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 42,
+    "question": "Dlaczego cząstki nanometrowe mogą mieć inne profile toksyczności niż ich odpowiedniki makroskopowe o tym samym składzie chemicznym?",
+    "options": [
+      "Ze względu na odmienne właściwości powierzchniowe, reaktywność, rozpuszczalność i biodystrybucję",
+      "Bo skład chemiczny w nanoskali ulega zmianie na losowy",
+      "Bo tracą wszystkie właściwości fizyczne"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 43,
+    "question": "Co jest przykładem SbD opartego na SUBSTYTUCJI?",
+    "options": [
+      "Zastąpienie rozpuszczalnego, bioakumulacyjnego nanomateriału innym, mniej mobilnym i mniej toksycznym",
+      "Zwiększenie dawki tego samego nanomateriału",
+      "Przeniesienie produkcji do innego kraju bez zmian materiału"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 44,
+    "question": "Która droga narażenia jest szczególnie istotna przy stosowaniu nanomateriałów w żywności i suplementach?",
+    "options": [
+      "Ingestia (droga pokarmowa)",
+      "Inhalacja",
+      "Ekspozycja przez skórę"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 45,
+    "question": "W jakim celu stosuje się podejście warstwowe (tiered) w ocenie ryzyka nanomateriałów?",
+    "options": [
+      "Aby krokowo zwiększać poziom złożoności oceny w zależności od potrzeb i dostępnych danych",
+      "Aby wykonać wszystkie możliwe testy od razu",
+      "Aby całkowicie pominąć etap zbierania danych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 46,
+    "question": "Które z poniższych zachowań jest elementem kultury bezpieczeństwa w nanosafety?",
+    "options": [
+      "Systematyczne zgłaszanie incydentów i „near‑missów” oraz aktualizacja procedur",
+      "Ukrywanie wszystkich drobnych incydentów",
+      "Poleganie wyłącznie na intuicji pracowników"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 47,
+    "question": "Jak w SbD traktuje się niepewności związane z brakiem danych toksykologicznych dla nowego nanomateriału?",
+    "options": [
+      "Zastosowanie podejścia ostrożnościowego oraz projektowanie wariantów generujących mniej narażenia",
+      "Przyjęcie, że brak danych oznacza brak ryzyka",
+      "Ignorowanie niepewności na etapie projektowania"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 48,
+    "question": "Który przykład dotyczy SbD w kontekście końca życia produktu (end‑of‑life)?",
+    "options": [
+      "Projektowanie nanokompozytów tak, aby w trakcie recyklingu i spalania uwalniały minimalne ilości wolnych nanocząstek",
+      "Zakładanie, że recykling nie będzie prowadzony",
+      "Brak analiz emisji w instalacjach spalania"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 49,
+    "question": "Po co w ramach nanosafety stosuje się modele in silico (QSAR, PBPK itp.)?",
+    "options": [
+      "Aby przewidywać zachowanie i toksyczność nanomateriałów oraz wspierać wybór bezpieczniejszych wariantów",
+      "Aby zastąpić konieczność posiadania jakichkolwiek danych eksperymentalnych",
+      "Wyłącznie do celów marketingowych"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": 50,
+    "question": "Jaką rolę pełni współpraca z regulatorami w kontekście Safe‑by‑Design dla nanotechnologii?",
+    "options": [
+      "Pomaga dostosować projekt materiału i strategię badań do przyszłych wymogów regulacyjnych i ograniczyć ryzyko 'regulatory surprise'",
+      "Nie ma znaczenia na etapie projektowania",
+      "Służy wyłącznie do uzyskania zezwoleń marketingowych"
+    ],
+    "correctIndex": 0
+  }
+]
