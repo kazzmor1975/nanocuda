@@ -443,6 +443,164 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
     background: #f59e0b; /* amber-500 */
 }
 
+/* --- Nano Lesson View --- */
+.lesson-content-box {
+    background: var(--surface-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+}
+
+.lesson-content-box h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.quiz-container {
+    background: var(--surface-light);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    background: var(--card-bg);
+    transition: all var(--transition-fast);
+}
+
+.quiz-option:hover {
+    border-color: var(--primary-color);
+}
+
+.quiz-option.selected {
+    border-color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.quiz-feedback {
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.quiz-feedback.success {
+    background: rgba(34, 197, 94, 0.1);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.quiz-feedback.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--risk-color);
+    border: 1px solid var(--risk-color);
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* --- Print Styles (Project Sheet) --- */
+.print-only {
+    display: none;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    #print-view, #print-view * {
+        visibility: visible;
+    }
+
+    #print-view {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 2cm;
+    }
+
+    .print-header {
+        border-bottom: 2px solid #333;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .print-header h2 {
+        margin-top: 0;
+        font-size: 24px;
+        color: #000;
+    }
+
+    .print-meta p {
+        margin: 0.5rem 0;
+        font-size: 14px;
+    }
+
+    .print-fields {
+        display: flex;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    .print-input {
+        border: none;
+        border-bottom: 1px solid #999;
+        font-family: inherit;
+        font-size: 14px;
+        outline: none;
+        width: 200px;
+    }
+
+    .print-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .print-section h3 {
+        font-size: 16px;
+        color: #333;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .print-section p, .print-section li {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 0.25rem;
+    }
+
+    .print-notes .notes-area {
+        height: 150px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 0.5rem;
+    }
+}
+
 /* Conceptual Diagrams */
 .priority-header-content {
     display: flex;

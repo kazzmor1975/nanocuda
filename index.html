@@ -24,8 +24,24 @@
             <section id="intro-section">
                 <h2 data-i18n="homeTitle">Select an Intended Use Case</h2>
                 <p data-i18n="homeDesc">Choose your application area to start finding the best nanomaterial for your lab project.</p>
+                <div class="mode-toggle-container margin-top-md" style="justify-content: center;">
+                    <button id="btn-flow-app" class="mode-btn active" data-i18n="findByApp">Start from Application</button>
+                    <button id="btn-flow-mat" class="mode-btn" data-i18n="findByMaterial">Start from Material</button>
+                </div>
+            </section>
+
+            <section id="bookmarks-section" class="margin-bottom-xl" style="display: none;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem;">
+                    <h3 data-i18n="recentSessions">Recent Sessions</h3>
+                </div>
+                <div id="bookmarks-list" class="tags-container">
+                    <!-- Bookmarks injected here -->
+                </div>
             </section>
             <section id="app-grid" class="grid-container">
+                <!-- Cards populated by JavaScript -->
+            </section>
+            <section id="mat-grid" class="grid-container" style="display: none;">
                 <!-- Cards populated by JavaScript -->
             </section>
         </div>
@@ -33,6 +49,7 @@
         <!-- Priority Settings View -->
         <div id="view-priority" style="display: none;">
             <div class="mode-toggle-container">
+                <button id="btn-mode-learn" class="mode-btn" data-i18n="learnMode">📚 Nano-Lesson</button>
                 <button id="btn-mode-explore" class="mode-btn" data-i18n="modeExplore">🔍 Explore</button>
                 <button id="btn-mode-decide" class="mode-btn active" data-i18n="modeDecide">⚖️ Decide</button>
             </div>
@@ -101,8 +118,11 @@
             </button>
 
             <header class="result-header">
-                <h2 id="res-title">Material Name</h2>
-                <div class="score-badge"><span data-i18n="match">Match</span>: <span id="res-score"></span>%</div>
+                <div>
+                    <h2 id="res-title">Material Name</h2>
+                    <div class="score-badge"><span data-i18n="match">Match</span>: <span id="res-score"></span>%</div>
+                </div>
+                <button id="btn-generate-sheet" class="btn-secondary" data-i18n="generateProjectSheet">Generate Project Sheet</button>
             </header>
 
             <div class="result-content">
@@ -162,6 +182,45 @@
             </div>
         </div>
 
+        <!-- Material Reverse Flow View -->
+        <div id="view-material" style="display: none;">
+            <button class="back-button btn-home" aria-label="Back to selection" data-i18n="btnBackUseCases">
+                &larr; Back
+            </button>
+            <header class="result-header">
+                <div>
+                    <h2 id="rev-title">Material Name</h2>
+                </div>
+            </header>
+            <div class="result-content">
+                <div class="main-column">
+                    <article class="section-block">
+                        <h3 data-i18n="usedIn">Used in:</h3>
+                        <div id="rev-apps" class="tags-container margin-bottom-md"></div>
+
+                        <h3 data-i18n="resWhy">Why this material?</h3>
+                        <p id="rev-why" class="text-large"></p>
+                    </article>
+
+                    <article class="section-block">
+                        <h3 data-i18n="resPath">Experimental Path</h3>
+                        <ol id="rev-path" class="experimental-path-list"></ol>
+                    </article>
+                </div>
+                <aside class="sidebar-column">
+                    <div class="section-block strengths-block">
+                        <h3 data-i18n="resStrengths">Key Strengths</h3>
+                        <ul id="rev-strengths" class="bullet-list"></ul>
+                    </div>
+
+                    <div class="section-block trade-offs-block">
+                        <h3 data-i18n="resRisks">Key Risks & Limitations</h3>
+                        <ul id="rev-limitations" class="bullet-list"></ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
         <!-- Comparison View -->
         <div id="view-compare" style="display: none;">
             <button class="back-button btn-summary" aria-label="Back to recommendations" data-i18n="btnBackRecs">
@@ -183,7 +242,93 @@
             </section>
         </div>
 
+        <!-- Nano-Lesson View -->
+        <div id="view-lesson" style="display: none;">
+            <div class="mode-toggle-container">
+                <button id="btn-lesson-mode-learn" class="mode-btn active" data-i18n="learnMode">📚 Nano-Lesson</button>
+                <button id="btn-lesson-mode-explore" class="mode-btn" data-i18n="modeExplore">🔍 Explore</button>
+                <button id="btn-lesson-mode-decide" class="mode-btn" data-i18n="modeDecide">⚖️ Decide</button>
+            </div>
+            <button class="back-button btn-home" aria-label="Back to selection" data-i18n="btnBackUseCases">
+                &larr; Back to Use Cases
+            </button>
+            <section class="lesson-section">
+                <header class="view-header">
+                    <h2 id="lesson-app-title"></h2>
+                    <p id="lesson-progress-text" class="helper-text"></p>
+                </header>
+                <div class="card-container">
+                    <div id="lesson-content" class="lesson-content-box">
+                        <h3 id="lesson-title"></h3>
+                        <p id="lesson-text"></p>
+
+                        <div id="lesson-quiz" class="quiz-container margin-top-md" style="display: none;">
+                            <p id="quiz-question" class="font-weight-bold"></p>
+                            <div id="quiz-options" class="quiz-options">
+                                <!-- Populated by JS -->
+                            </div>
+                            <div id="quiz-feedback" class="quiz-feedback margin-top-sm" style="display: none;"></div>
+                            <button id="btn-check-answer" class="btn-secondary margin-top-sm" disabled data-i18n="checkAnswer">Check Answer</button>
+                        </div>
+                    </div>
+                    <div class="action-bar flex-between">
+                        <button id="btn-lesson-prev" class="btn-secondary" style="display: none;">&larr; Prev</button>
+                        <button id="btn-lesson-next" class="btn-primary" data-i18n="nextLesson" style="display: none;">Next Lesson &rarr;</button>
+                        <button id="btn-lesson-finish" class="btn-primary" data-i18n="finishLessons" style="display: none;">Finish Lessons</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </main>
+
+    <!-- Print View / Project Sheet -->
+    <div id="print-view" class="print-only">
+        <div class="print-header">
+            <h2>Nanomaterial Project Sheet</h2>
+            <div class="print-meta">
+                <p><strong><span data-i18n="applicationArea">Application Area:</span></strong> <span id="print-app-name"></span></p>
+                <p><strong><span data-i18n="materialClass">Material Class:</span></strong> <span id="print-mat-name"></span></p>
+                <div class="print-fields">
+                    <label><span data-i18n="studentName">Student Name:</span> <input type="text" class="print-input"></label>
+                    <label><span data-i18n="supervisorName">Supervisor Name:</span> <input type="text" class="print-input"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="print-body">
+            <div class="print-section">
+                <h3><span data-i18n="resWhy">Why this material?</span></h3>
+                <p id="print-why"></p>
+            </div>
+
+            <div class="print-section">
+                <h3><span data-i18n="resProperties">Most Important Target Properties</span></h3>
+                <ul id="print-properties"></ul>
+            </div>
+
+            <div class="print-section">
+                <h3><span data-i18n="resMethods">Recommended Characterization Methods</span></h3>
+                <ul id="print-methods"></ul>
+            </div>
+
+            <div class="print-section">
+                <h3><span data-i18n="resPath">Experimental Path</span></h3>
+                <ol id="print-path"></ol>
+            </div>
+
+            <div class="print-section">
+                <h3><span data-i18n="resRisks">Key Risks & Limitations</span></h3>
+                <ul id="print-limitations"></ul>
+                <p id="print-tradeoffs" style="margin-top: 0.5rem; font-style: italic;"></p>
+            </div>
+
+            <div class="print-section print-notes">
+                <h3><span data-i18n="projectNotes">Notes:</span></h3>
+                <div class="notes-area"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="data.js"></script>
