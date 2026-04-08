@@ -106,6 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Encyclopedia State
     let encMaterials = [];
+    let currentlyViewedMaterial = null;
+    let externalDataLoaded = false;
     const encSearch = document.getElementById('enc-search');
     const encMorph = document.getElementById('enc-filter-morph');
     const encComp = document.getElementById('enc-filter-comp');
@@ -173,6 +175,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showEncyclopediaDetail(mat) {
+        currentlyViewedMaterial = mat;
+        externalDataLoaded = false;
+
         document.getElementById('enc-mat-title').textContent = mat.name;
         document.getElementById('enc-mat-desc').textContent = mat.shortDescription;
 
@@ -189,6 +194,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('enc-mat-limitations').innerHTML = mat.limitations.map(l => `<li>${l}</li>`).join('');
         document.getElementById('enc-mat-safety').textContent = mat.nanosafety;
 
+        // Reset External Data Panel
+        const externalContainer = document.getElementById('external-data-container');
+        if (externalContainer) externalContainer.style.display = 'none';
+        const toggleIcon = document.getElementById('external-toggle-icon');
+        if (toggleIcon) toggleIcon.textContent = '▼';
+
         // "See where this fits" Action
         const btnSeeFits = document.getElementById('btn-see-fits');
         btnSeeFits.onclick = () => {
@@ -200,6 +211,146 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         switchView(viewEncyclopediaDetail);
+    }
+
+    // Toggle External Data Panel
+    const btnToggleExternal = document.getElementById('btn-toggle-external');
+    if (btnToggleExternal) {
+        btnToggleExternal.addEventListener('click', () => {
+            const container = document.getElementById('external-data-container');
+            const icon = document.getElementById('external-toggle-icon');
+            if (container.style.display === 'none') {
+                container.style.display = 'block';
+                icon.textContent = '▲';
+                if (!externalDataLoaded && currentlyViewedMaterial) {
+                    loadExternalData(currentlyViewedMaterial);
+                }
+            } else {
+                container.style.display = 'none';
+                icon.textContent = '▼';
+            }
+        });
+    }
+
+    // --- External API Fetching ---
+    async function loadExternalData(mat) {
+        externalDataLoaded = true;
+        const mpContent = document.getElementById('ext-mp-content');
+        const pubchemContent = document.getElementById('ext-pubchem-content');
+        const nanoLinks = document.getElementById('ext-nano-links');
+
+        // Loading states
+        const loadingStr = uiDict['loadingExternal'] || "Fetching data...";
+        mpContent.innerHTML = `<p class="helper-text"><em>${loadingStr}</em></p>`;
+        pubchemContent.innerHTML = `<p class="helper-text"><em>${loadingStr}</em></p>`;
+        nanoLinks.innerHTML = '';
+
+        // 1. PubChem API
+        if (mat.pubchemCids && mat.pubchemCids.length > 0) {
+            let pubchemHtml = '';
+            for (const cid of mat.pubchemCids) {
+                try {
+                    // PUG-REST simple properties fetch
+                    const res = await fetch(`https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/${cid}/property/MolecularFormula,MolecularWeight,IUPACName/JSON`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        const props = data.PropertyTable.Properties[0];
+                        pubchemHtml += `
+                            <div style="background:var(--card-bg); padding:0.75rem; border-radius:var(--radius-sm); border:1px solid var(--border-color); margin-bottom:0.5rem;">
+                                <strong>IUPAC:</strong> ${props.IUPACName || 'N/A'}<br>
+                                <strong>Formula:</strong> ${props.MolecularFormula || 'N/A'}<br>
+                                <strong>Weight:</strong> ${props.MolecularWeight ? props.MolecularWeight + ' g/mol' : 'N/A'}<br>
+                                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/${cid}" target="_blank" rel="noopener noreferrer">View on PubChem ↗</a>
+                            </div>
+                        `;
+                    } else {
+                        pubchemHtml += `<p class="helper-text">Could not load CID ${cid}</p>`;
+                    }
+                } catch (e) {
+                    console.error("PubChem Fetch Error:", e);
+                    pubchemHtml = `<p class="helper-text error-text">${uiDict['errorExternal'] || "Data could not be loaded."}</p>`;
+                }
+            }
+            pubchemContent.innerHTML = pubchemHtml;
+        } else {
+            pubchemContent.innerHTML = `<p class="helper-text">${uiDict['noExternalIds'] || "No external identifiers."}</p>`;
+        }
+
+        // 2. Materials Project API
+        // For security and simplicity in this vanilla client, we mock the API key requirement check
+        // Real implementation would require a backend proxy or an env variable injected into the client
+        const MP_API_KEY = window.MP_API_KEY || null; // e.g. set via config
+
+        if (mat.materialsProjectIds && mat.materialsProjectIds.length > 0) {
+            let mpHtml = '';
+
+            if (!MP_API_KEY) {
+                mpHtml = `<p class="helper-text"><em>API Key required for Materials Project data. Please configure window.MP_API_KEY.</em></p>`;
+                // Fallback to just providing a link
+                mat.materialsProjectIds.forEach(mpId => {
+                    mpHtml += `<p><a href="https://next-gen.materialsproject.org/materials/${mpId}" target="_blank" rel="noopener noreferrer">View ${mpId} on Materials Project ↗</a></p>`;
+                });
+            } else {
+                for (const mpId of mat.materialsProjectIds) {
+                    try {
+                        const res = await fetch(`https://api.materialsproject.org/materials/summary/?material_ids=${mpId}&_fields=formula_pretty,spacegroup,band_gap,energy_above_hull`, {
+                            headers: {
+                                'X-API-KEY': MP_API_KEY,
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (res.ok) {
+                            const data = await res.json();
+                            if (data.data && data.data.length > 0) {
+                                const doc = data.data[0];
+                                mpHtml += `
+                                    <div style="background:var(--card-bg); padding:0.75rem; border-radius:var(--radius-sm); border:1px solid var(--border-color); margin-bottom:0.5rem;">
+                                        <strong>Formula:</strong> ${doc.formula_pretty || 'N/A'}<br>
+                                        <strong>Space Group:</strong> ${doc.spacegroup ? doc.spacegroup.symbol : 'N/A'}<br>
+                                        <strong>Band Gap:</strong> ${doc.band_gap !== null ? doc.band_gap.toFixed(3) + ' eV' : 'N/A'}<br>
+                                        <strong>Energy Above Hull:</strong> ${doc.energy_above_hull !== null ? doc.energy_above_hull.toFixed(3) + ' eV/atom' : 'N/A'}<br>
+                                        <a href="https://next-gen.materialsproject.org/materials/${mpId}" target="_blank" rel="noopener noreferrer">View on Materials Project ↗</a>
+                                    </div>
+                                `;
+                            }
+                        } else {
+                            mpHtml += `<p class="helper-text">Could not load MP ID ${mpId}</p>`;
+                        }
+                    } catch (e) {
+                        console.error("Materials Project Fetch Error:", e);
+                        mpHtml = `<p class="helper-text error-text">${uiDict['errorExternal'] || "Data could not be loaded."}</p>`;
+                    }
+                }
+            }
+            mpContent.innerHTML = mpHtml;
+        } else {
+            mpContent.innerHTML = `<p class="helper-text">${uiDict['noExternalIds'] || "No external identifiers."}</p>`;
+        }
+
+        // 3. Curated Nano Databases (StatNano, NanoDatabank, etc)
+        let nanoHtml = '';
+        if (mat.nanoExampleLinks && mat.nanoExampleLinks.length > 0) {
+            nanoHtml += mat.nanoExampleLinks.map(link => `
+                <li style="margin-bottom: 0.25rem;">
+                    <strong>[${link.source}]</strong> <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label} ↗</a>
+                </li>
+            `).join('');
+        }
+
+        if (mat.safetySources && mat.safetySources.length > 0) {
+            nanoHtml += mat.safetySources.map(link => `
+                <li style="margin-bottom: 0.25rem;">
+                    <strong>[${link.source}]</strong> <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label} ↗</a>
+                </li>
+            `).join('');
+        }
+
+        if (nanoHtml) {
+            nanoLinks.innerHTML = nanoHtml;
+        } else {
+            nanoLinks.innerHTML = `<li><span class="helper-text">${uiDict['noExternalIds'] || "No external links provided."}</span></li>`;
+        }
     }
 
     const btnEncBack = document.getElementById('btn-enc-back');
@@ -372,6 +523,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Re-render current view with new data
         if (viewHome.style.display !== 'none') {
             renderGrid();
+        } else if (document.getElementById('view-encyclopedia').style.display !== 'none') {
+            renderEncyclopediaHome();
+        } else if (document.getElementById('view-encyclopedia-detail').style.display !== 'none' && currentEncyclopediaMaterial) {
+            showEncyclopediaDetail(currentEncyclopediaMaterial);
         } else if (viewPriority.style.display !== 'none' && currentApp) {
             // Re-fetch currentApp reference from new language array
             showPriorityView(currentApp.id, true);
@@ -385,6 +540,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (viewCompare.style.display !== 'none' && currentApp) {
             currentApp = applications.find(a => a.id === currentApp.id);
             generateRecommendations();
+        } else if (document.getElementById('view-lesson').style.display !== 'none' && currentApp) {
+            currentApp = applications.find(a => a.id === currentApp.id);
+            renderLesson();
         }
     }
 

@@ -68,7 +68,16 @@ const UI_I18N = {
         "btnOpenEncyclopedia": "Open in Encyclopedia",
         "btnSeeWhereFits": "See where this fits",
         "nanosafety": "Nanosafety Notes",
-        "externalData": "External Data"
+        "externalData": "External Data",
+        "externalDataToggle": "View Data from External Sources",
+        "materialsProject": "Materials Project (Structures)",
+        "pubchem": "PubChem (Chemical Identity)",
+        "nanoDatabases": "Real-world Examples & Safety Tools",
+        "loadingExternal": "Fetching data...",
+        "errorExternal": "Data could not be loaded, but local recommendations are still available.",
+        "noExternalIds": "No external identifiers are currently linked for this material class.",
+        "overview": "Overview",
+        "usedIn": "Typical Applications"
     },
     "pl": {
         "title": "Kreator Nanomateriałów",
@@ -139,7 +148,16 @@ const UI_I18N = {
         "btnOpenEncyclopedia": "Otwórz w Encyklopedii",
         "btnSeeWhereFits": "Zobacz gdzie to pasuje",
         "nanosafety": "Uwagi o Bezpieczeństwie (Nanosafety)",
-        "externalData": "Dane Zewnętrzne"
+        "externalData": "Dane Zewnętrzne",
+        "externalDataToggle": "Wyświetl Dane ze Źródeł Zewnętrznych",
+        "materialsProject": "Materials Project (Struktury)",
+        "pubchem": "PubChem (Tożsamość Chemiczna)",
+        "nanoDatabases": "Przykłady z Życia i Narzędzia Bezpieczeństwa",
+        "loadingExternal": "Pobieranie danych...",
+        "errorExternal": "Nie można załadować danych, ale lokalne rekomendacje są nadal dostępne.",
+        "noExternalIds": "Brak zewnętrznych identyfikatorów przypisanych do tej klasy materiałów.",
+        "overview": "Przegląd",
+        "usedIn": "Typowe zastosowania"
     }
 };
 
@@ -1882,7 +1900,27 @@ const APP_DATA = {
                     "Hard to achieve high selectivity without complex functionalization"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-48"
+                ],
+                "pubchemCids": [
+                    "163152"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "StatNano",
+                        "label": "Graphene-based conductives",
+                        "url": "https://statnano.com/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "NanoRiskCat",
+                        "label": "Graphene Safety Profile",
+                        "url": "https://www.nanoriskcat.dk/"
+                    }
+                ]
             },
             {
                 "id": "sensor_metal_oxides",
@@ -1930,7 +1968,29 @@ const APP_DATA = {
                     "Often requires high operating temperatures (200-400°C)"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-2657",
+                    "mp-2133"
+                ],
+                "pubchemCids": [
+                    "26042",
+                    "14806"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "NanoDatabank",
+                        "label": "TiO2 Nanoparticles",
+                        "url": "https://nanodatabank.eu/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "OECD",
+                        "label": "Testing Guidelines for Nanomaterials",
+                        "url": "https://www.oecd.org/chemicalsafety/nanosafety/"
+                    }
+                ]
             },
             {
                 "id": "sensor_cnt",
@@ -1978,7 +2038,11 @@ const APP_DATA = {
                     "Batch-to-batch variation"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "bio_ha",
@@ -2026,7 +2090,21 @@ const APP_DATA = {
                     "Poor load-bearing capability on its own"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-18861"
+                ],
+                "pubchemCids": [
+                    "46101"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "Nanodatabase",
+                        "label": "Bone graft substitute",
+                        "url": "https://nanodb.dk/"
+                    }
+                ],
+                "safetySources": []
             },
             {
                 "id": "bio_ceramics",
@@ -2073,7 +2151,11 @@ const APP_DATA = {
                     "Difficult to form into complex shapes without losing bioactivity"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "bio_polymers",
@@ -2120,7 +2202,11 @@ const APP_DATA = {
                     "Possible inflammatory response to degradation byproducts"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "coat_oxide",
@@ -2169,7 +2255,29 @@ const APP_DATA = {
                     "Requires UV for photocatalysis"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-2657",
+                    "mp-2133"
+                ],
+                "pubchemCids": [
+                    "26042",
+                    "14806"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "NanoDatabank",
+                        "label": "TiO2 Nanoparticles",
+                        "url": "https://nanodatabank.eu/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "OECD",
+                        "label": "Testing Guidelines for Nanomaterials",
+                        "url": "https://www.oecd.org/chemicalsafety/nanosafety/"
+                    }
+                ]
             },
             {
                 "id": "coat_ceramic",
@@ -2218,7 +2326,11 @@ const APP_DATA = {
                     "Poor adhesion if thermal mismatch exists"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "coat_polymer",
@@ -2267,7 +2379,11 @@ const APP_DATA = {
                     "Susceptible to UV degradation over time"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "ec_carbon",
@@ -2314,7 +2430,11 @@ const APP_DATA = {
                     "Low energy density (specific capacity) compared to metal oxides"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "ec_metal_oxides",
@@ -2362,7 +2482,29 @@ const APP_DATA = {
                     "Volume expansion during cycling"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-2657",
+                    "mp-2133"
+                ],
+                "pubchemCids": [
+                    "26042",
+                    "14806"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "NanoDatabank",
+                        "label": "TiO2 Nanoparticles",
+                        "url": "https://nanodatabank.eu/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "OECD",
+                        "label": "Testing Guidelines for Nanomaterials",
+                        "url": "https://www.oecd.org/chemicalsafety/nanosafety/"
+                    }
+                ]
             },
             {
                 "id": "ec_polymers",
@@ -2410,7 +2552,11 @@ const APP_DATA = {
                     "Poor long-term cycling stability due to structural degradation"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "cat_precious",
@@ -2459,7 +2605,11 @@ const APP_DATA = {
                     "Susceptible to CO poisoning"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "cat_zeolites",
@@ -2509,7 +2659,11 @@ const APP_DATA = {
                     "Less active for certain redox reactions"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "cat_photo",
@@ -2558,7 +2712,29 @@ const APP_DATA = {
                     "Rapid electron-hole recombination"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-2657",
+                    "mp-2133"
+                ],
+                "pubchemCids": [
+                    "26042",
+                    "14806"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "NanoDatabank",
+                        "label": "TiO2 Nanoparticles",
+                        "url": "https://nanodatabank.eu/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "OECD",
+                        "label": "Testing Guidelines for Nanomaterials",
+                        "url": "https://www.oecd.org/chemicalsafety/nanosafety/"
+                    }
+                ]
             },
             {
                 "id": "filt_go",
@@ -2606,7 +2782,11 @@ const APP_DATA = {
                     "Difficult to scale up defect-free"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "filt_electrospun",
@@ -2654,7 +2834,11 @@ const APP_DATA = {
                     "Mechanically delicate"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "filt_zif",
@@ -2702,7 +2886,11 @@ const APP_DATA = {
                     "Brittle nature complicates membrane fabrication"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "struc_cnt",
@@ -2751,7 +2939,11 @@ const APP_DATA = {
                     "High cost of pristine CNTs"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "struc_clay",
@@ -2800,7 +2992,11 @@ const APP_DATA = {
                     "Requires precise organic modification to exfoliate"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "struc_mmc",
@@ -2849,7 +3045,11 @@ const APP_DATA = {
                     "Machining the final part is very difficult"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "opt_qd",
@@ -2898,7 +3098,11 @@ const APP_DATA = {
                     "Susceptible to photobleaching/oxidation without core-shell structures"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "opt_plasmonic",
@@ -2947,7 +3151,11 @@ const APP_DATA = {
                     "Broad emission compared to QDs"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "opt_ucnp",
@@ -2995,7 +3203,11 @@ const APP_DATA = {
                     "Complex synthesis requiring rare-earth elements"
                 ],
                 "nanosafety": "Handle with care in a fume hood.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             }
         ]
     },
@@ -4689,7 +4901,27 @@ const APP_DATA = {
                     "Trudność w osiągnięciu wysokiej selektywności bez złożonej funkcjonalizacji"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-48"
+                ],
+                "pubchemCids": [
+                    "163152"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "StatNano",
+                        "label": "Graphene-based conductives",
+                        "url": "https://statnano.com/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "NanoRiskCat",
+                        "label": "Graphene Safety Profile",
+                        "url": "https://www.nanoriskcat.dk/"
+                    }
+                ]
             },
             {
                 "id": "sensor_metal_oxides",
@@ -4737,7 +4969,29 @@ const APP_DATA = {
                     "Często wymaga wysokich temperatur pracy (200-400°C)"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-2657",
+                    "mp-2133"
+                ],
+                "pubchemCids": [
+                    "26042",
+                    "14806"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "NanoDatabank",
+                        "label": "TiO2 Nanoparticles",
+                        "url": "https://nanodatabank.eu/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "OECD",
+                        "label": "Testing Guidelines for Nanomaterials",
+                        "url": "https://www.oecd.org/chemicalsafety/nanosafety/"
+                    }
+                ]
             },
             {
                 "id": "sensor_cnt",
@@ -4785,7 +5039,11 @@ const APP_DATA = {
                     "Zmienność właściwości między partiami"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "bio_ha",
@@ -4833,7 +5091,21 @@ const APP_DATA = {
                     "Słabe właściwości nośne samodzielnie"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-18861"
+                ],
+                "pubchemCids": [
+                    "46101"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "Nanodatabase",
+                        "label": "Bone graft substitute",
+                        "url": "https://nanodb.dk/"
+                    }
+                ],
+                "safetySources": []
             },
             {
                 "id": "bio_ceramics",
@@ -4880,7 +5152,11 @@ const APP_DATA = {
                     "Trudność w formowaniu w złożone kształty bez utraty bioaktywności"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "bio_polymers",
@@ -4927,7 +5203,11 @@ const APP_DATA = {
                     "Możliwa reakcja zapalna na produkty uboczne degradacji"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "coat_oxide",
@@ -4976,7 +5256,29 @@ const APP_DATA = {
                     "Wymaga promieniowania UV do fotokatalizy"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-2657",
+                    "mp-2133"
+                ],
+                "pubchemCids": [
+                    "26042",
+                    "14806"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "NanoDatabank",
+                        "label": "TiO2 Nanoparticles",
+                        "url": "https://nanodatabank.eu/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "OECD",
+                        "label": "Testing Guidelines for Nanomaterials",
+                        "url": "https://www.oecd.org/chemicalsafety/nanosafety/"
+                    }
+                ]
             },
             {
                 "id": "coat_ceramic",
@@ -5025,7 +5327,11 @@ const APP_DATA = {
                     "Słaba adhezja przy niedopasowaniu cieplnym"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "coat_polymer",
@@ -5074,7 +5380,11 @@ const APP_DATA = {
                     "Podatne na degradację UV w czasie"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "ec_carbon",
@@ -5121,7 +5431,11 @@ const APP_DATA = {
                     "Niska gęstość energii w porównaniu z tlenkami metali"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "ec_metal_oxides",
@@ -5169,7 +5483,29 @@ const APP_DATA = {
                     "Rozszerzanie objętości podczas cyklowania"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-2657",
+                    "mp-2133"
+                ],
+                "pubchemCids": [
+                    "26042",
+                    "14806"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "NanoDatabank",
+                        "label": "TiO2 Nanoparticles",
+                        "url": "https://nanodatabank.eu/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "OECD",
+                        "label": "Testing Guidelines for Nanomaterials",
+                        "url": "https://www.oecd.org/chemicalsafety/nanosafety/"
+                    }
+                ]
             },
             {
                 "id": "ec_polymers",
@@ -5217,7 +5553,11 @@ const APP_DATA = {
                     "Słaba długoterminowa stabilność z powodu degradacji strukturalnej"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "cat_precious",
@@ -5266,7 +5606,11 @@ const APP_DATA = {
                     "Podatność na zatrucie CO"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "cat_zeolites",
@@ -5316,7 +5660,11 @@ const APP_DATA = {
                     "Mniej aktywne w niektórych reakcjach redoks"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "cat_photo",
@@ -5365,7 +5713,29 @@ const APP_DATA = {
                     "Szybka rekombinacja ładunków"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [
+                    "mp-2657",
+                    "mp-2133"
+                ],
+                "pubchemCids": [
+                    "26042",
+                    "14806"
+                ],
+                "nanoExampleLinks": [
+                    {
+                        "source": "NanoDatabank",
+                        "label": "TiO2 Nanoparticles",
+                        "url": "https://nanodatabank.eu/"
+                    }
+                ],
+                "safetySources": [
+                    {
+                        "source": "OECD",
+                        "label": "Testing Guidelines for Nanomaterials",
+                        "url": "https://www.oecd.org/chemicalsafety/nanosafety/"
+                    }
+                ]
             },
             {
                 "id": "filt_go",
@@ -5413,7 +5783,11 @@ const APP_DATA = {
                     "Trudność w bezdefektowym skalowaniu"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "filt_electrospun",
@@ -5461,7 +5835,11 @@ const APP_DATA = {
                     "Delikatność mechaniczna"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "filt_zif",
@@ -5509,7 +5887,11 @@ const APP_DATA = {
                     "Kruchość komplikuje produkcję"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "struc_cnt",
@@ -5557,7 +5939,11 @@ const APP_DATA = {
                     "Wysoki koszt"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "struc_clay",
@@ -5605,7 +5991,11 @@ const APP_DATA = {
                     "Wymaga precyzyjnej modyfikacji organicznej"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "struc_mmc",
@@ -5653,7 +6043,11 @@ const APP_DATA = {
                     "Obróbka skrawaniem jest bardzo trudna"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "opt_qd",
@@ -5698,7 +6092,11 @@ const APP_DATA = {
                     "Podatne na fotowybielanie bez struktur rdzeń-powłoka"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "opt_plasmonic",
@@ -5742,7 +6140,11 @@ const APP_DATA = {
                     "Szeroka emisja w porównaniu z QD"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             },
             {
                 "id": "opt_ucnp",
@@ -5786,7 +6188,11 @@ const APP_DATA = {
                     "Złożona synteza wymagająca metali ziem rzadkich"
                 ],
                 "nanosafety": "Obchodź się ostrożnie w wyciągu.",
-                "externalIds": {}
+                "externalIds": {},
+                "materialsProjectIds": [],
+                "pubchemCids": [],
+                "nanoExampleLinks": [],
+                "safetySources": []
             }
         ]
     }

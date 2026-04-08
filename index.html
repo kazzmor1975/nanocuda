@@ -254,10 +254,30 @@
                         <p id="enc-mat-safety"></p>
                     </div>
 
-                    <div class="section-block">
-                        <h3 data-i18n="externalData">External Data</h3>
-                        <div id="enc-mat-external" class="helper-text">
-                            No external data linked yet.
+                    <div class="section-block external-data-block" style="background: var(--surface-light); border-top: 4px solid var(--primary-color);">
+                        <button id="btn-toggle-external" class="btn-secondary" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                            <span data-i18n="externalDataToggle">View Data from External Sources</span>
+                            <span id="external-toggle-icon">▼</span>
+                        </button>
+
+                        <div id="external-data-container" style="display: none; margin-top: 1rem;">
+                            <!-- Materials Project Section -->
+                            <div class="external-section">
+                                <h4 data-i18n="materialsProject" style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Materials Project</h4>
+                                <div id="ext-mp-content" class="external-content-area" style="font-size: 0.85rem;"></div>
+                            </div>
+
+                            <!-- PubChem Section -->
+                            <div class="external-section" style="margin-top: 1rem;">
+                                <h4 data-i18n="pubchem" style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">PubChem</h4>
+                                <div id="ext-pubchem-content" class="external-content-area" style="font-size: 0.85rem;"></div>
+                            </div>
+
+                            <!-- Curated Nano Databases Links -->
+                            <div class="external-section" style="margin-top: 1rem;">
+                                <h4 data-i18n="nanoDatabases" style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-secondary);">Real-world Examples & Safety Tools</h4>
+                                <ul id="ext-nano-links" class="bullet-list" style="font-size: 0.85rem;"></ul>
+                            </div>
                         </div>
                     </div>
                 </aside>
