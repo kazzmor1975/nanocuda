@@ -12,6 +12,10 @@
         <div class="logo">
             <h1><span data-i18n="title">Nanomaterial Matchmaker</span> <span data-i18n="version">v2.0</span></h1>
         </div>
+        <nav class="global-nav">
+            <button id="nav-decide" class="nav-btn active" data-i18n="navDecide">Decide</button>
+            <button id="nav-encyclopedia" class="nav-btn" data-i18n="navEncyclopedia">Encyclopedia</button>
+        </nav>
         <div class="header-actions">
             <button id="lang-toggle" aria-label="Toggle language" data-i18n="langToggle">🇵🇱 PL</button>
             <button id="theme-toggle" aria-label="Toggle dark mode" data-i18n="themeDark">🌙 Dark Mode</button>
@@ -24,13 +28,9 @@
             <section id="intro-section">
                 <h2 data-i18n="homeTitle">Select an Intended Use Case</h2>
                 <p data-i18n="homeDesc">Choose your application area to start finding the best nanomaterial for your lab project.</p>
-                <div class="mode-toggle-container margin-top-md" style="justify-content: center;">
-                    <button id="btn-flow-app" class="mode-btn active" data-i18n="findByApp">Start from Application</button>
-                    <button id="btn-flow-mat" class="mode-btn" data-i18n="findByMaterial">Start from Material</button>
-                </div>
             </section>
 
-            <section id="bookmarks-section" class="margin-bottom-xl" style="display: none;">
+            <section id="bookmarks-section" class="margin-bottom-xl margin-top-xl" style="display: none;">
                 <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem;">
                     <h3 data-i18n="recentSessions">Recent Sessions</h3>
                 </div>
@@ -39,9 +39,6 @@
                 </div>
             </section>
             <section id="app-grid" class="grid-container">
-                <!-- Cards populated by JavaScript -->
-            </section>
-            <section id="mat-grid" class="grid-container" style="display: none;">
                 <!-- Cards populated by JavaScript -->
             </section>
         </div>
@@ -122,7 +119,10 @@
                     <h2 id="res-title">Material Name</h2>
                     <div class="score-badge"><span data-i18n="match">Match</span>: <span id="res-score"></span>%</div>
                 </div>
-                <button id="btn-generate-sheet" class="btn-secondary" data-i18n="generateProjectSheet">Generate Project Sheet</button>
+                <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                    <button id="btn-open-enc" class="btn-primary" data-i18n="btnOpenEncyclopedia">Open in Encyclopedia</button>
+                    <button id="btn-generate-sheet" class="btn-secondary" data-i18n="generateProjectSheet">Generate Project Sheet</button>
+                </div>
             </header>
 
             <div class="result-content">
@@ -182,40 +182,83 @@
             </div>
         </div>
 
-        <!-- Material Reverse Flow View -->
-        <div id="view-material" style="display: none;">
-            <button class="back-button btn-home" aria-label="Back to selection" data-i18n="btnBackUseCases">
-                &larr; Back
+        <!-- Encyclopedia Home View -->
+        <div id="view-encyclopedia" style="display: none;">
+            <section class="encyclopedia-header" style="margin-bottom: 2rem;">
+                <h2 data-i18n="navEncyclopedia">Encyclopedia</h2>
+                <p>Browse and filter all nanomaterial classes.</p>
+                <div class="encyclopedia-filters" style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                    <input type="text" id="enc-search" data-i18n-placeholder="searchPlaceholder" placeholder="Search materials..." style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); flex: 1; min-width: 200px;">
+                    <select id="enc-filter-morph" style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                        <option value="all" data-i18n="filterMorphology">Filter by Morphology</option>
+                    </select>
+                    <select id="enc-filter-comp" style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                        <option value="all" data-i18n="filterComposition">Filter by Composition</option>
+                    </select>
+                    <select id="enc-filter-app" style="padding: 0.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                        <option value="all" data-i18n="filterApp">Filter by Application</option>
+                    </select>
+                </div>
+            </section>
+            <section id="enc-grid" class="grid-container">
+                <!-- Cards populated by JavaScript -->
+            </section>
+        </div>
+
+        <!-- Encyclopedia Detail View -->
+        <div id="view-encyclopedia-detail" style="display: none;">
+            <button class="back-button" id="btn-enc-back" aria-label="Back to Encyclopedia" data-i18n="btnBackEncyclopedia">
+                &larr; Back to Encyclopedia
             </button>
             <header class="result-header">
                 <div>
-                    <h2 id="rev-title">Material Name</h2>
+                    <h2 id="enc-mat-title">Material Name</h2>
                 </div>
+                <button id="btn-see-fits" class="btn-primary" data-i18n="btnSeeWhereFits">See where this fits</button>
             </header>
             <div class="result-content">
                 <div class="main-column">
                     <article class="section-block">
-                        <h3 data-i18n="usedIn">Used in:</h3>
-                        <div id="rev-apps" class="tags-container margin-bottom-md"></div>
-
-                        <h3 data-i18n="resWhy">Why this material?</h3>
-                        <p id="rev-why" class="text-large"></p>
+                        <h3 data-i18n="overview">Overview</h3>
+                        <p id="enc-mat-desc" class="text-large"></p>
                     </article>
 
                     <article class="section-block">
-                        <h3 data-i18n="resPath">Experimental Path</h3>
-                        <ol id="rev-path" class="experimental-path-list"></ol>
+                        <h3 data-i18n="usedIn">Typical Applications</h3>
+                        <div id="enc-mat-apps" class="tags-container margin-bottom-md"></div>
+                    </article>
+
+                    <article class="section-block">
+                        <h3 data-i18n="resProperties">Key Properties</h3>
+                        <ul id="enc-mat-props" class="bullet-list"></ul>
+                    </article>
+
+                    <article class="section-block">
+                        <h3 data-i18n="resMethods">Common Characterization Methods</h3>
+                        <ul id="enc-mat-methods" class="bullet-list"></ul>
                     </article>
                 </div>
                 <aside class="sidebar-column">
                     <div class="section-block strengths-block">
-                        <h3 data-i18n="resStrengths">Key Strengths</h3>
-                        <ul id="rev-strengths" class="bullet-list"></ul>
+                        <h3 data-i18n="resStrengths">Benefits</h3>
+                        <ul id="enc-mat-strengths" class="bullet-list"></ul>
                     </div>
 
                     <div class="section-block trade-offs-block">
-                        <h3 data-i18n="resRisks">Key Risks & Limitations</h3>
-                        <ul id="rev-limitations" class="bullet-list"></ul>
+                        <h3 data-i18n="resRisks">Limitations</h3>
+                        <ul id="enc-mat-limitations" class="bullet-list"></ul>
+                    </div>
+
+                    <div class="section-block warning-block" style="background: rgba(245, 158, 11, 0.1); border-color: var(--risk-color);">
+                        <h3 data-i18n="nanosafety" style="color: var(--risk-color);">Nanosafety Notes</h3>
+                        <p id="enc-mat-safety"></p>
+                    </div>
+
+                    <div class="section-block">
+                        <h3 data-i18n="externalData">External Data</h3>
+                        <div id="enc-mat-external" class="helper-text">
+                            No external data linked yet.
+                        </div>
                     </div>
                 </aside>
             </div>

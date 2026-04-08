@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = 'en';
     }
 
-    let applications = APP_DATA[currentLang];
+    let applications = APP_DATA[currentLang].applications || APP_DATA[currentLang];
     let uiDict = UI_I18N[currentLang];
 
     let currentApp = null;
@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewResult = document.getElementById('view-result');
     const viewCompare = document.getElementById('view-compare');
     const viewLesson = document.getElementById('view-lesson');
-    const viewMaterial = document.getElementById('view-material');
+    const viewEncyclopedia = document.getElementById('view-encyclopedia');
+    const viewEncyclopediaDetail = document.getElementById('view-encyclopedia-detail');
 
     // DOM Elements - Inner
     const appGrid = document.getElementById('app-grid');
-    const matGrid = document.getElementById('mat-grid');
     const bookmarksSection = document.getElementById('bookmarks-section');
     const bookmarksList = document.getElementById('bookmarks-list');
     const prioritySlidersContainer = document.getElementById('priority-sliders');
@@ -85,27 +85,127 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnGenerateSheet) btnGenerateSheet.addEventListener('click', () => window.print());
     btnCompareMode.addEventListener('click', showCompareView);
 
-    // Flow Toggles
-    const btnFlowApp = document.getElementById('btn-flow-app');
-    const btnFlowMat = document.getElementById('btn-flow-mat');
+    // Global Navigation
+    const navDecide = document.getElementById('nav-decide');
+    const navEncyclopedia = document.getElementById('nav-encyclopedia');
+    if (navDecide) navDecide.addEventListener('click', () => setGlobalMode('decide'));
+    if (navEncyclopedia) navEncyclopedia.addEventListener('click', () => setGlobalMode('encyclopedia'));
 
-    if (btnFlowApp) btnFlowApp.addEventListener('click', () => setFlowMode('app'));
-    if (btnFlowMat) btnFlowMat.addEventListener('click', () => setFlowMode('mat'));
-
-    function setFlowMode(flow) {
-        startFlow = flow;
-        if (flow === 'app') {
-            btnFlowApp.classList.add('active');
-            btnFlowMat.classList.remove('active');
-            appGrid.style.display = 'grid';
-            matGrid.style.display = 'none';
+    function setGlobalMode(mode) {
+        if (mode === 'decide') {
+            if (navDecide) navDecide.classList.add('active');
+            if (navEncyclopedia) navEncyclopedia.classList.remove('active');
+            switchView(viewHome);
         } else {
-            btnFlowApp.classList.remove('active');
-            btnFlowMat.classList.add('active');
-            appGrid.style.display = 'none';
-            matGrid.style.display = 'grid';
+            if (navEncyclopedia) navEncyclopedia.classList.add('active');
+            if (navDecide) navDecide.classList.remove('active');
+            renderEncyclopediaHome();
+            switchView(viewEncyclopedia);
         }
     }
+
+    // Encyclopedia State
+    let encMaterials = [];
+    const encSearch = document.getElementById('enc-search');
+    const encMorph = document.getElementById('enc-filter-morph');
+    const encComp = document.getElementById('enc-filter-comp');
+    const encApp = document.getElementById('enc-filter-app');
+
+    if (encSearch) encSearch.addEventListener('input', renderEncyclopediaHome);
+    if (encMorph) encMorph.addEventListener('change', renderEncyclopediaHome);
+    if (encComp) encComp.addEventListener('change', renderEncyclopediaHome);
+    if (encApp) encApp.addEventListener('change', renderEncyclopediaHome);
+
+    function initEncyclopediaFilters() {
+        if (!encMorph) return;
+
+        encMaterials = APP_DATA[currentLang].materials;
+
+        // Populate options based on current lang
+        const extractUnique = (arr, key) => [...new Set(arr.flatMap(item => item[key]))];
+
+        const morphs = extractUnique(encMaterials, 'morphology');
+        const comps = extractUnique(encMaterials, 'composition');
+
+        encMorph.innerHTML = `<option value="all">${uiDict['filterMorphology'] || "Filter by Morphology"}</option>`;
+        morphs.forEach(m => encMorph.innerHTML += `<option value="${m}">${m}</option>`);
+
+        encComp.innerHTML = `<option value="all">${uiDict['filterComposition'] || "Filter by Composition"}</option>`;
+        comps.forEach(c => encComp.innerHTML += `<option value="${c}">${c}</option>`);
+
+        encApp.innerHTML = `<option value="all">${uiDict['filterApp'] || "Filter by Application"}</option>`;
+        applications.forEach(app => encApp.innerHTML += `<option value="${app.id}">${app.title}</option>`);
+    }
+
+    function renderEncyclopediaHome() {
+        const grid = document.getElementById('enc-grid');
+        if (!grid) return;
+
+        grid.innerHTML = '';
+        const search = encSearch.value.toLowerCase();
+        const morph = encMorph.value;
+        const comp = encComp.value;
+        const app = encApp.value;
+
+        encMaterials.forEach(mat => {
+            // Apply filters
+            if (morph !== 'all' && !mat.morphology.includes(morph)) return;
+            if (comp !== 'all' && !mat.composition.includes(comp)) return;
+            if (app !== 'all' && !mat.applications.includes(app)) return;
+            if (search) {
+                const text = `${mat.name} ${mat.shortDescription} ${mat.morphology.join(' ')} ${mat.composition.join(' ')}`.toLowerCase();
+                if (!text.includes(search)) return;
+            }
+
+            const card = document.createElement('button');
+            card.className = 'app-card';
+            card.innerHTML = `
+                <h3>${mat.name}</h3>
+                <p style="margin-bottom: 0.5rem;" class="helper-text">${mat.shortDescription}</p>
+                <div class="tags-container" style="margin-top: 0.5rem;">
+                    ${mat.morphology.map(m => `<span class="tag" style="background:var(--surface-light)">${m}</span>`).join('')}
+                    ${mat.composition.map(c => `<span class="tag" style="background:var(--surface-light)">${c}</span>`).join('')}
+                </div>
+            `;
+            card.addEventListener('click', () => showEncyclopediaDetail(mat));
+            grid.appendChild(card);
+        });
+    }
+
+    function showEncyclopediaDetail(mat) {
+        document.getElementById('enc-mat-title').textContent = mat.name;
+        document.getElementById('enc-mat-desc').textContent = mat.shortDescription;
+
+        // Map app IDs to titles
+        const appTitles = mat.applications.map(appId => {
+            const found = applications.find(a => a.id === appId);
+            return found ? found.title : appId;
+        });
+
+        document.getElementById('enc-mat-apps').innerHTML = appTitles.map(a => `<span class="tag">${a}</span>`).join('');
+        document.getElementById('enc-mat-props').innerHTML = mat.properties.map(p => `<li>${p}</li>`).join('');
+        document.getElementById('enc-mat-methods').innerHTML = mat.methods.map(m => `<li><strong>${m.name}:</strong> ${m.why}</li>`).join('');
+        document.getElementById('enc-mat-strengths').innerHTML = mat.strengths.map(s => `<li>${s}</li>`).join('');
+        document.getElementById('enc-mat-limitations').innerHTML = mat.limitations.map(l => `<li>${l}</li>`).join('');
+        document.getElementById('enc-mat-safety').textContent = mat.nanosafety;
+
+        // "See where this fits" Action
+        const btnSeeFits = document.getElementById('btn-see-fits');
+        btnSeeFits.onclick = () => {
+            // Pick first applicable application to jump into
+            if (mat.applications.length > 0) {
+                setGlobalMode('decide');
+                showPriorityView(mat.applications[0]);
+            }
+        };
+
+        switchView(viewEncyclopediaDetail);
+    }
+
+    const btnEncBack = document.getElementById('btn-enc-back');
+    if (btnEncBack) btnEncBack.addEventListener('click', () => {
+        switchView(viewEncyclopedia);
+    });
 
     if (btnModeExplore) btnModeExplore.addEventListener('click', () => setAppMode('explore'));
     if (btnModeDecide) btnModeDecide.addEventListener('click', () => setAppMode('decide'));
@@ -255,6 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initial Render
+    initEncyclopediaFilters();
     renderGrid();
 
     /* =================== I18N MANAGEMENT =================== */
@@ -262,10 +363,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleLanguage() {
         currentLang = currentLang === 'en' ? 'pl' : 'en';
         localStorage.setItem('lang', currentLang);
-        applications = APP_DATA[currentLang];
+        applications = APP_DATA[currentLang].applications || APP_DATA[currentLang];
         uiDict = UI_I18N[currentLang];
 
         updateUIForLanguage();
+        initEncyclopediaFilters();
 
         // Re-render current view with new data
         if (viewHome.style.display !== 'none') {
@@ -306,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =================== VIEW MANAGEMENT =================== */
 
     function switchView(targetView) {
-        [viewHome, viewPriority, viewSummary, viewResult, viewCompare, viewLesson, viewMaterial].forEach(v => {
+        [viewHome, viewPriority, viewSummary, viewResult, viewCompare, viewLesson, viewEncyclopedia, viewEncyclopediaDetail].forEach(v => {
             if (v) v.style.display = 'none';
         });
         targetView.style.display = 'block';
@@ -376,45 +478,6 @@ document.addEventListener('DOMContentLoaded', () => {
             appGrid.appendChild(card);
         });
 
-        // Material Grid
-        if (matGrid) {
-            matGrid.innerHTML = '';
-            const allMaterials = {};
-            applications.forEach(app => {
-                if (app.materials) {
-                    app.materials.forEach(mat => {
-                        if (!allMaterials[mat.id]) {
-                            allMaterials[mat.id] = { ...mat, apps: [] };
-                        }
-                        if (!allMaterials[mat.id].apps.includes(app.title)) {
-                            allMaterials[mat.id].apps.push(app.title);
-                        }
-                    });
-                }
-            });
-
-            Object.values(allMaterials).forEach(mat => {
-                const card = document.createElement('button');
-                card.className = 'app-card';
-                card.innerHTML = `
-                    <h3>${mat.name}</h3>
-                    <p class="helper-text margin-top-sm">${uiDict.usedIn || "Used in:"} ${mat.apps.join(', ')}</p>
-                `;
-                card.addEventListener('click', () => showMaterialReverseView(mat));
-                matGrid.appendChild(card);
-            });
-        }
-    }
-
-    function showMaterialReverseView(mat) {
-        document.getElementById('rev-title').textContent = mat.name;
-        document.getElementById('rev-why').textContent = mat.why;
-        document.getElementById('rev-apps').innerHTML = mat.apps.map(a => `<span class="tag">${a}</span>`).join('');
-        document.getElementById('rev-path').innerHTML = mat.experimentalPath.map(step => `<li>${step}</li>`).join('');
-        document.getElementById('rev-strengths').innerHTML = mat.strengths.map(s => `<li>${s}</li>`).join('');
-        document.getElementById('rev-limitations').innerHTML = mat.limitations.map(l => `<li>${l}</li>`).join('');
-
-        switchView(viewMaterial);
     }
 
     /* STEP 2: PRIORITY SETTINGS */
@@ -762,6 +825,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Populate Print View
         populatePrintView(mat);
+
+        const btnOpenEnc = document.getElementById('btn-open-enc');
+        if (btnOpenEnc) {
+            btnOpenEnc.onclick = () => {
+                const encMat = APP_DATA[currentLang].materials.find(m => m.id === mat.id);
+                if (encMat) {
+                    setGlobalMode('encyclopedia');
+                    showEncyclopediaDetail(encMat);
+                }
+            };
+        }
 
         switchView(viewResult);
     }
