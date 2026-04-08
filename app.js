@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mode === 'decide') {
             if (navDecide) navDecide.classList.add('active');
             renderGrid();
-            renderBookmarks();
             switchView(viewHome);
         } else if (mode === 'encyclopedia') {
             if (navEncyclopedia) navEncyclopedia.classList.add('active');
@@ -644,46 +643,8 @@ document.addEventListener('DOMContentLoaded', () => {
         switchView(viewHome);
     }
 
-    function saveSession(appId, appTitle) {
-        // Remove existing if same app
-        sessions = sessions.filter(s => s.appId !== appId);
-        sessions.unshift({
-            id: Date.now(),
-            appId: appId,
-            title: appTitle,
-            date: new Date().toLocaleDateString()
-        });
-        if (sessions.length > 5) sessions.pop();
-        localStorage.setItem('nanoSessions', JSON.stringify(sessions));
-        renderBookmarks();
-    }
-
-    function renderBookmarks() {
-        if (sessions.length === 0) {
-            if (bookmarksSection) bookmarksSection.style.display = 'none';
-            return;
-        }
-        if (bookmarksSection) bookmarksSection.style.display = 'block';
-        if (bookmarksList) {
-            bookmarksList.innerHTML = '';
-            sessions.forEach(session => {
-                const btn = document.createElement('button');
-                btn.className = 'tag';
-                btn.style.cursor = 'pointer';
-                btn.style.padding = '0.5rem 1rem';
-                btn.innerHTML = `🕒 ${session.title} <span style="font-size: 0.8em; opacity: 0.7;">(${session.date})</span>`;
-                btn.addEventListener('click', () => {
-                    showPriorityView(session.appId);
-                });
-                bookmarksList.appendChild(btn);
-            });
-        }
-    }
-
     /* STEP 1: HOME GRID */
     function renderGrid() {
-        renderBookmarks();
-
         // App Grid
         appGrid.innerHTML = '';
         applications.forEach(app => {
@@ -707,8 +668,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!keepPriorities) {
             userPriorities = {}; // reset on new entry
         }
-
-        saveSession(currentApp.id, currentApp.title);
 
         document.getElementById('pri-app-name').textContent = currentApp.title;
 
