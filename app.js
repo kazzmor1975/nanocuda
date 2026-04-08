@@ -84,20 +84,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // Global Navigation
     const navDecide = document.getElementById('nav-decide');
     const navEncyclopedia = document.getElementById('nav-encyclopedia');
+    const btnNavQuiz = document.getElementById('nav-quiz');
     if (navDecide) navDecide.addEventListener('click', () => setGlobalMode('decide'));
     if (navEncyclopedia) navEncyclopedia.addEventListener('click', () => setGlobalMode('encyclopedia'));
 
     function setGlobalMode(mode) {
+        if (navDecide) navDecide.classList.remove('active');
+        if (navEncyclopedia) navEncyclopedia.classList.remove('active');
+        if (btnNavQuiz) btnNavQuiz.classList.remove('active');
+
         if (mode === 'decide') {
             if (navDecide) navDecide.classList.add('active');
-            if (navEncyclopedia) navEncyclopedia.classList.remove('active');
+            renderGrid();
+            renderBookmarks();
             switchView(viewHome);
-        } else {
+        } else if (mode === 'encyclopedia') {
             if (navEncyclopedia) navEncyclopedia.classList.add('active');
-            if (navDecide) navDecide.classList.remove('active');
             renderEncyclopediaHome();
             switchView(viewEncyclopedia);
+        } else if (mode === 'quiz') {
+            if (btnNavQuiz) btnNavQuiz.classList.add('active');
+            renderQuizCategories();
+            switchView(viewQuizHome);
         }
+    }
+
+    if (btnNavQuiz) {
+        btnNavQuiz.addEventListener('click', () => setGlobalMode('quiz'));
+    }
+
+    const btnQuizBack = document.getElementById('btn-quiz-back');
+    if (btnQuizBack) {
+        btnQuizBack.addEventListener('click', () => {
+            switchView(viewQuizHome);
+            renderQuizCategories();
+        });
     }
 
     // Encyclopedia State
@@ -381,6 +402,176 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    /* =================== QUIZ LOGIC =================== */
+    const viewQuizHome = document.getElementById('view-quiz-home');
+    const viewQuizActive = document.getElementById('view-quiz-active');
+    const quizCategoriesContainer = document.getElementById('quiz-categories');
+    const btnQuizCheck = document.getElementById('btn-quiz-check');
+    const btnQuizNext = document.getElementById('btn-quiz-next');
+    const btnQuizRestart = document.getElementById('btn-quiz-restart');
+
+    let currentQuizCategory = null;
+    let currentQuizQuestions = [];
+    let currentQuizIndex = 0;
+    let currentQuizScore = 0;
+    let currentQuizSelectedOption = null;
+
+    function renderQuizCategories() {
+        if (!quizCategoriesContainer) return;
+        quizCategoriesContainer.innerHTML = '';
+        if (typeof QUIZ_DATA === 'undefined') return;
+
+        Object.keys(QUIZ_DATA).forEach(categoryKey => {
+            const card = document.createElement('div');
+            card.className = 'app-card';
+
+            const titleStr = uiDict.quizCategoryTitles && uiDict.quizCategoryTitles[categoryKey] ?
+                             uiDict.quizCategoryTitles[categoryKey] : categoryKey;
+
+            card.innerHTML = `<h3>${titleStr}</h3>`;
+            card.addEventListener('click', () => startQuiz(categoryKey));
+            quizCategoriesContainer.appendChild(card);
+        });
+    }
+
+    function startQuiz(categoryKey) {
+        currentQuizCategory = categoryKey;
+        // Deep copy questions and shuffle options
+        currentQuizQuestions = QUIZ_DATA[categoryKey].map(q => {
+            // Options are strings, first is correct (index 0) originally
+            const options = [...q.options];
+            const originalCorrect = options[q.correctIndex];
+
+            // Shuffle
+            for (let i = options.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [options[i], options[j]] = [options[j], options[i]];
+            }
+
+            return {
+                ...q,
+                options,
+                newCorrectIndex: options.indexOf(originalCorrect)
+            };
+        });
+
+        currentQuizIndex = 0;
+        currentQuizScore = 0;
+
+        const titleStr = uiDict.quizCategoryTitles && uiDict.quizCategoryTitles[currentQuizCategory] ?
+                         uiDict.quizCategoryTitles[currentQuizCategory] : currentQuizCategory;
+
+        document.getElementById('quiz-active-title').textContent = titleStr;
+        switchView(viewQuizActive);
+        renderActiveQuiz();
+    }
+
+    function renderActiveQuiz(onlyUpdateLanguage = false) {
+        if (!onlyUpdateLanguage) {
+            document.getElementById('quiz-active-container').style.display = 'block';
+            document.getElementById('quiz-results-container').style.display = 'none';
+        }
+
+        const total = currentQuizQuestions.length;
+        if (currentQuizIndex >= total) {
+            showQuizResults();
+            return;
+        }
+
+        const q = currentQuizQuestions[currentQuizIndex];
+
+        let progText = uiDict.quizProgress || "Question {current} of {total}";
+        document.getElementById('quiz-progress-text').textContent = progText.replace('{current}', currentQuizIndex + 1).replace('{total}', total);
+
+        let scoreText = uiDict.quizScore || "Score: {score} / {total}";
+        document.getElementById('quiz-score-text').textContent = scoreText.replace('{score}', currentQuizScore).replace('{total}', total);
+
+        document.getElementById('quiz-active-question').textContent = q.question;
+
+        if (!onlyUpdateLanguage) {
+            const optsContainer = document.getElementById('quiz-active-options');
+            optsContainer.innerHTML = '';
+            currentQuizSelectedOption = null;
+            btnQuizCheck.disabled = true;
+            btnQuizCheck.style.display = 'block';
+            btnQuizNext.style.display = 'none';
+
+            const feedback = document.getElementById('quiz-active-feedback');
+            feedback.style.display = 'none';
+
+            q.options.forEach((optText, index) => {
+                const optEl = document.createElement('div');
+                optEl.className = 'quiz-option';
+                optEl.innerHTML = `<input type="radio" name="active-quiz-opt" value="${index}"> <label>${optText}</label>`;
+                optEl.addEventListener('click', () => {
+                    if (btnQuizCheck.style.display === 'none') return; // already answered
+                    optsContainer.querySelectorAll('.quiz-option').forEach(el => el.classList.remove('selected'));
+                    optEl.classList.add('selected');
+                    optEl.querySelector('input').checked = true;
+                    currentQuizSelectedOption = index;
+                    btnQuizCheck.disabled = false;
+                });
+                optsContainer.appendChild(optEl);
+            });
+        }
+    }
+
+    if (btnQuizCheck) {
+        btnQuizCheck.addEventListener('click', () => {
+            if (currentQuizSelectedOption === null) return;
+            const q = currentQuizQuestions[currentQuizIndex];
+            const isCorrect = currentQuizSelectedOption === q.newCorrectIndex;
+            const feedback = document.getElementById('quiz-active-feedback');
+
+            if (isCorrect) {
+                currentQuizScore++;
+                feedback.textContent = `✅ ${uiDict.quizCorrect || 'Correct!'}`;
+                feedback.className = 'quiz-feedback margin-top-sm success';
+            } else {
+                feedback.textContent = `❌ ${uiDict.quizIncorrect || 'Not quite.'}`;
+                feedback.className = 'quiz-feedback margin-top-sm error';
+            }
+
+            // Mark correct answer
+            const options = document.getElementById('quiz-active-options').children;
+            options[q.newCorrectIndex].style.borderLeft = '4px solid var(--success-color)';
+            if (!isCorrect) {
+                options[currentQuizSelectedOption].style.borderLeft = '4px solid var(--error-color)';
+            }
+
+            // Update score display immediately
+            let scoreText = uiDict.quizScore || "Score: {score} / {total}";
+            document.getElementById('quiz-score-text').textContent = scoreText.replace('{score}', currentQuizScore).replace('{total}', currentQuizQuestions.length);
+
+            feedback.style.display = 'block';
+            btnQuizCheck.style.display = 'none';
+            btnQuizNext.style.display = 'block';
+        });
+    }
+
+    if (btnQuizNext) {
+        btnQuizNext.addEventListener('click', () => {
+            currentQuizIndex++;
+            renderActiveQuiz();
+        });
+    }
+
+    if (btnQuizRestart) {
+        btnQuizRestart.addEventListener('click', () => {
+            startQuiz(currentQuizCategory);
+        });
+    }
+
+    function showQuizResults() {
+        document.getElementById('quiz-active-container').style.display = 'none';
+        document.getElementById('quiz-results-container').style.display = 'block';
+        if (btnQuizNext) btnQuizNext.style.display = 'none';
+
+        let scoreText = uiDict.quizScore || "Score: {score} / {total}";
+        document.getElementById('quiz-final-score').textContent = scoreText.replace('{score}', currentQuizScore).replace('{total}', currentQuizQuestions.length);
+    }
+
+
     // Initial Render
     initEncyclopediaFilters();
     renderGrid();
@@ -439,7 +630,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =================== VIEW MANAGEMENT =================== */
 
     function switchView(targetView) {
-        [viewHome, viewPriority, viewSummary, viewResult, viewCompare, viewLesson, viewEncyclopedia, viewEncyclopediaDetail].forEach(v => {
+        [viewHome, viewPriority, viewSummary, viewResult, viewCompare, viewLesson, viewEncyclopedia, viewEncyclopediaDetail, viewQuizHome, viewQuizActive].forEach(v => {
             if (v) v.style.display = 'none';
         });
         targetView.style.display = 'block';

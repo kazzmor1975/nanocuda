@@ -76,7 +76,29 @@ const UI_I18N = {
         "loadingExternal": "Fetching data...",
         "errorExternal": "Data could not be loaded, but local recommendations are still available.",
         "noExternalIds": "No external identifiers are currently linked for this material class.",
-        "overview": "Overview"
+        "overview": "Overview",
+        "navQuiz": "Quiz",
+        "quizTitle": "Nano-Quiz",
+        "quizDesc": "Select a category to test your knowledge.",
+        "btnBackQuiz": "Back to Categories",
+        "checkAnswer": "Check Answer",
+        "nextQuestion": "Next Question",
+        "quizCompleted": "Quiz Completed!",
+        "quizRestart": "Restart Quiz",
+        "quizScore": "Score: {score} / {total}",
+        "quizProgress": "Question {current} of {total}",
+        "quizCorrect": "Correct!",
+        "quizIncorrect": "Not quite.",
+        "quizCategoryTitles": {
+            "klasy i typy nanomateriałów": "Classes & Types",
+            "metody charakteryzacji nanomateriałów": "Characterization",
+            "metody syntezy i wytwarzania": "Synthesis & Manufacturing",
+            "modelowanie, symulacje i data‑driven nano": "Modeling & Data-driven",
+            "nanosafety, toksykologia i projektowanie safer‑by‑design": "Nanosafety & Toxicology",
+            "podstawy nanonauki": "Fundamentals of Nanoscience",
+            "właściwości i zjawiska charakterystyczne nanomateriałów": "Properties & Phenomena",
+            "zastosowania nanotechnologii": "Applications"
+        }
     },
     "pl": {
         "title": "Kreator Nanomateriałów",
@@ -155,7 +177,29 @@ const UI_I18N = {
         "loadingExternal": "Pobieranie danych...",
         "errorExternal": "Nie można załadować danych, ale lokalne rekomendacje są nadal dostępne.",
         "noExternalIds": "Brak zewnętrznych identyfikatorów przypisanych do tej klasy materiałów.",
-        "overview": "Przegląd"
+        "overview": "Przegląd",
+        "navQuiz": "Quiz",
+        "quizTitle": "Nano-Quiz",
+        "quizDesc": "Wybierz kategorię, aby sprawdzić swoją wiedzę.",
+        "btnBackQuiz": "Wróć do Kategorii",
+        "checkAnswer": "Sprawdź odpowiedź",
+        "nextQuestion": "Następne pytanie",
+        "quizCompleted": "Quiz zakończony!",
+        "quizRestart": "Rozpocznij od nowa",
+        "quizScore": "Wynik: {score} / {total}",
+        "quizProgress": "Pytanie {current} z {total}",
+        "quizCorrect": "Dobrze!",
+        "quizIncorrect": "Nie do końca.",
+        "quizCategoryTitles": {
+            "klasy i typy nanomateriałów": "Klasy i typy nanomateriałów",
+            "metody charakteryzacji nanomateriałów": "Metody charakteryzacji",
+            "metody syntezy i wytwarzania": "Metody syntezy i wytwarzania",
+            "modelowanie, symulacje i data‑driven nano": "Modelowanie i data-driven nano",
+            "nanosafety, toksykologia i projektowanie safer‑by‑design": "Nanosafety i toksykologia",
+            "podstawy nanonauki": "Podstawy nanonauki",
+            "właściwości i zjawiska charakterystyczne nanomateriałów": "Właściwości i zjawiska",
+            "zastosowania nanotechnologii": "Zastosowania nanotechnologii"
+        }
     }
 };
 

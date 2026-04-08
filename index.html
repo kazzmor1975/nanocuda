@@ -15,6 +15,7 @@
         <nav class="global-nav">
             <button id="nav-decide" class="nav-btn active" data-i18n="navDecide">Decide</button>
             <button id="nav-encyclopedia" class="nav-btn" data-i18n="navEncyclopedia">Encyclopedia</button>
+            <button id="nav-quiz" class="nav-btn" data-i18n="navQuiz">Quiz</button>
         </nav>
         <div class="header-actions">
             <button id="lang-toggle" aria-label="Toggle language" data-i18n="langToggle">🇵🇱 PL</button>
@@ -304,6 +305,52 @@
             </section>
         </div>
 
+        <!-- Quiz Category Selection View -->
+        <div id="view-quiz-home" style="display: none;">
+            <section class="encyclopedia-header" style="margin-bottom: 2rem;">
+                <h2 data-i18n="quizTitle">Nano-Quiz</h2>
+                <p data-i18n="quizDesc">Select a category to test your knowledge.</p>
+            </section>
+            <section id="quiz-categories" class="grid-container">
+                <!-- Categories populated by JS -->
+            </section>
+        </div>
+
+        <!-- Active Quiz View -->
+        <div id="view-quiz-active" style="display: none;">
+            <button class="back-button" id="btn-quiz-back" aria-label="Back to Quiz Categories" data-i18n="btnBackQuiz">
+                &larr; Back to Categories
+            </button>
+            <section class="lesson-section">
+                <header class="view-header">
+                    <h2 id="quiz-active-title">Category Name</h2>
+                    <p id="quiz-progress-text" class="helper-text">Question 1 of X</p>
+                    <p id="quiz-score-text" class="score-badge" style="display: inline-block; margin-top: 0.5rem;"></p>
+                </header>
+                <div class="card-container">
+                    <div class="lesson-content-box">
+                        <div id="quiz-active-container" class="quiz-container">
+                            <p id="quiz-active-question" class="font-weight-bold" style="font-size: 1.1rem; margin-bottom: 1.5rem;"></p>
+                            <div id="quiz-active-options" class="quiz-options">
+                                <!-- Populated by JS -->
+                            </div>
+                            <div id="quiz-active-feedback" class="quiz-feedback margin-top-sm" style="display: none;"></div>
+                            <button id="btn-quiz-check" class="btn-secondary margin-top-sm" disabled data-i18n="checkAnswer">Check Answer</button>
+                        </div>
+
+                        <div id="quiz-results-container" style="display: none; text-align: center;">
+                            <h3 data-i18n="quizCompleted">Quiz Completed!</h3>
+                            <p class="text-large margin-top-sm" id="quiz-final-score"></p>
+                            <button id="btn-quiz-restart" class="btn-primary margin-top-md" data-i18n="quizRestart">Restart Quiz</button>
+                        </div>
+                    </div>
+                    <div class="action-bar flex-between">
+                        <button id="btn-quiz-next" class="btn-primary" data-i18n="nextQuestion" style="display: none;">Next Question &rarr;</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </main>
 
     <!-- Print View / Project Sheet -->
@@ -356,6 +403,7 @@
 
     <!-- Scripts -->
     <script src="data.js"></script>
+    <script src="quiz_data.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

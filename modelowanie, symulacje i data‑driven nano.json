@@ -220,4 +220,13 @@
     "correctIndex": 0
   },
   {
-    "id
+    "id": 23,
+    "question": "Czy sztuczna inteligencja zstępuje w pełni symulacje MD/DFT w nanonauce?",
+    "options": [
+      "Nie, uzupełnia je – ML jest szybsze, ale wymaga danych z MD/DFT i eksperymentów do nauki i walidacji",
+      "Tak, symulacje stały się całkowicie zbędne",
+      "Nie, sztuczna inteligencja w ogóle nie znajduje zastosowania w nanotechnologii"
+    ],
+    "correctIndex": 0
+  }
+]
