@@ -67,8 +67,14 @@
                     <p class="helper-text" data-i18n="compareLimitHelper">Select up to 2 materials to compare.</p>
                 </div>
 
-                <div id="ranking-list" class="ranking-container">
-                    <!-- Ranked items populated by JS -->
+                <div class="summary-layout">
+                    <div id="ranking-list" class="ranking-container">
+                        <!-- Ranked items populated by JS -->
+                    </div>
+                    <aside class="chart-container-aside">
+                        <canvas id="summary-radar-chart" width="300" height="300" aria-label="Radar chart comparing top recommended materials" role="img"></canvas>
+                        <div id="summary-radar-legend" class="chart-legend"></div>
+                    </aside>
                 </div>
             </section>
         </div>
@@ -146,6 +152,12 @@
                 <header class="view-header">
                     <h2 data-i18n="compTitle">Material Comparison</h2>
                 </header>
+
+                <div class="compare-chart-wrapper">
+                    <canvas id="compare-radar-chart" width="400" height="350" aria-label="Radar chart comparing selected materials" role="img"></canvas>
+                    <div id="compare-radar-legend" class="chart-legend chart-legend-center"></div>
+                </div>
+
                 <div class="compare-grid" id="compare-grid">
                     <!-- Populated by JS -->
                 </div>

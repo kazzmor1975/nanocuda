@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'app-card';
             card.setAttribute('aria-label', `Select ${app.title}`);
             card.innerHTML = `
+                <div class="app-card-icon">${app.icon}</div>
                 <h3>${app.title}</h3>
                 <p>${app.description}</p>
             `;
@@ -198,12 +199,130 @@ document.addEventListener('DOMContentLoaded', () => {
         return scoredMaterials.sort((a, b) => b.matchScore - a.matchScore);
     }
 
+    /* CHART UTILITIES */
+    const CHART_COLORS = [
+        'rgba(37, 99, 235, 0.8)',   // blue-600
+        'rgba(22, 163, 74, 0.8)',   // green-600
+        'rgba(220, 38, 38, 0.8)'    // red-600
+    ];
+
+    function drawRadarChart(canvasId, legendId, materialsToChart) {
+        const canvas = document.getElementById(canvasId);
+        const legendContainer = document.getElementById(legendId);
+        if (!canvas || !legendContainer) return;
+
+        const ctx = canvas.getContext('2d');
+        const width = canvas.width;
+        const height = canvas.height;
+        const centerX = width / 2;
+        const centerY = height / 2;
+        const radius = Math.min(centerX, centerY) - 40; // leave room for labels
+
+        ctx.clearRect(0, 0, width, height);
+        legendContainer.innerHTML = '';
+
+        const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+        const gridColor = isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+        const textColor = isDarkMode ? '#d1d5db' : '#4b5563';
+
+        const dimensions = currentApp.dimensions;
+        const numAxes = dimensions.length;
+        const angleStep = (Math.PI * 2) / numAxes;
+
+        // Draw Grid
+        ctx.strokeStyle = gridColor;
+        ctx.lineWidth = 1;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.font = '12px Inter, sans-serif';
+
+        for (let level = 1; level <= 5; level++) {
+            const r = (radius / 5) * level;
+            ctx.beginPath();
+            for (let i = 0; i < numAxes; i++) {
+                const angle = i * angleStep - Math.PI / 2;
+                const x = centerX + r * Math.cos(angle);
+                const y = centerY + r * Math.sin(angle);
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        // Draw Axes and Labels
+        for (let i = 0; i < numAxes; i++) {
+            const angle = i * angleStep - Math.PI / 2;
+            const x = centerX + radius * Math.cos(angle);
+            const y = centerY + radius * Math.sin(angle);
+
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+
+            // Draw label
+            const labelX = centerX + (radius + 20) * Math.cos(angle);
+            const labelY = centerY + (radius + 20) * Math.sin(angle);
+
+            // Adjust alignment based on angle to prevent overlap
+            if (Math.abs(Math.cos(angle)) < 0.1) {
+                ctx.textAlign = 'center';
+            } else if (Math.cos(angle) > 0) {
+                ctx.textAlign = 'left';
+            } else {
+                ctx.textAlign = 'right';
+            }
+
+            ctx.fillStyle = textColor;
+            // truncate label if too long
+            let labelText = dimensions[i].label;
+            if (labelText.length > 15) labelText = labelText.substring(0, 15) + '...';
+            ctx.fillText(labelText, labelX, labelY);
+        }
+
+        // Draw Data Polygons
+        materialsToChart.forEach((mat, matIdx) => {
+            const color = CHART_COLORS[matIdx % CHART_COLORS.length];
+
+            ctx.beginPath();
+            for (let i = 0; i < numAxes; i++) {
+                const dimId = dimensions[i].id;
+                const val = mat.ratings[dimId] || 3;
+                const r = (radius / 5) * val;
+                const angle = i * angleStep - Math.PI / 2;
+                const x = centerX + r * Math.cos(angle);
+                const y = centerY + r * Math.sin(angle);
+
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+
+            ctx.fillStyle = color.replace('0.8', '0.2'); // semi-transparent fill
+            ctx.fill();
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Draw Legend
+            const legendItem = document.createElement('div');
+            legendItem.className = 'legend-item';
+            legendItem.innerHTML = `<span class="legend-color" style="background-color: ${color};"></span> <span>${mat.name}</span>`;
+            legendContainer.appendChild(legendItem);
+        });
+    }
+
     /* STEP 3: RECOMMENDATION SUMMARY */
     function generateRecommendations() {
         rankedMaterials = calculateScores();
         selectedForComparison = []; // reset
         updateCompareButton();
         renderRankingList();
+
+        // Draw summary chart for top 3
+        drawRadarChart('summary-radar-chart', 'summary-radar-legend', rankedMaterials.slice(0, 3));
+
         switchView(viewSummary);
     }
 
@@ -284,7 +403,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('res-strengths').innerHTML = mat.strengths.map(s => `<li>${s}</li>`).join('');
         document.getElementById('res-limitations').innerHTML = mat.limitations.map(l => `<li>${l}</li>`).join('');
 
-        document.getElementById('res-properties').innerHTML = currentApp.targetProperties.map(prop => `<span class="tag">${prop}</span>`).join('');
+        document.getElementById('res-properties').innerHTML = currentApp.targetProperties.map((prop, idx) => {
+            const score = mat.propertyScores[idx] || 3;
+            const pct = (score / 5) * 100;
+            return `
+            <div class="property-tag-container" aria-label="${prop}: ${score} out of 5">
+                <div class="property-tag-bar" style="width: ${pct}%"></div>
+                <span class="property-tag-text">${prop}</span>
+            </div>
+            `;
+        }).join('');
 
         document.getElementById('res-methods').innerHTML = currentApp.methods.map(method => `
             <div class="method-item">
@@ -310,6 +438,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const grid = document.getElementById('compare-grid');
         grid.innerHTML = ''; // clear
+
+        // Draw Chart
+        drawRadarChart('compare-radar-chart', 'compare-radar-legend', [mat1, mat2]);
 
         [mat1, mat2].forEach(mat => {
             const col = document.createElement('div');
