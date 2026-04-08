@@ -73,7 +73,13 @@ p { color: var(--text-secondary); }
 .logo h1 { font-size: 1.5rem; color: var(--primary-color); }
 .logo span { font-size: 0.9rem; color: var(--text-secondary); font-weight: 400; margin-left: 0.5rem; }
 
-#theme-toggle {
+.header-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#theme-toggle, #lang-toggle {
     background: none;
     border: 1px solid var(--border-color);
     color: var(--text-primary);
@@ -83,7 +89,7 @@ p { color: var(--text-secondary); }
     font-size: 0.875rem;
     transition: all 0.2s ease;
 }
-#theme-toggle:hover { background-color: var(--border-color); }
+#theme-toggle:hover, #lang-toggle:hover { background-color: var(--border-color); }
 
 /* Main Container */
 main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
