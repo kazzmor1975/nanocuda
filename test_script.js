@@ -18,17 +18,6 @@ const { chromium } = require('playwright');
     await page.waitForSelector('#view-home:visible');
     await page.screenshot({ path: 'bookmarks_view.png' });
 
-    // Test: Nano-lesson mode
-    await page.click('.app-card:first-child');
-    await page.waitForSelector('#view-priority:visible');
-    await page.click('#btn-mode-learn');
-    await page.waitForSelector('#view-lesson:visible');
-    await page.screenshot({ path: 'lesson_view.png' });
-
-    // Go back home from lesson mode
-    await page.click('#view-lesson .btn-home');
-    await page.waitForSelector('#view-home:visible');
-
     // Test: Encyclopedia Mode (Material Data Browser)
     await page.click('#nav-encyclopedia');
     await page.waitForSelector('#view-encyclopedia:visible');

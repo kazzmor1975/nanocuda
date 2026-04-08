@@ -46,7 +46,6 @@
         <!-- Priority Settings View -->
         <div id="view-priority" style="display: none;">
             <div class="mode-toggle-container">
-                <button id="btn-mode-learn" class="mode-btn" data-i18n="learnMode">📚 Nano-Lesson</button>
                 <button id="btn-mode-explore" class="mode-btn" data-i18n="modeExplore">🔍 Explore</button>
                 <button id="btn-mode-decide" class="mode-btn active" data-i18n="modeDecide">⚖️ Decide</button>
             </div>
@@ -301,44 +300,6 @@
 
                 <div class="compare-grid" id="compare-grid">
                     <!-- Populated by JS -->
-                </div>
-            </section>
-        </div>
-
-        <!-- Nano-Lesson View -->
-        <div id="view-lesson" style="display: none;">
-            <div class="mode-toggle-container">
-                <button id="btn-lesson-mode-learn" class="mode-btn active" data-i18n="learnMode">📚 Nano-Lesson</button>
-                <button id="btn-lesson-mode-explore" class="mode-btn" data-i18n="modeExplore">🔍 Explore</button>
-                <button id="btn-lesson-mode-decide" class="mode-btn" data-i18n="modeDecide">⚖️ Decide</button>
-            </div>
-            <button class="back-button btn-home" aria-label="Back to selection" data-i18n="btnBackUseCases">
-                &larr; Back to Use Cases
-            </button>
-            <section class="lesson-section">
-                <header class="view-header">
-                    <h2 id="lesson-app-title"></h2>
-                    <p id="lesson-progress-text" class="helper-text"></p>
-                </header>
-                <div class="card-container">
-                    <div id="lesson-content" class="lesson-content-box">
-                        <h3 id="lesson-title"></h3>
-                        <p id="lesson-text"></p>
-
-                        <div id="lesson-quiz" class="quiz-container margin-top-md" style="display: none;">
-                            <p id="quiz-question" class="font-weight-bold"></p>
-                            <div id="quiz-options" class="quiz-options">
-                                <!-- Populated by JS -->
-                            </div>
-                            <div id="quiz-feedback" class="quiz-feedback margin-top-sm" style="display: none;"></div>
-                            <button id="btn-check-answer" class="btn-secondary margin-top-sm" disabled data-i18n="checkAnswer">Check Answer</button>
-                        </div>
-                    </div>
-                    <div class="action-bar flex-between">
-                        <button id="btn-lesson-prev" class="btn-secondary" style="display: none;">&larr; Prev</button>
-                        <button id="btn-lesson-next" class="btn-primary" data-i18n="nextLesson" style="display: none;">Next Lesson &rarr;</button>
-                        <button id="btn-lesson-finish" class="btn-primary" data-i18n="finishLessons" style="display: none;">Finish Lessons</button>
-                    </div>
                 </div>
             </section>
         </div>

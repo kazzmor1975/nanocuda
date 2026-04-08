@@ -58,10 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mode toggles
     const btnModeExplore = document.getElementById('btn-mode-explore');
     const btnModeDecide = document.getElementById('btn-mode-decide');
-    const btnModeLearn = document.getElementById('btn-mode-learn');
-    const btnLessonModeExplore = document.getElementById('btn-lesson-mode-explore');
-    const btnLessonModeDecide = document.getElementById('btn-lesson-mode-decide');
-    const btnLessonModeLearn = document.getElementById('btn-lesson-mode-learn');
 
     // Initialize
     initTheme();
@@ -360,21 +356,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (btnModeExplore) btnModeExplore.addEventListener('click', () => setAppMode('explore'));
     if (btnModeDecide) btnModeDecide.addEventListener('click', () => setAppMode('decide'));
-    if (btnModeLearn) btnModeLearn.addEventListener('click', () => setAppMode('learn'));
-    if (btnLessonModeExplore) btnLessonModeExplore.addEventListener('click', () => setAppMode('explore'));
-    if (btnLessonModeDecide) btnLessonModeDecide.addEventListener('click', () => setAppMode('decide'));
-    if (btnLessonModeLearn) btnLessonModeLearn.addEventListener('click', () => setAppMode('learn'));
 
     function setAppMode(mode) {
         appMode = mode;
 
-        [btnModeExplore, btnModeDecide, btnModeLearn, btnLessonModeExplore, btnLessonModeDecide, btnLessonModeLearn].forEach(btn => {
+        [btnModeExplore, btnModeDecide].forEach(btn => {
             if (btn) btn.classList.remove('active');
         });
 
         if (mode === 'explore') {
             if (btnModeExplore) btnModeExplore.classList.add('active');
-            if (btnLessonModeExplore) btnLessonModeExplore.classList.add('active');
             prioritySlidersContainer.style.display = 'none';
             btnGetRecommendations.textContent = currentLang === 'pl' ? 'Przeglądaj materiały' : 'Explore Materials';
             const priDesc = document.querySelector('#view-priority .view-header p');
@@ -382,128 +373,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (viewPriority.style.display !== 'block') switchView(viewPriority);
         } else if (mode === 'decide') {
             if (btnModeDecide) btnModeDecide.classList.add('active');
-            if (btnLessonModeDecide) btnLessonModeDecide.classList.add('active');
             prioritySlidersContainer.style.display = 'grid';
             btnGetRecommendations.textContent = uiDict.btnGetRecs;
             const priDesc = document.querySelector('#view-priority .view-header p');
             if(priDesc) priDesc.style.display = 'block';
             if (viewPriority.style.display !== 'block') switchView(viewPriority);
-        } else if (mode === 'learn') {
-            if (btnModeLearn) btnModeLearn.classList.add('active');
-            if (btnLessonModeLearn) btnLessonModeLearn.classList.add('active');
-            startLessonMode();
         }
     }
-
-    // --- Nano Lesson Mode Functions ---
-    function startLessonMode() {
-        if (!currentApp || !currentApp.lessons || currentApp.lessons.length === 0) {
-            console.warn("No lessons available for this application area.");
-            return;
-        }
-        currentLessonIndex = 0;
-        document.getElementById('lesson-app-title').textContent = currentApp.title;
-        renderLesson();
-        switchView(viewLesson);
-    }
-
-    function renderLesson() {
-        const lesson = currentApp.lessons[currentLessonIndex];
-        const total = currentApp.lessons.length;
-
-        // Progress text
-        let progressTemplate = uiDict.lessonProgress || "Lesson {current} of {total}";
-        progressTemplate = progressTemplate.replace('{current}', currentLessonIndex + 1).replace('{total}', total);
-        document.getElementById('lesson-progress-text').textContent = progressTemplate;
-
-        // Content
-        document.getElementById('lesson-title').textContent = lesson.title;
-        document.getElementById('lesson-text').textContent = lesson.text;
-
-        // Quiz
-        const quizContainer = document.getElementById('lesson-quiz');
-        if (lesson.quiz) {
-            quizContainer.style.display = 'block';
-            document.getElementById('quiz-question').textContent = lesson.quiz.question;
-            const optionsContainer = document.getElementById('quiz-options');
-            optionsContainer.innerHTML = '';
-
-            selectedQuizOption = null;
-            const btnCheck = document.getElementById('btn-check-answer');
-            btnCheck.disabled = true;
-            btnCheck.style.display = 'block';
-            const feedback = document.getElementById('quiz-feedback');
-            feedback.style.display = 'none';
-            feedback.className = 'quiz-feedback margin-top-sm';
-
-            lesson.quiz.options.forEach((optText, index) => {
-                const optEl = document.createElement('div');
-                optEl.className = 'quiz-option';
-                optEl.innerHTML = `<input type="radio" name="quiz-opt" value="${index}"> <label>${optText}</label>`;
-                optEl.addEventListener('click', () => {
-                    // visually select
-                    optionsContainer.querySelectorAll('.quiz-option').forEach(el => el.classList.remove('selected'));
-                    optEl.classList.add('selected');
-                    optEl.querySelector('input').checked = true;
-                    selectedQuizOption = index;
-                    btnCheck.disabled = false;
-                });
-                optionsContainer.appendChild(optEl);
-            });
-        } else {
-            quizContainer.style.display = 'none';
-        }
-
-        // Navigation buttons
-        const btnPrev = document.getElementById('btn-lesson-prev');
-        const btnNext = document.getElementById('btn-lesson-next');
-        const btnFinish = document.getElementById('btn-lesson-finish');
-
-        btnPrev.style.display = currentLessonIndex > 0 ? 'block' : 'none';
-
-        if (currentLessonIndex < total - 1) {
-            btnNext.style.display = 'block';
-            btnFinish.style.display = 'none';
-        } else {
-            btnNext.style.display = 'none';
-            btnFinish.style.display = 'block';
-        }
-    }
-
-    document.getElementById('btn-check-answer')?.addEventListener('click', () => {
-        if (selectedQuizOption === null) return;
-        const lesson = currentApp.lessons[currentLessonIndex];
-        const isCorrect = selectedQuizOption === lesson.quiz.correctIndex;
-        const feedback = document.getElementById('quiz-feedback');
-
-        feedback.style.display = 'block';
-        if (isCorrect) {
-            feedback.textContent = (currentLang === 'en' ? '✅ Correct! ' : '✅ Dobrze! ') + lesson.quiz.explanation;
-            feedback.className = 'quiz-feedback margin-top-sm success';
-        } else {
-            feedback.textContent = (currentLang === 'en' ? '❌ Not quite. ' : '❌ Nie do końca. ') + lesson.quiz.explanation;
-            feedback.className = 'quiz-feedback margin-top-sm error';
-        }
-        document.getElementById('btn-check-answer').style.display = 'none';
-    });
-
-    document.getElementById('btn-lesson-next')?.addEventListener('click', () => {
-        if (currentLessonIndex < currentApp.lessons.length - 1) {
-            currentLessonIndex++;
-            renderLesson();
-        }
-    });
-
-    document.getElementById('btn-lesson-prev')?.addEventListener('click', () => {
-        if (currentLessonIndex > 0) {
-            currentLessonIndex--;
-            renderLesson();
-        }
-    });
-
-    document.getElementById('btn-lesson-finish')?.addEventListener('click', () => {
-        setAppMode('decide');
-    });
 
     // Initial Render
     initEncyclopediaFilters();
@@ -525,8 +401,8 @@ document.addEventListener('DOMContentLoaded', () => {
             renderGrid();
         } else if (document.getElementById('view-encyclopedia').style.display !== 'none') {
             renderEncyclopediaHome();
-        } else if (document.getElementById('view-encyclopedia-detail').style.display !== 'none' && currentEncyclopediaMaterial) {
-            showEncyclopediaDetail(currentEncyclopediaMaterial);
+        } else if (document.getElementById('view-encyclopedia-detail').style.display !== 'none' && currentlyViewedMaterial) {
+            showEncyclopediaDetail(currentlyViewedMaterial);
         } else if (viewPriority.style.display !== 'none' && currentApp) {
             // Re-fetch currentApp reference from new language array
             showPriorityView(currentApp.id, true);
@@ -540,9 +416,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (viewCompare.style.display !== 'none' && currentApp) {
             currentApp = applications.find(a => a.id === currentApp.id);
             generateRecommendations();
-        } else if (document.getElementById('view-lesson').style.display !== 'none' && currentApp) {
-            currentApp = applications.find(a => a.id === currentApp.id);
-            renderLesson();
         }
     }
 
@@ -609,7 +482,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.padding = '0.5rem 1rem';
                 btn.innerHTML = `🕒 ${session.title} <span style="font-size: 0.8em; opacity: 0.7;">(${session.date})</span>`;
                 btn.addEventListener('click', () => {
-                    setFlowMode('app');
                     showPriorityView(session.appId);
                 });
                 bookmarksList.appendChild(btn);
