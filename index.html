@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanomaterial Matchmaker</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Import Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>Nanomaterial Matchmaker <span>v1.0</span></h1>
+        </div>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+        <!-- Home / Selection View -->
+        <section id="intro-section">
+            <h2>Select an Intended Use Case</h2>
+            <p>Choose your application area to get tailored recommendations on nanomaterial classes, key properties to optimize, and characterization methods to use in the lab.</p>
+        </section>
+
+        <section id="app-grid" class="grid-container">
+            <!-- Cards populated by JavaScript -->
+        </section>
+
+        <!-- Result View -->
+        <section id="result-section">
+            <button id="back-btn" class="back-button" aria-label="Back to selection">
+                &larr; Back to Selection
+            </button>
+
+            <header class="result-header">
+                <h2 id="res-title">Application Title</h2>
+                <p id="res-desc">Application description goes here.</p>
+            </header>
+
+            <div class="result-content">
+                <!-- Main Content Column -->
+                <div class="main-column">
+                    <article class="section-block">
+                        <h3>Recommended Material Classes</h3>
+                        <div id="res-materials">
+                            <!-- Populated by JS -->
+                        </div>
+                    </article>
+
+                    <article class="section-block">
+                        <h3>Most Important Target Properties</h3>
+                        <div id="res-properties" class="tags-container">
+                            <!-- Populated by JS -->
+                        </div>
+                    </article>
+
+                    <article class="section-block">
+                        <h3>Recommended Characterization Methods</h3>
+                        <div id="res-methods">
+                            <!-- Populated by JS -->
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sidebar / Warnings Column -->
+                <aside class="sidebar-column">
+                    <div class="section-block trade-offs-block">
+                        <h3>Key Risks & Limitations</h3>
+                        <p id="res-tradeoffs">Tradeoffs go here.</p>
+                    </div>
+
+                    <div class="section-block next-step-block">
+                        <h3>Recommended Next Lab Step</h3>
+                        <p id="res-nextstep">Next step goes here.</p>
+                    </div>
+
+                    <div class="section-block question-block">
+                        <h3>Example Student Question</h3>
+                        <div id="res-question">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
