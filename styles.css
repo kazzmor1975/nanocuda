@@ -549,6 +549,23 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
     width: 100%;
 }
 
+/* --- Form Inputs (Print & Assistant) --- */
+.print-input {
+    border: 1px solid var(--border-color);
+    background: var(--surface-light);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5rem;
+    outline: none;
+    width: 100%;
+}
+
+.print-input:focus {
+    border-color: var(--primary-color);
+}
+
 /* --- Print Styles (Project Sheet) --- */
 .print-only {
     display: none;

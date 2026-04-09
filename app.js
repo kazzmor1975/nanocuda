@@ -607,6 +607,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function escapeHTML(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
     function askJules(payload) {
         responseBox.style.display = 'block';
         responseContent.textContent = uiDict.astLoading || "Jules myśli...";
@@ -616,9 +622,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Mock responses based on the prompt instructions
             if (payload.mode === 'diagnostic') {
                 responseContent.innerHTML = `Możliwe przyczyny:
-- <b>Nieodpowiednie przygotowanie próbki</b>: Grubość warstwy lub użyty rozpuszczalnik mógł wpłynąć na wynik (częsty problem w ${payload.data.technique}).
+- <b>Nieodpowiednie przygotowanie próbki</b>: Grubość warstwy lub użyty rozpuszczalnik mógł wpłynąć na wynik (częsty problem w ${escapeHTML(payload.data.technique)}).
 - <b>Artefakty pomiarowe</b>: Szum i dryft baseline'u mogą wynikać ze złej kalibracji lub nieodpowiedniego ustawienia aparatu.
-- <b>Specyfika materiału</b>: ${payload.data.materialType} w formie ${payload.data.sampleForm} często wykazuje takie anomalie.
+- <b>Specyfika materiału</b>: ${escapeHTML(payload.data.materialType)} w formie ${escapeHTML(payload.data.sampleForm)} często wykazuje takie anomalie.
 
 Co możesz sprawdzić:
 - Zmierz próbkę referencyjną, aby wykluczyć błąd aparatu.
@@ -626,11 +632,12 @@ Co możesz sprawdzić:
 - Zweryfikuj parametry pomiaru (np. czas, zakres).
 
 Ograniczenia metody:
-- ${payload.data.technique} ma fizyczne limity rozdzielczości, które mogą ujawniać się w Twojej próbce.
+- ${escapeHTML(payload.data.technique)} ma fizyczne limity rozdzielczości, które mogą ujawniać się w Twojej próbce.
 - Metoda jest wrażliwa na jakość przygotowania próbki.`;
             } else if (payload.mode === 'method-compare') {
+                const candidates = payload.data.candidates ? escapeHTML(payload.data.candidates.split(',')[0].trim()) : "wybranej metody";
                 responseContent.innerHTML = `Rekomendowana metoda:
-- W Twoim przypadku najlepiej użyć <b>${payload.data.candidates.split(',')[0].trim()}</b>, ponieważ idealnie nadaje się do formy ${payload.data.constraints.sampleForm} w celu uzyskania informacji: ${payload.data.goal}.
+- W Twoim przypadku najlepiej użyć <b>${candidates}</b>, ponieważ idealnie nadaje się do formy ${escapeHTML(payload.data.constraints.sampleForm)} w celu uzyskania informacji: ${escapeHTML(payload.data.goal)}.
 
 Dlaczego nie inne:
 - Pozostałe metody mogą być mniej czułe lub wymagać dłuższego czasu pomiaru, co nie jest optymalne.
