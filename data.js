@@ -98,7 +98,22 @@ const UI_I18N = {
             "podstawy nanonauki": "Fundamentals of Nanoscience",
             "właściwości i zjawiska charakterystyczne nanomateriałów": "Properties & Phenomena",
             "zastosowania nanotechnologii": "Applications"
-        }
+        },
+        "navAssistant": "Assistant",
+        "assistantTitle": "AI Assistant (Jules)",
+        "assistantDesc": "Get help diagnosing lab results or comparing characterization methods.",
+        "astModeDiagnostic": "🧪 Diagnostic Triage",
+        "astModeCompare": "⚖️ Method Compare",
+        "astTechLabel": "Technique (e.g., XRD, Raman, DLS):",
+        "astMatLabel": "Material (e.g., metal oxide, polymer):",
+        "astFormLabel": "Sample Form:",
+        "astDescLabel": "What's wrong? (problem description):",
+        "astPrepLabel": "Sample Preparation:",
+        "astCandLabel": "Candidates to compare (e.g., XRD, Raman):",
+        "astGoalLabel": "What information is needed?",
+        "astBtnAsk": "Ask Jules",
+        "astResponseTitle": "Jules's Answer",
+        "astLoading": "Jules is thinking..."
     },
     "pl": {
         "title": "Kreator Nanomateriałów",
@@ -199,7 +214,22 @@ const UI_I18N = {
             "podstawy nanonauki": "Podstawy nanonauki",
             "właściwości i zjawiska charakterystyczne nanomateriałów": "Właściwości i zjawiska",
             "zastosowania nanotechnologii": "Zastosowania nanotechnologii"
-        }
+        },
+        "navAssistant": "Asystent",
+        "assistantTitle": "Asystent AI (Jules)",
+        "assistantDesc": "Uzyskaj pomoc w diagnozowaniu wyników laboratoryjnych lub porównywaniu metod badawczych.",
+        "astModeDiagnostic": "🧪 Diagnosta Wyników",
+        "astModeCompare": "⚖️ Porównywarka Metod",
+        "astTechLabel": "Technika (np. XRD, Raman, DLS):",
+        "astMatLabel": "Materiał (np. tlenek metalu, polimer):",
+        "astFormLabel": "Forma próbki:",
+        "astDescLabel": "Co jest dziwne? (opis problemu):",
+        "astPrepLabel": "Przygotowanie próbki:",
+        "astCandLabel": "Techniki do porównania (np. XRD, Raman):",
+        "astGoalLabel": "Jaka informacja jest potrzebna?",
+        "astBtnAsk": "Zapytaj Julesa",
+        "astResponseTitle": "Odpowiedź Julesa",
+        "astLoading": "Jules myśli..."
     }
 };
 

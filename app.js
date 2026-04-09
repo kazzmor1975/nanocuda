@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navDecide = document.getElementById('nav-decide');
     const navEncyclopedia = document.getElementById('nav-encyclopedia');
     const btnNavQuiz = document.getElementById('nav-quiz');
+    const btnNavAssistant = document.getElementById('nav-assistant');
     if (navDecide) navDecide.addEventListener('click', () => setGlobalMode('decide'));
     if (navEncyclopedia) navEncyclopedia.addEventListener('click', () => setGlobalMode('encyclopedia'));
 
@@ -92,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navDecide) navDecide.classList.remove('active');
         if (navEncyclopedia) navEncyclopedia.classList.remove('active');
         if (btnNavQuiz) btnNavQuiz.classList.remove('active');
+        if (btnNavAssistant) btnNavAssistant.classList.remove('active');
 
         if (mode === 'decide') {
             if (navDecide) navDecide.classList.add('active');
@@ -105,11 +107,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (btnNavQuiz) btnNavQuiz.classList.add('active');
             renderQuizCategories();
             switchView(viewQuizHome);
+        } else if (mode === 'assistant') {
+            if (btnNavAssistant) btnNavAssistant.classList.add('active');
+            switchView(viewAssistant);
         }
     }
 
     if (btnNavQuiz) {
         btnNavQuiz.addEventListener('click', () => setGlobalMode('quiz'));
+    }
+
+    if (btnNavAssistant) {
+        btnNavAssistant.addEventListener('click', () => setGlobalMode('assistant'));
     }
 
     const btnQuizBack = document.getElementById('btn-quiz-back');
@@ -404,6 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =================== QUIZ LOGIC =================== */
     const viewQuizHome = document.getElementById('view-quiz-home');
     const viewQuizActive = document.getElementById('view-quiz-active');
+    const viewAssistant = document.getElementById('view-assistant');
     const quizCategoriesContainer = document.getElementById('quiz-categories');
     const btnQuizCheck = document.getElementById('btn-quiz-check');
     const btnQuizNext = document.getElementById('btn-quiz-next');
@@ -571,6 +581,115 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    /* =================== ASSISTANT LOGIC =================== */
+    const btnAstDiag = document.getElementById('btn-ast-diagnostic');
+    const btnAstComp = document.getElementById('btn-ast-compare');
+    const formDiag = document.getElementById('ast-form-diagnostic');
+    const formComp = document.getElementById('ast-form-compare');
+    const responseBox = document.getElementById('ast-response-box');
+    const responseContent = document.getElementById('ast-response-content');
+
+    if (btnAstDiag && btnAstComp) {
+        btnAstDiag.addEventListener('click', () => {
+            btnAstDiag.classList.add('active');
+            btnAstComp.classList.remove('active');
+            formDiag.style.display = 'block';
+            formComp.style.display = 'none';
+            responseBox.style.display = 'none';
+        });
+
+        btnAstComp.addEventListener('click', () => {
+            btnAstComp.classList.add('active');
+            btnAstDiag.classList.remove('active');
+            formComp.style.display = 'block';
+            formDiag.style.display = 'none';
+            responseBox.style.display = 'none';
+        });
+    }
+
+    function askJules(payload) {
+        responseBox.style.display = 'block';
+        responseContent.textContent = uiDict.astLoading || "Jules myśli...";
+
+        // Mock backend delay
+        setTimeout(() => {
+            // Mock responses based on the prompt instructions
+            if (payload.mode === 'diagnostic') {
+                responseContent.innerHTML = `Możliwe przyczyny:
+- <b>Nieodpowiednie przygotowanie próbki</b>: Grubość warstwy lub użyty rozpuszczalnik mógł wpłynąć na wynik (częsty problem w ${payload.data.technique}).
+- <b>Artefakty pomiarowe</b>: Szum i dryft baseline'u mogą wynikać ze złej kalibracji lub nieodpowiedniego ustawienia aparatu.
+- <b>Specyfika materiału</b>: ${payload.data.materialType} w formie ${payload.data.sampleForm} często wykazuje takie anomalie.
+
+Co możesz sprawdzić:
+- Zmierz próbkę referencyjną, aby wykluczyć błąd aparatu.
+- Zmień rozcieńczenie lub sposób suszenia.
+- Zweryfikuj parametry pomiaru (np. czas, zakres).
+
+Ograniczenia metody:
+- ${payload.data.technique} ma fizyczne limity rozdzielczości, które mogą ujawniać się w Twojej próbce.
+- Metoda jest wrażliwa na jakość przygotowania próbki.`;
+            } else if (payload.mode === 'method-compare') {
+                responseContent.innerHTML = `Rekomendowana metoda:
+- W Twoim przypadku najlepiej użyć <b>${payload.data.candidates.split(',')[0].trim()}</b>, ponieważ idealnie nadaje się do formy ${payload.data.constraints.sampleForm} w celu uzyskania informacji: ${payload.data.goal}.
+
+Dlaczego nie inne:
+- Pozostałe metody mogą być mniej czułe lub wymagać dłuższego czasu pomiaru, co nie jest optymalne.
+
+Alternatywy:
+- Jeśli nie masz dostępu do rekomendowanej metody, rozważ alternatywy podane w Twoim zapytaniu.`;
+            }
+        }, 1500);
+    }
+
+    const btnSubmitDiag = document.getElementById('btn-ast-diag-submit');
+    if (btnSubmitDiag) {
+        btnSubmitDiag.addEventListener('click', () => {
+            const payload = {
+                mode: "diagnostic",
+                context: {
+                    lang: currentLang,
+                    userLevel: "msc",
+                    track: "nanoengineering"
+                },
+                data: {
+                    technique: document.getElementById('ast-diag-tech').value || "Nieznana",
+                    materialType: document.getElementById('ast-diag-mat').value || "Nieznany",
+                    sampleForm: document.getElementById('ast-diag-form').value,
+                    description: document.getElementById('ast-diag-desc').value || "Brak opisu",
+                    prep: document.getElementById('ast-diag-prep').value || "Brak danych"
+                }
+            };
+            // Log for debug
+            console.log("Jules Payload:", payload);
+            askJules(payload);
+        });
+    }
+
+    const btnSubmitComp = document.getElementById('btn-ast-comp-submit');
+    if (btnSubmitComp) {
+        btnSubmitComp.addEventListener('click', () => {
+            const payload = {
+                mode: "method-compare",
+                context: {
+                    lang: currentLang,
+                    userLevel: "msc",
+                    track: "nanoengineering"
+                },
+                data: {
+                    candidates: document.getElementById('ast-comp-cand').value || "Brak",
+                    goal: document.getElementById('ast-comp-goal').value || "Nie określono",
+                    constraints: {
+                        sampleForm: document.getElementById('ast-comp-form').value
+                    }
+                }
+            };
+            // Log for debug
+            console.log("Jules Payload:", payload);
+            askJules(payload);
+        });
+    }
+
+
     // Initial Render
     initEncyclopediaFilters();
     renderGrid();
@@ -629,7 +748,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =================== VIEW MANAGEMENT =================== */
 
     function switchView(targetView) {
-        [viewHome, viewPriority, viewSummary, viewResult, viewCompare, viewLesson, viewEncyclopedia, viewEncyclopediaDetail, viewQuizHome, viewQuizActive].forEach(v => {
+        [viewHome, viewPriority, viewSummary, viewResult, viewCompare, viewLesson, viewEncyclopedia, viewEncyclopediaDetail, viewQuizHome, viewQuizActive, viewAssistant].forEach(v => {
             if (v) v.style.display = 'none';
         });
         targetView.style.display = 'block';
